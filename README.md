@@ -50,3 +50,8 @@ Script ran for every pair is stored in `simulator/pairs` directory to save param
 export PYTHONPATH="${PYTHONPATH}:/path/to/your/directory"
 python simulator/pairs/btcusd/calculate_a.py
 ```
+
+### Market-specific studies
+
+- [reUSD/sfrxUSD LP–crvUSD](simulator/pairs/reusd_sfrxusd_lp/README.md):
+  onchain oracle reconstruction and joint v2 `A`/fee parameter screen.
