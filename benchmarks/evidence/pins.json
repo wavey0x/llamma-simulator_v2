@@ -9,8 +9,8 @@
     "simulator/amm/simulator.py": "ca7bafce74a515f4eca072ca6542a7d28d783c66debcc8ad2cd7ac61cd43dce1",
     "simulator/amm/intitial_liquidity.py": "3ec7fade2e0ce55ae27a4d8d390f3461a7d8bbd905d9409bd2028c88f84d5fba"
   },
-  "debea182cbcd639af4c5d3089b8e8e877f5dbb2a": {
-    "simulator/amm/lending_amm.py": "38f86c6773f1993d59c9adbe81fcad6e0511b81d048bc959f9181d005cad82f2",
+  "54eb3f7895badf9ed73a2713a7ce21fdfcc0c4f5": {
+    "simulator/amm/lending_amm.py": "7e8e06bc5753387d5d1f1c23c18a3a970cceef00304168530ae762eeedae877e",
     "simulator/amm/simulator.py": "d1363f4cca8f7159e252b4ba23b1ac4a39d65ff00f130afe07d392496bf06e67",
     "simulator/amm/intitial_liquidity.py": "3ec7fade2e0ce55ae27a4d8d390f3461a7d8bbd905d9409bd2028c88f84d5fba"
   }

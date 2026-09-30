@@ -443,6 +443,8 @@ class LendingAMM:
             # Now adiabatic conversion from definitely in-band
             return x_o + y_o * sqrt(p_o_down * p_o)
 
+    # Include bands in either balance map, even outside the deposited range.
+    # Keep legacy bounds and ascending summation; do not populate unrepresented bands.
     def get_all_y(self):
         return sum(self.get_y_up(i) for i in sorted(self.bands_x.keys() | self.bands_y.keys()) if -500 <= i < 500)
 
