@@ -217,6 +217,9 @@ class LendingAMM:
         """
         Not the method to be present in real smart contract, for simulations only
         Returns tuple of x and y changes in target band
+
+        price is the external market price after external execution costs only.
+        This method applies the AMM fee per band; callers must not pre-apply it.
         """
 
         if self.bands_x[self.active_band] == 0 and self.bands_y[self.active_band] == 0:

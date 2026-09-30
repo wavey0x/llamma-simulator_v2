@@ -1,0 +1,117 @@
+{
+  "schema": 1,
+  "dataset": "REUSD_SFRXUSD_LP_CAUSAL_MINUTE_V1",
+  "description": "Every-block LP valuations with UTC minute OHLC and a causal opening LP oracle. Data preparation only; AMM replay is separate.",
+  "download": {
+    "url": "https://github.com/wavey0x/llamma-simulator_v2/releases/download/lp-causal-minute-v1/REUSD_SFRXUSD_LP_CAUSAL_MINUTE_V1.zip",
+    "bytes": 511636542,
+    "sha256": "aa2bf588dcff07afa21860837a038dd5187075d7d1572edc087b33d4516fa7c6"
+  },
+  "history": {
+    "chain_id": 1,
+    "first_block": 22088660,
+    "last_block": 25870305,
+    "first_timestamp": 1742480747,
+    "last_timestamp": 1788119591,
+    "record_count": 3781646,
+    "pin": {
+      "block_hash": "0x9667d83b47fc3a5dbffd2ad99db063cda226b43e7cd6423c139332ac0938f48b",
+      "block_number": 25870305,
+      "block_timestamp": 1788119591
+    }
+  },
+  "candles": {
+    "rows": 760648,
+    "schema": "lp-causal-minute-candles-v1",
+    "columns": [
+      "timestamp",
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume",
+      "oracle"
+    ],
+    "dtype": "little-endian float64 in prices.npy; integer WAD prices in prices.jsonl.gz",
+    "first_timestamp": 1742480760,
+    "last_timestamp": 1788119580,
+    "excluded_minutes": [
+      1742480700
+    ],
+    "missing_minutes": [],
+    "partial_final_minute": true
+  },
+  "units": {
+    "spot": "crvUSD per LP",
+    "oracle": "USD per LP",
+    "timestamp": "UTC minute start"
+  },
+  "oracle": {
+    "ema_seconds": 866,
+    "oracle_updates": "One modeled price_w per nonempty UTC minute using the latest completed block at or before the minute start",
+    "oracle_initialization": "First historical virtual price at its actual source timestamp"
+  },
+  "quote_convention": "Preserve target deployment: USD/LP Oracle consumed numerically by crvUSD AMM; Spot is crvUSD/LP",
+  "preparation_code_sha256": {
+    "reusd_sfrxusd_lp.py": "7bc73b4c31094cabdbe0ac414396b38db2fa1d883626a7570494964f1079b06d",
+    "reusd_sfrxusd_lp_candles.py": "4027cc9d19397c6a56d08a03520494302d3250fdac2015f9bc407b487e64b436"
+  },
+  "files": {
+    "history.jsonl.gz": {
+      "bytes": 330224221,
+      "sha256": "673156b889b8227157d170e5794e5cba2a6d4042bac7220572383a460f90e244"
+    },
+    "candle-evidence.npy": {
+      "bytes": 24340864,
+      "sha256": "2d8fdfc28c359f4bd8897f5c09bf31f22f606d93bda53b7b9567e77a47c96ecf"
+    },
+    "components.npy": {
+      "bytes": 109533440,
+      "sha256": "90bbc788385b9852015ee76adbdfb11534748cf01a15e14f283f340caae18238"
+    },
+    "display-prices.npy": {
+      "bytes": 18255680,
+      "sha256": "1c819eafde0a5cc25453247157e2a28b3d1b436a576366608dd96243e3721c1e"
+    },
+    "oracle-trace.json": {
+      "bytes": 610,
+      "sha256": "57541445fdabce9a4072061c728b4c2a243b76f59e4d2308195e59ac544d2146"
+    },
+    "oracle-trace.npy": {
+      "bytes": 133874176,
+      "sha256": "0c0c86231943fc31eeeafbbfdfb2fe1aad1edaebad1573e0d5bb93cb50c9a7c3"
+    },
+    "preparation.json": {
+      "bytes": 3117,
+      "sha256": "96404a9176c749ecb34dfde358c41cfc02b267953a4e1348ff285a2a91ee160c"
+    },
+    "prices.jsonl.gz": {
+      "bytes": 37957237,
+      "sha256": "234e19d5604d82e186fcb4af2e4bc3dc8456505a785fb2d2a292ddb627add708"
+    },
+    "prices.npy": {
+      "bytes": 42596416,
+      "sha256": "533b87261edcff4a9da44ec73e12132228a4977bd18c127c77432dc2dc81a046"
+    },
+    "source-times.npy": {
+      "bytes": 30253296,
+      "sha256": "97cdbcdd0e48870282054d7d88791c63db8c8dbbaf04d5fea8164a424d114431"
+    }
+  },
+  "prepare_command": "uv run --frozen --python 3.11.15 python -m simulator.import_data.reusd_sfrxusd_lp_candles --history lp-causal-minute-v1/history.jsonl.gz --output tmp-lp-causal",
+  "loading": [
+    "Load prices.npy with numpy.load: columns 0:6 are timestamp/OHLC/zero volume, column 6 is the separately prepared LP oracle. Timestamps are Unix seconds.",
+    "Do not calculate a second candle EMA or convert the oracle denomination.",
+    "Prepare AMM oracle memory over the full supplied oracle history before run/window cuts using the separate causal-oracle initialization patch. This archive intentionally contains no AMM state or simulation results."
+  ],
+  "historical_point_files": "The existing history.jsonl.gz and prices.jsonl.gz in this repository are the earlier sparse point dataset. history.jsonl.gz is retained as the seed for filling every missing block; the release above is the current minute dataset.",
+  "collection_command": "uv run --frozen --python 3.11.15 python -m simulator.import_data.reusd_sfrxusd_lp_blocks --history data/REUSD_SFRXUSD_LP/history.jsonl.gz --source-sha256 2c69962adf44796f244eccfd890d5531e062fcc83079907b0878927b6b29f382 --cache tmp-lp-block-cache --output tmp-lp-block-history.jsonl.gz",
+  "collection_notes": "Optional recollection uses ETH_RPC_URL, verifies the chain anchor and sampled reused rows, and fetches missing blocks. Offline preparation needs no RPC. Recollected headers carry the current collector hash; the released raw file preserves original collection provenance.",
+  "validation": {
+    "offline_tests": 9,
+    "full_prepared_records_match": 760648,
+    "full_numeric_arrays_match": 6,
+    "oracle_memory_values_match_with_separate_simulator_patch": 760648,
+    "scope": "Full input comparison against the completed causal-method run. Prepared record bodies and all six arrays are unchanged; metadata identifies the standalone preparer. No AMM simulation rerun."
+  }
+}

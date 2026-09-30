@@ -144,11 +144,15 @@ class Simulator:
         for (t, open, high, low, close, vol), oracle_price in zip(prices_for_simulation, oracle_prices_for_simulation):
             amm.set_p_oracle(oracle_price, timestamp=t)
 
-            high = find_target_price(high * (1 - self.external_fee), t, is_up=True)
-            low = find_target_price(low * (1 + self.external_fee), t, is_up=False)
+            high_external = high * (1 - self.external_fee)
+            low_external = low * (1 + self.external_fee)
+            high = find_target_price(high_external, t, is_up=True)
+            low = find_target_price(low_external, t, is_up=False)
 
+            # Use fee-adjusted targets only to check profitability. The AMM
+            # applies its own per-band fee inside trade_to_price().
             if high > amm.get_p():
-                amm.trade_to_price(high)
+                amm.trade_to_price(high_external)
 
             # Not correct for dynamic fees which are too high
             # if high > max_price:
@@ -158,7 +162,7 @@ class Simulator:
             #         assert amm.bands_x[n] > 0
 
             if low < amm.get_p():
-                amm.trade_to_price(low)
+                amm.trade_to_price(low_external)
 
             # Not correct for dynamic fees which are too high
             # if low < min_price:
