@@ -1,0 +1,152 @@
+{
+  "head": {
+    "base": "f18e1231bdc47798314463d1595c69b9dcaacd6f",
+    "pr": "e94f9d196750aba623d2b8bd3a3954e8b5abb65c",
+    "candidate": "debea182cbcd639af4c5d3089b8e8e877f5dbb2a"
+  },
+  "valuation_cases": 1500,
+  "valuation_comparisons": 9000,
+  "replay_cases": 1000,
+  "variants": [
+    "base",
+    "pr",
+    "candidate"
+  ],
+  "bitwise_losses_equal": true,
+  "nonzero_balances_oracle_state_and_logs_equal": true,
+  "matching_preexisting_failures": [
+    {
+      "case": 19,
+      "error": [
+        "AssertionError",
+        "active band should not exceed 500"
+      ]
+    },
+    {
+      "case": 58,
+      "error": [
+        "AssertionError",
+        "active band should not exceed 500"
+      ]
+    },
+    {
+      "case": 64,
+      "error": [
+        "AssertionError",
+        "active band should not exceed 500"
+      ]
+    },
+    {
+      "case": 137,
+      "error": [
+        "AssertionError",
+        "active band should not exceed 500"
+      ]
+    },
+    {
+      "case": 152,
+      "error": [
+        "AssertionError",
+        "active band should not exceed 500"
+      ]
+    },
+    {
+      "case": 160,
+      "error": [
+        "AssertionError",
+        "active band should not exceed 500"
+      ]
+    },
+    {
+      "case": 171,
+      "error": [
+        "AssertionError",
+        "active band should not exceed 500"
+      ]
+    },
+    {
+      "case": 229,
+      "error": [
+        "AssertionError",
+        "active band should not exceed 500"
+      ]
+    },
+    {
+      "case": 243,
+      "error": [
+        "AssertionError",
+        "active band should not exceed 500"
+      ]
+    },
+    {
+      "case": 252,
+      "error": [
+        "AssertionError",
+        "active band should not exceed 500"
+      ]
+    },
+    {
+      "case": 419,
+      "error": [
+        "AssertionError",
+        "active band should not exceed 500"
+      ]
+    },
+    {
+      "case": 446,
+      "error": [
+        "AssertionError",
+        "active band should not exceed 500"
+      ]
+    },
+    {
+      "case": 618,
+      "error": [
+        "AssertionError",
+        "active band should not exceed 500"
+      ]
+    },
+    {
+      "case": 627,
+      "error": [
+        "AssertionError",
+        "active band should not exceed 500"
+      ]
+    },
+    {
+      "case": 717,
+      "error": [
+        "AssertionError",
+        "active band should not exceed 500"
+      ]
+    },
+    {
+      "case": 852,
+      "error": [
+        "AssertionError",
+        "active band should not exceed 500"
+      ]
+    },
+    {
+      "case": 855,
+      "error": [
+        "AssertionError",
+        "active band should not exceed 500"
+      ]
+    },
+    {
+      "case": 909,
+      "error": [
+        "AssertionError",
+        "active band should not exceed 500"
+      ]
+    },
+    {
+      "case": 981,
+      "error": [
+        "AssertionError",
+        "active band should not exceed 500"
+      ]
+    }
+  ]
+}
