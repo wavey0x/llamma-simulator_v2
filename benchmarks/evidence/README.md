@@ -5,31 +5,31 @@ All benchmarks used CPython 3.11.15 on macOS 26.6.2 arm64. Timings are workload-
 and machine-dependent, exclude collection/preparation, and use alternating
 execution order after two warmup batches per revision.
 
-| Workload | Upstream | Previous PR | Candidate | Upstream / candidate | Previous PR / candidate |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| 2,000 synthetic windows, 7 trials | 3.778 s | 2.205 s | 1.369 s | 2.76x | 1.61x |
-| 4,000 historical windows, 3 trials | 7.293 s | 4.026 s | 2.373 s | 3.07x | 1.70x |
+| Workload | Upstream | This PR | Speedup |
+| --- | ---: | ---: | ---: |
+| 2,000 synthetic windows, 7 trials | 3.778 s | 1.369 s | 2.76x |
+| 4,000 historical windows, 3 trials | 7.293 s | 2.373 s | 3.07x |
 
-Every ordered loss matched bit for bit across all three revisions, including
+Every ordered loss matched bit for bit between upstream and this PR, including
 warmups and every timed trial. Each result JSON contains the common full loss
 array, its hash, every timing, effective settings, and executed source hashes.
-`pins.json` was saved before measurement:
+The table uses the upstream and PR entries (first and last) in the archived
+receipts. `pins.json` was saved before measurement:
 
 - Upstream: `f18e1231bdc47798314463d1595c69b9dcaacd6f`
-- Previous PR: `e94f9d196750aba623d2b8bd3a3954e8b5abb65c`
-- Candidate: `54eb3f7895badf9ed73a2713a7ce21fdfcc0c4f5`
+- This PR: `54eb3f7895badf9ed73a2713a7ce21fdfcc0c4f5`
 
 Run from this branch's repository root; the benchmark and randomized checks
 require only the Python standard library:
 
 ```sh
 python benchmarks/benchmark_amm.py \
-  --baseline f18e1231bdc47798314463d1595c69b9dcaacd6f e94f9d196750aba623d2b8bd3a3954e8b5abb65c \
+  --baseline f18e1231bdc47798314463d1595c69b9dcaacd6f \
   --candidate 54eb3f7895badf9ed73a2713a7ce21fdfcc0c4f5 \
   --windows 2000 --warmup 2 --repeats 7 --output synthetic.json
 
 python benchmarks/benchmark_amm.py \
-  --baseline f18e1231bdc47798314463d1595c69b9dcaacd6f e94f9d196750aba623d2b8bd3a3954e8b5abb65c \
+  --baseline f18e1231bdc47798314463d1595c69b9dcaacd6f \
   --candidate 54eb3f7895badf9ed73a2713a7ce21fdfcc0c4f5 \
   --workload benchmarks/evidence/historical-workload.json.gz \
   --warmup 2 --repeats 3 --output historical.json
@@ -51,8 +51,8 @@ the application's causal initialization. Spot is crvUSD/LP and oracle is USD/LP,
 preserving the recorded observation convention; this is a performance/parity
 fixture, not a market calibration or an endorsement of that denomination choice.
 
-`verify.py` preserves the prior review's fixed randomized scenarios while loading
-the three actual revisions. All 1,500 valuation states and 1,000 replay cases
+`verify.py` runs fixed randomized scenarios against the pinned sources.
+All 1,500 valuation states and 1,000 replay cases
 matched, including complete logs, oracle state and nonzero balances. There were
 981 successful replays and 19 matching pre-existing band-limit assertion failures.
 Dictionary keys containing unused zeros are intentionally excluded from state
