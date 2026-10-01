@@ -14,7 +14,9 @@ The [fresh handoff verification](reference-results/README.md) reproduces the ear
 
 ## Reproduce
 
-**Verified target: Apple Silicon macOS, Python 3.11.15, Cython 3.2.4, Apple Clang 21.0.0 (`clang-2100.1.1.101`), SDK 26.5.** See [toolchain.json](cython/toolchain.json) for the exact compiler target string and flags. Install `uv` and matching Xcode command-line tools first. Other systems require an explicit port of the compiler/SDK and shared-library commands; changing the target JSON alone is insufficient. Measure every backend on the same machine. Absolute times from different hosts are not comparable.
+**Use your own hardware and compiler.** Matching our machine, compiler or absolute timings is not required. Establish local baselines for every backend and compare optimizations on that same machine, keeping your chosen environment stable and recording it with the results.
+
+The packaged scripts record our original environment and currently contain macOS-specific setup. Before running on another target, adapt the compiler/SDK handling in `cython/build.py` and `cython/setup.py`, Phil's shared-library command in `prepare.py`, and host reporting in `bench.py`; record your target in `cython/toolchain.json`. Install `uv` and use the dependency lock. This setup work should leave model logic and frozen benchmark inputs unchanged.
 
 From the repository root, after cloning the handoff branch:
 
