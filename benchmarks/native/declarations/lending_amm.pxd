@@ -1,6 +1,8 @@
 # Types and native dispatch only. Financial formulas live in the pinned .py file.
 import cython
 
+ctypedef (double, double) OracleSnapshot
+
 cpdef double sqrt(double value) except? -1
 
 cpdef double _power(double value, double exponent) except? -1
@@ -56,10 +58,12 @@ cdef class LendingAMM:
     @cython.locals(price=cython.double, fee=cython.double, timestamp=cython.double)
     cpdef void restore_oracle_state(self, state) except *
     cpdef void set_p_oracle(self, double p, timestamp=*)
+    @cython.locals(snapshot=OracleSnapshot)
     cpdef (double, double) _observe(self, double p, timestamp=*)
     @cython.locals(p_oracle=cython.double, oracle_memory_fee=cython.double,
                    fee_with_memory=cython.double, distance_fee=cython.double)
     cpdef double dynamic_fee(self, long n_band, timestamp=*) except? -1
+    @cython.locals(fee_with_memory=cython.double, distance_fee=cython.double)
     cpdef double _dynamic_fee(self, long n_band, double p_oracle, double oracle_memory_fee) except? -1
     cpdef _normalize_timestamp(self, timestamp)
     @cython.locals(elapsed=cython.double, current=cython.double, previous=cython.double, delay=cython.double)
@@ -100,6 +104,7 @@ cdef class LendingAMM:
     @cython.locals(x=cython.double, y=cython.double, y0=cython.double, f=cython.double, g=cython.double,
                    p_o=cython.double, current_price=cython.double,
                    dx=cython.double, dy=cython.double, oracle_memory_fee=cython.double, fee=cython.double,
+                   snapshot=OracleSnapshot,
                    antifee=cython.double,
                    n=cython.long, original_band=cython.long, bstep=cython.long, Inv=cython.double,
                    original_price=cython.double, x_dest=cython.double, y_dest=cython.double,
