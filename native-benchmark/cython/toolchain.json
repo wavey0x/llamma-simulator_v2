@@ -1,0 +1,18 @@
+{
+  "target": {
+    "system": "Darwin",
+    "machine": "arm64",
+    "python": "3.11.15",
+    "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix",
+    "sdk_version": "26.5",
+    "deployment_target": "11.0"
+  },
+  "flags": [
+    "-std=c++17",
+    "-O3",
+    "-g0",
+    "-ffp-contract=off",
+    "-fno-fast-math"
+  ],
+  "schema": 1
+}

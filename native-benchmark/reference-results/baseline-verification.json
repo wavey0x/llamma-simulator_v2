@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "build_id": "ec88fc2de437fddb96cba1eb6687dd9c6187dcde870be8f845c3e915a6a84ed1",
+  "artifact_hash": "399829815341465566b73f7a4d7570bbe5f5c9e1338adfff832914b4e4f96ae2",
+  "scope": "fixed short replay and AMM fixtures; no parameter sweeps",
+  "windows": 48,
+  "absolute_tolerance": 5e-14,
+  "checks": {
+    "verify.py": "77719cbbd6df4660ea0a78aceb4c78159eec5d8ae7e09516e8e4d30e52e01241",
+    "check.py": "10392cc0e4c1f4b20e1d1cce383814c813494a1c7ea56baacf5c4ed4a39627de"
+  },
+  "maximum_loss_error": 3.774758283725532e-15,
+  "maximum_state_error": 0.0,
+  "state_absolute_tolerance": 1e-10,
+  "repeatability": "bitwise within each backend",
+  "evidence": {
+    "python.json": "dfc442d12bfdb303bb37b8e49b17a23016012163baf2f418a13f712fe8f1c89d",
+    "compiled.json": "3c76d6cdee32910af6ebb2ca626af5db2160e81edb59e1682f9047323ff832c0"
+  }
+}

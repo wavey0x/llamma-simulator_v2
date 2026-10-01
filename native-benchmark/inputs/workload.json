@@ -1,0 +1,2627 @@
+{
+  "markets": {
+    "ETH": {
+      "tasks": [
+        0,
+        3840
+      ],
+      "pairs": [
+        [
+          50,
+          0.001
+        ],
+        [
+          50,
+          0.002
+        ],
+        [
+          50,
+          0.005
+        ],
+        [
+          100,
+          0.001
+        ],
+        [
+          100,
+          0.002
+        ],
+        [
+          100,
+          0.005
+        ],
+        [
+          200,
+          0.001
+        ],
+        [
+          200,
+          0.002
+        ],
+        [
+          200,
+          0.005
+        ],
+        [
+          500,
+          0.001
+        ],
+        [
+          500,
+          0.002
+        ],
+        [
+          500,
+          0.005
+        ]
+      ],
+      "windows": [
+        {
+          "id": "ETH-1639822680",
+          "kind": "ordinary",
+          "offset": 0
+        },
+        {
+          "id": "ETH-1639846860",
+          "kind": "ordinary",
+          "offset": 60
+        },
+        {
+          "id": "ETH-1642209120",
+          "kind": "ordinary",
+          "offset": 120
+        },
+        {
+          "id": "ETH-1644662580",
+          "kind": "ordinary",
+          "offset": 180
+        },
+        {
+          "id": "ETH-1645106820",
+          "kind": "ordinary",
+          "offset": 240
+        },
+        {
+          "id": "ETH-1647020580",
+          "kind": "ordinary",
+          "offset": 300
+        },
+        {
+          "id": "ETH-1647755880",
+          "kind": "ordinary",
+          "offset": 360
+        },
+        {
+          "id": "ETH-1648634220",
+          "kind": "ordinary",
+          "offset": 420
+        },
+        {
+          "id": "ETH-1649379540",
+          "kind": "ordinary",
+          "offset": 480
+        },
+        {
+          "id": "ETH-1649564340",
+          "kind": "ordinary",
+          "offset": 540
+        },
+        {
+          "id": "ETH-1650011160",
+          "kind": "ordinary",
+          "offset": 600
+        },
+        {
+          "id": "ETH-1653216240",
+          "kind": "ordinary",
+          "offset": 660
+        },
+        {
+          "id": "ETH-1655339880",
+          "kind": "ordinary",
+          "offset": 720
+        },
+        {
+          "id": "ETH-1656241740",
+          "kind": "ordinary",
+          "offset": 780
+        },
+        {
+          "id": "ETH-1658880060",
+          "kind": "ordinary",
+          "offset": 840
+        },
+        {
+          "id": "ETH-1660856580",
+          "kind": "ordinary",
+          "offset": 900
+        },
+        {
+          "id": "ETH-1662830700",
+          "kind": "ordinary",
+          "offset": 960
+        },
+        {
+          "id": "ETH-1662867300",
+          "kind": "ordinary",
+          "offset": 1020
+        },
+        {
+          "id": "ETH-1664633880",
+          "kind": "ordinary",
+          "offset": 1080
+        },
+        {
+          "id": "ETH-1666483260",
+          "kind": "ordinary",
+          "offset": 1140
+        },
+        {
+          "id": "ETH-1666958100",
+          "kind": "ordinary",
+          "offset": 1200
+        },
+        {
+          "id": "ETH-1668956820",
+          "kind": "ordinary",
+          "offset": 1260
+        },
+        {
+          "id": "ETH-1669232880",
+          "kind": "ordinary",
+          "offset": 1320
+        },
+        {
+          "id": "ETH-1670027100",
+          "kind": "ordinary",
+          "offset": 1380
+        },
+        {
+          "id": "ETH-1671050100",
+          "kind": "ordinary",
+          "offset": 1440
+        },
+        {
+          "id": "ETH-1672466640",
+          "kind": "ordinary",
+          "offset": 1500
+        },
+        {
+          "id": "ETH-1672988580",
+          "kind": "ordinary",
+          "offset": 1560
+        },
+        {
+          "id": "ETH-1673338200",
+          "kind": "ordinary",
+          "offset": 1620
+        },
+        {
+          "id": "ETH-1673459700",
+          "kind": "ordinary",
+          "offset": 1680
+        },
+        {
+          "id": "ETH-1673667660",
+          "kind": "ordinary",
+          "offset": 1740
+        },
+        {
+          "id": "ETH-1674929220",
+          "kind": "ordinary",
+          "offset": 1800
+        },
+        {
+          "id": "ETH-1676438160",
+          "kind": "ordinary",
+          "offset": 1860
+        },
+        {
+          "id": "ETH-1680012000",
+          "kind": "ordinary",
+          "offset": 1920
+        },
+        {
+          "id": "ETH-1680420720",
+          "kind": "ordinary",
+          "offset": 1980
+        },
+        {
+          "id": "ETH-1680863400",
+          "kind": "ordinary",
+          "offset": 2040
+        },
+        {
+          "id": "ETH-1681543500",
+          "kind": "ordinary",
+          "offset": 2100
+        },
+        {
+          "id": "ETH-1681848900",
+          "kind": "ordinary",
+          "offset": 2160
+        },
+        {
+          "id": "ETH-1681881900",
+          "kind": "ordinary",
+          "offset": 2220
+        },
+        {
+          "id": "ETH-1682320920",
+          "kind": "ordinary",
+          "offset": 2280
+        },
+        {
+          "id": "ETH-1682720460",
+          "kind": "ordinary",
+          "offset": 2340
+        },
+        {
+          "id": "ETH-1682809020",
+          "kind": "ordinary",
+          "offset": 2400
+        },
+        {
+          "id": "ETH-1683103260",
+          "kind": "ordinary",
+          "offset": 2460
+        },
+        {
+          "id": "ETH-1683907680",
+          "kind": "ordinary",
+          "offset": 2520
+        },
+        {
+          "id": "ETH-1683929760",
+          "kind": "ordinary",
+          "offset": 2580
+        },
+        {
+          "id": "ETH-1683952260",
+          "kind": "ordinary",
+          "offset": 2640
+        },
+        {
+          "id": "ETH-1685246640",
+          "kind": "ordinary",
+          "offset": 2700
+        },
+        {
+          "id": "ETH-1686325980",
+          "kind": "ordinary",
+          "offset": 2760
+        },
+        {
+          "id": "ETH-1686871680",
+          "kind": "ordinary",
+          "offset": 2820
+        },
+        {
+          "id": "ETH-1687766640",
+          "kind": "ordinary",
+          "offset": 2880
+        },
+        {
+          "id": "ETH-1687775880",
+          "kind": "ordinary",
+          "offset": 2940
+        },
+        {
+          "id": "ETH-1688389800",
+          "kind": "ordinary",
+          "offset": 3000
+        },
+        {
+          "id": "ETH-1689556200",
+          "kind": "ordinary",
+          "offset": 3060
+        },
+        {
+          "id": "ETH-1690175040",
+          "kind": "ordinary",
+          "offset": 3120
+        },
+        {
+          "id": "ETH-1690901340",
+          "kind": "ordinary",
+          "offset": 3180
+        },
+        {
+          "id": "ETH-1690912500",
+          "kind": "ordinary",
+          "offset": 3240
+        },
+        {
+          "id": "ETH-1691528520",
+          "kind": "ordinary",
+          "offset": 3300
+        },
+        {
+          "id": "ETH-1691798760",
+          "kind": "ordinary",
+          "offset": 3360
+        },
+        {
+          "id": "ETH-1692639240",
+          "kind": "ordinary",
+          "offset": 3420
+        },
+        {
+          "id": "ETH-1693004760",
+          "kind": "ordinary",
+          "offset": 3480
+        },
+        {
+          "id": "ETH-1693870080",
+          "kind": "ordinary",
+          "offset": 3540
+        },
+        {
+          "id": "ETH-1694549580",
+          "kind": "ordinary",
+          "offset": 3600
+        },
+        {
+          "id": "ETH-1695503340",
+          "kind": "ordinary",
+          "offset": 3660
+        },
+        {
+          "id": "ETH-1696352100",
+          "kind": "ordinary",
+          "offset": 3720
+        },
+        {
+          "id": "ETH-1697951340",
+          "kind": "ordinary",
+          "offset": 3780
+        },
+        {
+          "id": "ETH-1698255540",
+          "kind": "ordinary",
+          "offset": 3840
+        },
+        {
+          "id": "ETH-1699094940",
+          "kind": "ordinary",
+          "offset": 3900
+        },
+        {
+          "id": "ETH-1699741800",
+          "kind": "ordinary",
+          "offset": 3960
+        },
+        {
+          "id": "ETH-1701931320",
+          "kind": "ordinary",
+          "offset": 4020
+        },
+        {
+          "id": "ETH-1702404060",
+          "kind": "ordinary",
+          "offset": 4080
+        },
+        {
+          "id": "ETH-1703095680",
+          "kind": "ordinary",
+          "offset": 4140
+        },
+        {
+          "id": "ETH-1703496240",
+          "kind": "ordinary",
+          "offset": 4200
+        },
+        {
+          "id": "ETH-1705635120",
+          "kind": "ordinary",
+          "offset": 4260
+        },
+        {
+          "id": "ETH-1707427620",
+          "kind": "ordinary",
+          "offset": 4320
+        },
+        {
+          "id": "ETH-1713520140",
+          "kind": "ordinary",
+          "offset": 4380
+        },
+        {
+          "id": "ETH-1714403160",
+          "kind": "ordinary",
+          "offset": 4440
+        },
+        {
+          "id": "ETH-1714496580",
+          "kind": "ordinary",
+          "offset": 4500
+        },
+        {
+          "id": "ETH-1715454180",
+          "kind": "ordinary",
+          "offset": 4560
+        },
+        {
+          "id": "ETH-1716420360",
+          "kind": "ordinary",
+          "offset": 4620
+        },
+        {
+          "id": "ETH-1717261440",
+          "kind": "ordinary",
+          "offset": 4680
+        },
+        {
+          "id": "ETH-1719215100",
+          "kind": "ordinary",
+          "offset": 4740
+        },
+        {
+          "id": "ETH-1720244700",
+          "kind": "ordinary",
+          "offset": 4800
+        },
+        {
+          "id": "ETH-1721434680",
+          "kind": "ordinary",
+          "offset": 4860
+        },
+        {
+          "id": "ETH-1724275080",
+          "kind": "ordinary",
+          "offset": 4920
+        },
+        {
+          "id": "ETH-1726297980",
+          "kind": "ordinary",
+          "offset": 4980
+        },
+        {
+          "id": "ETH-1726367760",
+          "kind": "ordinary",
+          "offset": 5040
+        },
+        {
+          "id": "ETH-1726766100",
+          "kind": "ordinary",
+          "offset": 5100
+        },
+        {
+          "id": "ETH-1726835280",
+          "kind": "ordinary",
+          "offset": 5160
+        },
+        {
+          "id": "ETH-1728897300",
+          "kind": "ordinary",
+          "offset": 5220
+        },
+        {
+          "id": "ETH-1729397220",
+          "kind": "ordinary",
+          "offset": 5280
+        },
+        {
+          "id": "ETH-1730334900",
+          "kind": "ordinary",
+          "offset": 5340
+        },
+        {
+          "id": "ETH-1731150720",
+          "kind": "ordinary",
+          "offset": 5400
+        },
+        {
+          "id": "ETH-1731757320",
+          "kind": "ordinary",
+          "offset": 5460
+        },
+        {
+          "id": "ETH-1733436120",
+          "kind": "ordinary",
+          "offset": 5520
+        },
+        {
+          "id": "ETH-1733742540",
+          "kind": "ordinary",
+          "offset": 5580
+        },
+        {
+          "id": "ETH-1734066900",
+          "kind": "ordinary",
+          "offset": 5640
+        },
+        {
+          "id": "ETH-1734367560",
+          "kind": "ordinary",
+          "offset": 5700
+        },
+        {
+          "id": "ETH-1736863080",
+          "kind": "ordinary",
+          "offset": 5760
+        },
+        {
+          "id": "ETH-1737045540",
+          "kind": "ordinary",
+          "offset": 5820
+        },
+        {
+          "id": "ETH-1742273280",
+          "kind": "ordinary",
+          "offset": 5880
+        },
+        {
+          "id": "ETH-1745982720",
+          "kind": "ordinary",
+          "offset": 5940
+        },
+        {
+          "id": "ETH-1746042720",
+          "kind": "ordinary",
+          "offset": 6000
+        },
+        {
+          "id": "ETH-1747447260",
+          "kind": "ordinary",
+          "offset": 6060
+        },
+        {
+          "id": "ETH-1747639920",
+          "kind": "ordinary",
+          "offset": 6120
+        },
+        {
+          "id": "ETH-1748535720",
+          "kind": "ordinary",
+          "offset": 6180
+        },
+        {
+          "id": "ETH-1748706660",
+          "kind": "ordinary",
+          "offset": 6240
+        },
+        {
+          "id": "ETH-1748864280",
+          "kind": "ordinary",
+          "offset": 6300
+        },
+        {
+          "id": "ETH-1749452640",
+          "kind": "ordinary",
+          "offset": 6360
+        },
+        {
+          "id": "ETH-1749642660",
+          "kind": "ordinary",
+          "offset": 6420
+        },
+        {
+          "id": "ETH-1750590480",
+          "kind": "ordinary",
+          "offset": 6480
+        },
+        {
+          "id": "ETH-1751405700",
+          "kind": "ordinary",
+          "offset": 6540
+        },
+        {
+          "id": "ETH-1752199320",
+          "kind": "ordinary",
+          "offset": 6600
+        },
+        {
+          "id": "ETH-1752336180",
+          "kind": "ordinary",
+          "offset": 6660
+        },
+        {
+          "id": "ETH-1753143660",
+          "kind": "ordinary",
+          "offset": 6720
+        },
+        {
+          "id": "ETH-1753448820",
+          "kind": "ordinary",
+          "offset": 6780
+        },
+        {
+          "id": "ETH-1753960140",
+          "kind": "ordinary",
+          "offset": 6840
+        },
+        {
+          "id": "ETH-1754978040",
+          "kind": "ordinary",
+          "offset": 6900
+        },
+        {
+          "id": "ETH-1755148980",
+          "kind": "ordinary",
+          "offset": 6960
+        },
+        {
+          "id": "ETH-1756501680",
+          "kind": "ordinary",
+          "offset": 7020
+        },
+        {
+          "id": "ETH-1756521720",
+          "kind": "ordinary",
+          "offset": 7080
+        },
+        {
+          "id": "ETH-1757886240",
+          "kind": "ordinary",
+          "offset": 7140
+        },
+        {
+          "id": "ETH-1758476400",
+          "kind": "ordinary",
+          "offset": 7200
+        },
+        {
+          "id": "ETH-1758483420",
+          "kind": "ordinary",
+          "offset": 7260
+        },
+        {
+          "id": "ETH-1760032500",
+          "kind": "ordinary",
+          "offset": 7320
+        },
+        {
+          "id": "ETH-1761359820",
+          "kind": "ordinary",
+          "offset": 7380
+        },
+        {
+          "id": "ETH-1762522440",
+          "kind": "ordinary",
+          "offset": 7440
+        },
+        {
+          "id": "ETH-1763131980",
+          "kind": "ordinary",
+          "offset": 7500
+        },
+        {
+          "id": "ETH-1763655840",
+          "kind": "ordinary",
+          "offset": 7560
+        },
+        {
+          "id": "ETH-1764314400",
+          "kind": "ordinary",
+          "offset": 7620
+        },
+        {
+          "id": "ETH-1638594780",
+          "kind": "stress",
+          "offset": 7680
+        },
+        {
+          "id": "ETH-1642805760",
+          "kind": "stress",
+          "offset": 7740
+        },
+        {
+          "id": "ETH-1652276040",
+          "kind": "stress",
+          "offset": 7800
+        },
+        {
+          "id": "ETH-1652331360",
+          "kind": "stress",
+          "offset": 7860
+        },
+        {
+          "id": "ETH-1655315100",
+          "kind": "stress",
+          "offset": 7920
+        },
+        {
+          "id": "ETH-1655586660",
+          "kind": "stress",
+          "offset": 7980
+        },
+        {
+          "id": "ETH-1655633100",
+          "kind": "stress",
+          "offset": 8040
+        },
+        {
+          "id": "ETH-1657714500",
+          "kind": "stress",
+          "offset": 8100
+        },
+        {
+          "id": "ETH-1657987140",
+          "kind": "stress",
+          "offset": 8160
+        },
+        {
+          "id": "ETH-1663071300",
+          "kind": "stress",
+          "offset": 8220
+        },
+        {
+          "id": "ETH-1663782300",
+          "kind": "stress",
+          "offset": 8280
+        },
+        {
+          "id": "ETH-1665663300",
+          "kind": "stress",
+          "offset": 8340
+        },
+        {
+          "id": "ETH-1666716300",
+          "kind": "stress",
+          "offset": 8400
+        },
+        {
+          "id": "ETH-1667935140",
+          "kind": "stress",
+          "offset": 8460
+        },
+        {
+          "id": "ETH-1668086100",
+          "kind": "stress",
+          "offset": 8520
+        },
+        {
+          "id": "ETH-1668177120",
+          "kind": "stress",
+          "offset": 8580
+        },
+        {
+          "id": "ETH-1670937300",
+          "kind": "stress",
+          "offset": 8640
+        },
+        {
+          "id": "ETH-1696197720",
+          "kind": "stress",
+          "offset": 8700
+        },
+        {
+          "id": "ETH-1702259820",
+          "kind": "stress",
+          "offset": 8760
+        },
+        {
+          "id": "ETH-1709140560",
+          "kind": "stress",
+          "offset": 8820
+        },
+        {
+          "id": "ETH-1709667720",
+          "kind": "stress",
+          "offset": 8880
+        },
+        {
+          "id": "ETH-1712946000",
+          "kind": "stress",
+          "offset": 8940
+        },
+        {
+          "id": "ETH-1713037920",
+          "kind": "stress",
+          "offset": 9000
+        },
+        {
+          "id": "ETH-1716493500",
+          "kind": "stress",
+          "offset": 9060
+        },
+        {
+          "id": "ETH-1722819300",
+          "kind": "stress",
+          "offset": 9120
+        },
+        {
+          "id": "ETH-1733777400",
+          "kind": "stress",
+          "offset": 9180
+        },
+        {
+          "id": "ETH-1738547520",
+          "kind": "stress",
+          "offset": 9240
+        },
+        {
+          "id": "ETH-1740932640",
+          "kind": "stress",
+          "offset": 9300
+        },
+        {
+          "id": "ETH-1741698720",
+          "kind": "stress",
+          "offset": 9360
+        },
+        {
+          "id": "ETH-1747597500",
+          "kind": "stress",
+          "offset": 9420
+        },
+        {
+          "id": "ETH-1750540140",
+          "kind": "stress",
+          "offset": 9480
+        },
+        {
+          "id": "ETH-1760130360",
+          "kind": "stress",
+          "offset": 9540
+        }
+      ],
+      "provenance": {
+        "sha256": "bb47d7e4e04541a736cb366f6c53acc6dd0db8f15dbc56b437b49166971a6fd0",
+        "rows": 2149199,
+        "first": 1635724800,
+        "last": 1764681480,
+        "oracle": "revision-specific 600-second EMA"
+      }
+    },
+    "BTC": {
+      "tasks": [
+        3840,
+        7680
+      ],
+      "pairs": [
+        [
+          50,
+          0.001
+        ],
+        [
+          50,
+          0.002
+        ],
+        [
+          50,
+          0.005
+        ],
+        [
+          100,
+          0.001
+        ],
+        [
+          100,
+          0.002
+        ],
+        [
+          100,
+          0.005
+        ],
+        [
+          200,
+          0.001
+        ],
+        [
+          200,
+          0.002
+        ],
+        [
+          200,
+          0.005
+        ],
+        [
+          500,
+          0.001
+        ],
+        [
+          500,
+          0.002
+        ],
+        [
+          500,
+          0.005
+        ]
+      ],
+      "windows": [
+        {
+          "id": "BTC-1637775540",
+          "kind": "ordinary",
+          "offset": 9600
+        },
+        {
+          "id": "BTC-1638968760",
+          "kind": "ordinary",
+          "offset": 9660
+        },
+        {
+          "id": "BTC-1640417580",
+          "kind": "ordinary",
+          "offset": 9720
+        },
+        {
+          "id": "BTC-1642181280",
+          "kind": "ordinary",
+          "offset": 9780
+        },
+        {
+          "id": "BTC-1642553940",
+          "kind": "ordinary",
+          "offset": 9840
+        },
+        {
+          "id": "BTC-1642869780",
+          "kind": "ordinary",
+          "offset": 9900
+        },
+        {
+          "id": "BTC-1645534140",
+          "kind": "ordinary",
+          "offset": 9960
+        },
+        {
+          "id": "BTC-1645985040",
+          "kind": "ordinary",
+          "offset": 10020
+        },
+        {
+          "id": "BTC-1647304200",
+          "kind": "ordinary",
+          "offset": 10080
+        },
+        {
+          "id": "BTC-1649279520",
+          "kind": "ordinary",
+          "offset": 10140
+        },
+        {
+          "id": "BTC-1650181140",
+          "kind": "ordinary",
+          "offset": 10200
+        },
+        {
+          "id": "BTC-1651105800",
+          "kind": "ordinary",
+          "offset": 10260
+        },
+        {
+          "id": "BTC-1651343220",
+          "kind": "ordinary",
+          "offset": 10320
+        },
+        {
+          "id": "BTC-1652480640",
+          "kind": "ordinary",
+          "offset": 10380
+        },
+        {
+          "id": "BTC-1652877720",
+          "kind": "ordinary",
+          "offset": 10440
+        },
+        {
+          "id": "BTC-1654358460",
+          "kind": "ordinary",
+          "offset": 10500
+        },
+        {
+          "id": "BTC-1654594020",
+          "kind": "ordinary",
+          "offset": 10560
+        },
+        {
+          "id": "BTC-1657866000",
+          "kind": "ordinary",
+          "offset": 10620
+        },
+        {
+          "id": "BTC-1658070360",
+          "kind": "ordinary",
+          "offset": 10680
+        },
+        {
+          "id": "BTC-1659020460",
+          "kind": "ordinary",
+          "offset": 10740
+        },
+        {
+          "id": "BTC-1659220260",
+          "kind": "ordinary",
+          "offset": 10800
+        },
+        {
+          "id": "BTC-1659411660",
+          "kind": "ordinary",
+          "offset": 10860
+        },
+        {
+          "id": "BTC-1659813840",
+          "kind": "ordinary",
+          "offset": 10920
+        },
+        {
+          "id": "BTC-1659824880",
+          "kind": "ordinary",
+          "offset": 10980
+        },
+        {
+          "id": "BTC-1661023020",
+          "kind": "ordinary",
+          "offset": 11040
+        },
+        {
+          "id": "BTC-1661295840",
+          "kind": "ordinary",
+          "offset": 11100
+        },
+        {
+          "id": "BTC-1661747940",
+          "kind": "ordinary",
+          "offset": 11160
+        },
+        {
+          "id": "BTC-1662054900",
+          "kind": "ordinary",
+          "offset": 11220
+        },
+        {
+          "id": "BTC-1662638100",
+          "kind": "ordinary",
+          "offset": 11280
+        },
+        {
+          "id": "BTC-1663759380",
+          "kind": "ordinary",
+          "offset": 11340
+        },
+        {
+          "id": "BTC-1664795040",
+          "kind": "ordinary",
+          "offset": 11400
+        },
+        {
+          "id": "BTC-1665611700",
+          "kind": "ordinary",
+          "offset": 11460
+        },
+        {
+          "id": "BTC-1666036080",
+          "kind": "ordinary",
+          "offset": 11520
+        },
+        {
+          "id": "BTC-1666835700",
+          "kind": "ordinary",
+          "offset": 11580
+        },
+        {
+          "id": "BTC-1666987800",
+          "kind": "ordinary",
+          "offset": 11640
+        },
+        {
+          "id": "BTC-1667730900",
+          "kind": "ordinary",
+          "offset": 11700
+        },
+        {
+          "id": "BTC-1668825660",
+          "kind": "ordinary",
+          "offset": 11760
+        },
+        {
+          "id": "BTC-1669407840",
+          "kind": "ordinary",
+          "offset": 11820
+        },
+        {
+          "id": "BTC-1669608120",
+          "kind": "ordinary",
+          "offset": 11880
+        },
+        {
+          "id": "BTC-1671573840",
+          "kind": "ordinary",
+          "offset": 11940
+        },
+        {
+          "id": "BTC-1675061580",
+          "kind": "ordinary",
+          "offset": 12000
+        },
+        {
+          "id": "BTC-1675587120",
+          "kind": "ordinary",
+          "offset": 12060
+        },
+        {
+          "id": "BTC-1676070180",
+          "kind": "ordinary",
+          "offset": 12120
+        },
+        {
+          "id": "BTC-1677467580",
+          "kind": "ordinary",
+          "offset": 12180
+        },
+        {
+          "id": "BTC-1678577340",
+          "kind": "ordinary",
+          "offset": 12240
+        },
+        {
+          "id": "BTC-1681017360",
+          "kind": "ordinary",
+          "offset": 12300
+        },
+        {
+          "id": "BTC-1681052220",
+          "kind": "ordinary",
+          "offset": 12360
+        },
+        {
+          "id": "BTC-1682317020",
+          "kind": "ordinary",
+          "offset": 12420
+        },
+        {
+          "id": "BTC-1683443700",
+          "kind": "ordinary",
+          "offset": 12480
+        },
+        {
+          "id": "BTC-1683747000",
+          "kind": "ordinary",
+          "offset": 12540
+        },
+        {
+          "id": "BTC-1684586400",
+          "kind": "ordinary",
+          "offset": 12600
+        },
+        {
+          "id": "BTC-1684739640",
+          "kind": "ordinary",
+          "offset": 12660
+        },
+        {
+          "id": "BTC-1684901820",
+          "kind": "ordinary",
+          "offset": 12720
+        },
+        {
+          "id": "BTC-1685052120",
+          "kind": "ordinary",
+          "offset": 12780
+        },
+        {
+          "id": "BTC-1689004980",
+          "kind": "ordinary",
+          "offset": 12840
+        },
+        {
+          "id": "BTC-1690859700",
+          "kind": "ordinary",
+          "offset": 12900
+        },
+        {
+          "id": "BTC-1690889700",
+          "kind": "ordinary",
+          "offset": 12960
+        },
+        {
+          "id": "BTC-1691592000",
+          "kind": "ordinary",
+          "offset": 13020
+        },
+        {
+          "id": "BTC-1692136200",
+          "kind": "ordinary",
+          "offset": 13080
+        },
+        {
+          "id": "BTC-1692300480",
+          "kind": "ordinary",
+          "offset": 13140
+        },
+        {
+          "id": "BTC-1692594660",
+          "kind": "ordinary",
+          "offset": 13200
+        },
+        {
+          "id": "BTC-1692689700",
+          "kind": "ordinary",
+          "offset": 13260
+        },
+        {
+          "id": "BTC-1693968000",
+          "kind": "ordinary",
+          "offset": 13320
+        },
+        {
+          "id": "BTC-1694440200",
+          "kind": "ordinary",
+          "offset": 13380
+        },
+        {
+          "id": "BTC-1695357360",
+          "kind": "ordinary",
+          "offset": 13440
+        },
+        {
+          "id": "BTC-1696119180",
+          "kind": "ordinary",
+          "offset": 13500
+        },
+        {
+          "id": "BTC-1696811460",
+          "kind": "ordinary",
+          "offset": 13560
+        },
+        {
+          "id": "BTC-1697106540",
+          "kind": "ordinary",
+          "offset": 13620
+        },
+        {
+          "id": "BTC-1697110080",
+          "kind": "ordinary",
+          "offset": 13680
+        },
+        {
+          "id": "BTC-1697884620",
+          "kind": "ordinary",
+          "offset": 13740
+        },
+        {
+          "id": "BTC-1699129560",
+          "kind": "ordinary",
+          "offset": 13800
+        },
+        {
+          "id": "BTC-1701292260",
+          "kind": "ordinary",
+          "offset": 13860
+        },
+        {
+          "id": "BTC-1701942900",
+          "kind": "ordinary",
+          "offset": 13920
+        },
+        {
+          "id": "BTC-1701958020",
+          "kind": "ordinary",
+          "offset": 13980
+        },
+        {
+          "id": "BTC-1702308780",
+          "kind": "ordinary",
+          "offset": 14040
+        },
+        {
+          "id": "BTC-1704853500",
+          "kind": "ordinary",
+          "offset": 14100
+        },
+        {
+          "id": "BTC-1706794440",
+          "kind": "ordinary",
+          "offset": 14160
+        },
+        {
+          "id": "BTC-1706838240",
+          "kind": "ordinary",
+          "offset": 14220
+        },
+        {
+          "id": "BTC-1707102000",
+          "kind": "ordinary",
+          "offset": 14280
+        },
+        {
+          "id": "BTC-1707330780",
+          "kind": "ordinary",
+          "offset": 14340
+        },
+        {
+          "id": "BTC-1708525860",
+          "kind": "ordinary",
+          "offset": 14400
+        },
+        {
+          "id": "BTC-1708808940",
+          "kind": "ordinary",
+          "offset": 14460
+        },
+        {
+          "id": "BTC-1708965600",
+          "kind": "ordinary",
+          "offset": 14520
+        },
+        {
+          "id": "BTC-1710202260",
+          "kind": "ordinary",
+          "offset": 14580
+        },
+        {
+          "id": "BTC-1711130040",
+          "kind": "ordinary",
+          "offset": 14640
+        },
+        {
+          "id": "BTC-1715263980",
+          "kind": "ordinary",
+          "offset": 14700
+        },
+        {
+          "id": "BTC-1715307360",
+          "kind": "ordinary",
+          "offset": 14760
+        },
+        {
+          "id": "BTC-1716454020",
+          "kind": "ordinary",
+          "offset": 14820
+        },
+        {
+          "id": "BTC-1717761120",
+          "kind": "ordinary",
+          "offset": 14880
+        },
+        {
+          "id": "BTC-1717931580",
+          "kind": "ordinary",
+          "offset": 14940
+        },
+        {
+          "id": "BTC-1720159620",
+          "kind": "ordinary",
+          "offset": 15000
+        },
+        {
+          "id": "BTC-1720769760",
+          "kind": "ordinary",
+          "offset": 15060
+        },
+        {
+          "id": "BTC-1720921620",
+          "kind": "ordinary",
+          "offset": 15120
+        },
+        {
+          "id": "BTC-1723264200",
+          "kind": "ordinary",
+          "offset": 15180
+        },
+        {
+          "id": "BTC-1723451820",
+          "kind": "ordinary",
+          "offset": 15240
+        },
+        {
+          "id": "BTC-1725694740",
+          "kind": "ordinary",
+          "offset": 15300
+        },
+        {
+          "id": "BTC-1725944100",
+          "kind": "ordinary",
+          "offset": 15360
+        },
+        {
+          "id": "BTC-1727457780",
+          "kind": "ordinary",
+          "offset": 15420
+        },
+        {
+          "id": "BTC-1727562540",
+          "kind": "ordinary",
+          "offset": 15480
+        },
+        {
+          "id": "BTC-1727990460",
+          "kind": "ordinary",
+          "offset": 15540
+        },
+        {
+          "id": "BTC-1728055440",
+          "kind": "ordinary",
+          "offset": 15600
+        },
+        {
+          "id": "BTC-1729915140",
+          "kind": "ordinary",
+          "offset": 15660
+        },
+        {
+          "id": "BTC-1731099480",
+          "kind": "ordinary",
+          "offset": 15720
+        },
+        {
+          "id": "BTC-1731253680",
+          "kind": "ordinary",
+          "offset": 15780
+        },
+        {
+          "id": "BTC-1731350340",
+          "kind": "ordinary",
+          "offset": 15840
+        },
+        {
+          "id": "BTC-1732378080",
+          "kind": "ordinary",
+          "offset": 15900
+        },
+        {
+          "id": "BTC-1735994460",
+          "kind": "ordinary",
+          "offset": 15960
+        },
+        {
+          "id": "BTC-1737012540",
+          "kind": "ordinary",
+          "offset": 16020
+        },
+        {
+          "id": "BTC-1737245940",
+          "kind": "ordinary",
+          "offset": 16080
+        },
+        {
+          "id": "BTC-1738359480",
+          "kind": "ordinary",
+          "offset": 16140
+        },
+        {
+          "id": "BTC-1738870440",
+          "kind": "ordinary",
+          "offset": 16200
+        },
+        {
+          "id": "BTC-1739323680",
+          "kind": "ordinary",
+          "offset": 16260
+        },
+        {
+          "id": "BTC-1739412540",
+          "kind": "ordinary",
+          "offset": 16320
+        },
+        {
+          "id": "BTC-1740046200",
+          "kind": "ordinary",
+          "offset": 16380
+        },
+        {
+          "id": "BTC-1741593900",
+          "kind": "ordinary",
+          "offset": 16440
+        },
+        {
+          "id": "BTC-1744016640",
+          "kind": "ordinary",
+          "offset": 16500
+        },
+        {
+          "id": "BTC-1745391420",
+          "kind": "ordinary",
+          "offset": 16560
+        },
+        {
+          "id": "BTC-1746985800",
+          "kind": "ordinary",
+          "offset": 16620
+        },
+        {
+          "id": "BTC-1747819500",
+          "kind": "ordinary",
+          "offset": 16680
+        },
+        {
+          "id": "BTC-1748000820",
+          "kind": "ordinary",
+          "offset": 16740
+        },
+        {
+          "id": "BTC-1748459100",
+          "kind": "ordinary",
+          "offset": 16800
+        },
+        {
+          "id": "BTC-1750538700",
+          "kind": "ordinary",
+          "offset": 16860
+        },
+        {
+          "id": "BTC-1750827180",
+          "kind": "ordinary",
+          "offset": 16920
+        },
+        {
+          "id": "BTC-1753627620",
+          "kind": "ordinary",
+          "offset": 16980
+        },
+        {
+          "id": "BTC-1754277300",
+          "kind": "ordinary",
+          "offset": 17040
+        },
+        {
+          "id": "BTC-1756398540",
+          "kind": "ordinary",
+          "offset": 17100
+        },
+        {
+          "id": "BTC-1759081860",
+          "kind": "ordinary",
+          "offset": 17160
+        },
+        {
+          "id": "BTC-1759106940",
+          "kind": "ordinary",
+          "offset": 17220
+        },
+        {
+          "id": "BTC-1635961500",
+          "kind": "stress",
+          "offset": 17280
+        },
+        {
+          "id": "BTC-1638594780",
+          "kind": "stress",
+          "offset": 17340
+        },
+        {
+          "id": "BTC-1645732260",
+          "kind": "stress",
+          "offset": 17400
+        },
+        {
+          "id": "BTC-1647399420",
+          "kind": "stress",
+          "offset": 17460
+        },
+        {
+          "id": "BTC-1651762380",
+          "kind": "stress",
+          "offset": 17520
+        },
+        {
+          "id": "BTC-1652276040",
+          "kind": "stress",
+          "offset": 17580
+        },
+        {
+          "id": "BTC-1653944520",
+          "kind": "stress",
+          "offset": 17640
+        },
+        {
+          "id": "BTC-1655315100",
+          "kind": "stress",
+          "offset": 17700
+        },
+        {
+          "id": "BTC-1655534160",
+          "kind": "stress",
+          "offset": 17760
+        },
+        {
+          "id": "BTC-1657714500",
+          "kind": "stress",
+          "offset": 17820
+        },
+        {
+          "id": "BTC-1660890180",
+          "kind": "stress",
+          "offset": 17880
+        },
+        {
+          "id": "BTC-1663071300",
+          "kind": "stress",
+          "offset": 17940
+        },
+        {
+          "id": "BTC-1663782300",
+          "kind": "stress",
+          "offset": 18000
+        },
+        {
+          "id": "BTC-1665663300",
+          "kind": "stress",
+          "offset": 18060
+        },
+        {
+          "id": "BTC-1667935140",
+          "kind": "stress",
+          "offset": 18120
+        },
+        {
+          "id": "BTC-1668086100",
+          "kind": "stress",
+          "offset": 18180
+        },
+        {
+          "id": "BTC-1668177120",
+          "kind": "stress",
+          "offset": 18240
+        },
+        {
+          "id": "BTC-1673529300",
+          "kind": "stress",
+          "offset": 18300
+        },
+        {
+          "id": "BTC-1692307680",
+          "kind": "stress",
+          "offset": 18360
+        },
+        {
+          "id": "BTC-1698099960",
+          "kind": "stress",
+          "offset": 18420
+        },
+        {
+          "id": "BTC-1702259880",
+          "kind": "stress",
+          "offset": 18480
+        },
+        {
+          "id": "BTC-1702559700",
+          "kind": "stress",
+          "offset": 18540
+        },
+        {
+          "id": "BTC-1704282840",
+          "kind": "stress",
+          "offset": 18600
+        },
+        {
+          "id": "BTC-1704418380",
+          "kind": "stress",
+          "offset": 18660
+        },
+        {
+          "id": "BTC-1704834000",
+          "kind": "stress",
+          "offset": 18720
+        },
+        {
+          "id": "BTC-1709140560",
+          "kind": "stress",
+          "offset": 18780
+        },
+        {
+          "id": "BTC-1709667720",
+          "kind": "stress",
+          "offset": 18840
+        },
+        {
+          "id": "BTC-1709911020",
+          "kind": "stress",
+          "offset": 18900
+        },
+        {
+          "id": "BTC-1713038160",
+          "kind": "stress",
+          "offset": 18960
+        },
+        {
+          "id": "BTC-1722819300",
+          "kind": "stress",
+          "offset": 19020
+        },
+        {
+          "id": "BTC-1733436780",
+          "kind": "stress",
+          "offset": 19080
+        },
+        {
+          "id": "BTC-1760130240",
+          "kind": "stress",
+          "offset": 19140
+        }
+      ],
+      "provenance": {
+        "sha256": "0ce886a2d0157d83b27e7b6707db6b1b067185ee8da8bd0fd191f0cd94ef0265",
+        "rows": 2091732,
+        "first": 1635724800,
+        "last": 1761233460,
+        "oracle": "revision-specific 600-second EMA",
+        "source": "upstream f18e123:data/BTCUSDT/BTCUSDT-1m-binance.json.gz",
+        "denomination": "USDT per BTC; USD proxy, matching upstream BTC/USD setup"
+      }
+    },
+    "LP": {
+      "tasks": [
+        7680,
+        11520
+      ],
+      "pairs": [
+        [
+          100,
+          0.001
+        ],
+        [
+          100,
+          0.003
+        ],
+        [
+          100,
+          0.01
+        ],
+        [
+          400,
+          0.001
+        ],
+        [
+          400,
+          0.003
+        ],
+        [
+          400,
+          0.01
+        ],
+        [
+          440,
+          0.001
+        ],
+        [
+          440,
+          0.003
+        ],
+        [
+          440,
+          0.00909090909090909
+        ],
+        [
+          500,
+          0.001
+        ],
+        [
+          500,
+          0.003
+        ],
+        [
+          500,
+          0.008
+        ]
+      ],
+      "windows": [
+        {
+          "id": "LP-1742645640",
+          "kind": "ordinary",
+          "offset": 19200
+        },
+        {
+          "id": "LP-1742877480",
+          "kind": "ordinary",
+          "offset": 19260
+        },
+        {
+          "id": "LP-1742990940",
+          "kind": "ordinary",
+          "offset": 19320
+        },
+        {
+          "id": "LP-1743641520",
+          "kind": "ordinary",
+          "offset": 19380
+        },
+        {
+          "id": "LP-1743669300",
+          "kind": "ordinary",
+          "offset": 19440
+        },
+        {
+          "id": "LP-1743977460",
+          "kind": "ordinary",
+          "offset": 19500
+        },
+        {
+          "id": "LP-1744030860",
+          "kind": "ordinary",
+          "offset": 19560
+        },
+        {
+          "id": "LP-1745561340",
+          "kind": "ordinary",
+          "offset": 19620
+        },
+        {
+          "id": "LP-1745731320",
+          "kind": "ordinary",
+          "offset": 19680
+        },
+        {
+          "id": "LP-1745923800",
+          "kind": "ordinary",
+          "offset": 19740
+        },
+        {
+          "id": "LP-1746723720",
+          "kind": "ordinary",
+          "offset": 19800
+        },
+        {
+          "id": "LP-1747936860",
+          "kind": "ordinary",
+          "offset": 19860
+        },
+        {
+          "id": "LP-1748545920",
+          "kind": "ordinary",
+          "offset": 19920
+        },
+        {
+          "id": "LP-1749032760",
+          "kind": "ordinary",
+          "offset": 19980
+        },
+        {
+          "id": "LP-1749170520",
+          "kind": "ordinary",
+          "offset": 20040
+        },
+        {
+          "id": "LP-1749405120",
+          "kind": "ordinary",
+          "offset": 20100
+        },
+        {
+          "id": "LP-1749765000",
+          "kind": "ordinary",
+          "offset": 20160
+        },
+        {
+          "id": "LP-1749769680",
+          "kind": "ordinary",
+          "offset": 20220
+        },
+        {
+          "id": "LP-1750592340",
+          "kind": "ordinary",
+          "offset": 20280
+        },
+        {
+          "id": "LP-1750861020",
+          "kind": "ordinary",
+          "offset": 20340
+        },
+        {
+          "id": "LP-1750867740",
+          "kind": "ordinary",
+          "offset": 20400
+        },
+        {
+          "id": "LP-1751365020",
+          "kind": "ordinary",
+          "offset": 20460
+        },
+        {
+          "id": "LP-1751400000",
+          "kind": "ordinary",
+          "offset": 20520
+        },
+        {
+          "id": "LP-1751426160",
+          "kind": "ordinary",
+          "offset": 20580
+        },
+        {
+          "id": "LP-1751750700",
+          "kind": "ordinary",
+          "offset": 20640
+        },
+        {
+          "id": "LP-1751835060",
+          "kind": "ordinary",
+          "offset": 20700
+        },
+        {
+          "id": "LP-1751974620",
+          "kind": "ordinary",
+          "offset": 20760
+        },
+        {
+          "id": "LP-1752071160",
+          "kind": "ordinary",
+          "offset": 20820
+        },
+        {
+          "id": "LP-1752500760",
+          "kind": "ordinary",
+          "offset": 20880
+        },
+        {
+          "id": "LP-1752533520",
+          "kind": "ordinary",
+          "offset": 20940
+        },
+        {
+          "id": "LP-1752542640",
+          "kind": "ordinary",
+          "offset": 21000
+        },
+        {
+          "id": "LP-1752581100",
+          "kind": "ordinary",
+          "offset": 21060
+        },
+        {
+          "id": "LP-1752859860",
+          "kind": "ordinary",
+          "offset": 21120
+        },
+        {
+          "id": "LP-1753802040",
+          "kind": "ordinary",
+          "offset": 21180
+        },
+        {
+          "id": "LP-1753888080",
+          "kind": "ordinary",
+          "offset": 21240
+        },
+        {
+          "id": "LP-1753982100",
+          "kind": "ordinary",
+          "offset": 21300
+        },
+        {
+          "id": "LP-1754351280",
+          "kind": "ordinary",
+          "offset": 21360
+        },
+        {
+          "id": "LP-1754970240",
+          "kind": "ordinary",
+          "offset": 21420
+        },
+        {
+          "id": "LP-1755168960",
+          "kind": "ordinary",
+          "offset": 21480
+        },
+        {
+          "id": "LP-1755552960",
+          "kind": "ordinary",
+          "offset": 21540
+        },
+        {
+          "id": "LP-1756080600",
+          "kind": "ordinary",
+          "offset": 21600
+        },
+        {
+          "id": "LP-1756427100",
+          "kind": "ordinary",
+          "offset": 21660
+        },
+        {
+          "id": "LP-1757772180",
+          "kind": "ordinary",
+          "offset": 21720
+        },
+        {
+          "id": "LP-1757859720",
+          "kind": "ordinary",
+          "offset": 21780
+        },
+        {
+          "id": "LP-1758095160",
+          "kind": "ordinary",
+          "offset": 21840
+        },
+        {
+          "id": "LP-1758411540",
+          "kind": "ordinary",
+          "offset": 21900
+        },
+        {
+          "id": "LP-1758446280",
+          "kind": "ordinary",
+          "offset": 21960
+        },
+        {
+          "id": "LP-1759200780",
+          "kind": "ordinary",
+          "offset": 22020
+        },
+        {
+          "id": "LP-1759558320",
+          "kind": "ordinary",
+          "offset": 22080
+        },
+        {
+          "id": "LP-1760025060",
+          "kind": "ordinary",
+          "offset": 22140
+        },
+        {
+          "id": "LP-1760303700",
+          "kind": "ordinary",
+          "offset": 22200
+        },
+        {
+          "id": "LP-1760873880",
+          "kind": "ordinary",
+          "offset": 22260
+        },
+        {
+          "id": "LP-1761236940",
+          "kind": "ordinary",
+          "offset": 22320
+        },
+        {
+          "id": "LP-1761354180",
+          "kind": "ordinary",
+          "offset": 22380
+        },
+        {
+          "id": "LP-1761473880",
+          "kind": "ordinary",
+          "offset": 22440
+        },
+        {
+          "id": "LP-1762124040",
+          "kind": "ordinary",
+          "offset": 22500
+        },
+        {
+          "id": "LP-1762270080",
+          "kind": "ordinary",
+          "offset": 22560
+        },
+        {
+          "id": "LP-1762981620",
+          "kind": "ordinary",
+          "offset": 22620
+        },
+        {
+          "id": "LP-1763368380",
+          "kind": "ordinary",
+          "offset": 22680
+        },
+        {
+          "id": "LP-1763629080",
+          "kind": "ordinary",
+          "offset": 22740
+        },
+        {
+          "id": "LP-1764015720",
+          "kind": "ordinary",
+          "offset": 22800
+        },
+        {
+          "id": "LP-1764507300",
+          "kind": "ordinary",
+          "offset": 22860
+        },
+        {
+          "id": "LP-1764722580",
+          "kind": "ordinary",
+          "offset": 22920
+        },
+        {
+          "id": "LP-1764766620",
+          "kind": "ordinary",
+          "offset": 22980
+        },
+        {
+          "id": "LP-1765427280",
+          "kind": "ordinary",
+          "offset": 23040
+        },
+        {
+          "id": "LP-1765445280",
+          "kind": "ordinary",
+          "offset": 23100
+        },
+        {
+          "id": "LP-1765775880",
+          "kind": "ordinary",
+          "offset": 23160
+        },
+        {
+          "id": "LP-1765927800",
+          "kind": "ordinary",
+          "offset": 23220
+        },
+        {
+          "id": "LP-1766223840",
+          "kind": "ordinary",
+          "offset": 23280
+        },
+        {
+          "id": "LP-1767394140",
+          "kind": "ordinary",
+          "offset": 23340
+        },
+        {
+          "id": "LP-1767714240",
+          "kind": "ordinary",
+          "offset": 23400
+        },
+        {
+          "id": "LP-1767729720",
+          "kind": "ordinary",
+          "offset": 23460
+        },
+        {
+          "id": "LP-1768089540",
+          "kind": "ordinary",
+          "offset": 23520
+        },
+        {
+          "id": "LP-1768417560",
+          "kind": "ordinary",
+          "offset": 23580
+        },
+        {
+          "id": "LP-1768616940",
+          "kind": "ordinary",
+          "offset": 23640
+        },
+        {
+          "id": "LP-1769168640",
+          "kind": "ordinary",
+          "offset": 23700
+        },
+        {
+          "id": "LP-1770182280",
+          "kind": "ordinary",
+          "offset": 23760
+        },
+        {
+          "id": "LP-1770196380",
+          "kind": "ordinary",
+          "offset": 23820
+        },
+        {
+          "id": "LP-1770322080",
+          "kind": "ordinary",
+          "offset": 23880
+        },
+        {
+          "id": "LP-1770355440",
+          "kind": "ordinary",
+          "offset": 23940
+        },
+        {
+          "id": "LP-1770564420",
+          "kind": "ordinary",
+          "offset": 24000
+        },
+        {
+          "id": "LP-1770639900",
+          "kind": "ordinary",
+          "offset": 24060
+        },
+        {
+          "id": "LP-1770848280",
+          "kind": "ordinary",
+          "offset": 24120
+        },
+        {
+          "id": "LP-1772506860",
+          "kind": "ordinary",
+          "offset": 24180
+        },
+        {
+          "id": "LP-1773666420",
+          "kind": "ordinary",
+          "offset": 24240
+        },
+        {
+          "id": "LP-1773669540",
+          "kind": "ordinary",
+          "offset": 24300
+        },
+        {
+          "id": "LP-1773734460",
+          "kind": "ordinary",
+          "offset": 24360
+        },
+        {
+          "id": "LP-1774429260",
+          "kind": "ordinary",
+          "offset": 24420
+        },
+        {
+          "id": "LP-1774731240",
+          "kind": "ordinary",
+          "offset": 24480
+        },
+        {
+          "id": "LP-1775165880",
+          "kind": "ordinary",
+          "offset": 24540
+        },
+        {
+          "id": "LP-1775962560",
+          "kind": "ordinary",
+          "offset": 24600
+        },
+        {
+          "id": "LP-1776536220",
+          "kind": "ordinary",
+          "offset": 24660
+        },
+        {
+          "id": "LP-1776729300",
+          "kind": "ordinary",
+          "offset": 24720
+        },
+        {
+          "id": "LP-1778484840",
+          "kind": "ordinary",
+          "offset": 24780
+        },
+        {
+          "id": "LP-1778668140",
+          "kind": "ordinary",
+          "offset": 24840
+        },
+        {
+          "id": "LP-1779248760",
+          "kind": "ordinary",
+          "offset": 24900
+        },
+        {
+          "id": "LP-1779409800",
+          "kind": "ordinary",
+          "offset": 24960
+        },
+        {
+          "id": "LP-1779482160",
+          "kind": "ordinary",
+          "offset": 25020
+        },
+        {
+          "id": "LP-1779727320",
+          "kind": "ordinary",
+          "offset": 25080
+        },
+        {
+          "id": "LP-1780073460",
+          "kind": "ordinary",
+          "offset": 25140
+        },
+        {
+          "id": "LP-1780431300",
+          "kind": "ordinary",
+          "offset": 25200
+        },
+        {
+          "id": "LP-1780496220",
+          "kind": "ordinary",
+          "offset": 25260
+        },
+        {
+          "id": "LP-1780933680",
+          "kind": "ordinary",
+          "offset": 25320
+        },
+        {
+          "id": "LP-1781136240",
+          "kind": "ordinary",
+          "offset": 25380
+        },
+        {
+          "id": "LP-1781395980",
+          "kind": "ordinary",
+          "offset": 25440
+        },
+        {
+          "id": "LP-1781942280",
+          "kind": "ordinary",
+          "offset": 25500
+        },
+        {
+          "id": "LP-1781947740",
+          "kind": "ordinary",
+          "offset": 25560
+        },
+        {
+          "id": "LP-1782056880",
+          "kind": "ordinary",
+          "offset": 25620
+        },
+        {
+          "id": "LP-1782128520",
+          "kind": "ordinary",
+          "offset": 25680
+        },
+        {
+          "id": "LP-1782168420",
+          "kind": "ordinary",
+          "offset": 25740
+        },
+        {
+          "id": "LP-1782355260",
+          "kind": "ordinary",
+          "offset": 25800
+        },
+        {
+          "id": "LP-1782487560",
+          "kind": "ordinary",
+          "offset": 25860
+        },
+        {
+          "id": "LP-1782715920",
+          "kind": "ordinary",
+          "offset": 25920
+        },
+        {
+          "id": "LP-1782783360",
+          "kind": "ordinary",
+          "offset": 25980
+        },
+        {
+          "id": "LP-1783335840",
+          "kind": "ordinary",
+          "offset": 26040
+        },
+        {
+          "id": "LP-1783439700",
+          "kind": "ordinary",
+          "offset": 26100
+        },
+        {
+          "id": "LP-1784188140",
+          "kind": "ordinary",
+          "offset": 26160
+        },
+        {
+          "id": "LP-1784680860",
+          "kind": "ordinary",
+          "offset": 26220
+        },
+        {
+          "id": "LP-1785150180",
+          "kind": "ordinary",
+          "offset": 26280
+        },
+        {
+          "id": "LP-1785358860",
+          "kind": "ordinary",
+          "offset": 26340
+        },
+        {
+          "id": "LP-1785538200",
+          "kind": "ordinary",
+          "offset": 26400
+        },
+        {
+          "id": "LP-1785716880",
+          "kind": "ordinary",
+          "offset": 26460
+        },
+        {
+          "id": "LP-1786068360",
+          "kind": "ordinary",
+          "offset": 26520
+        },
+        {
+          "id": "LP-1786658940",
+          "kind": "ordinary",
+          "offset": 26580
+        },
+        {
+          "id": "LP-1786684980",
+          "kind": "ordinary",
+          "offset": 26640
+        },
+        {
+          "id": "LP-1786863480",
+          "kind": "ordinary",
+          "offset": 26700
+        },
+        {
+          "id": "LP-1787875080",
+          "kind": "ordinary",
+          "offset": 26760
+        },
+        {
+          "id": "LP-1788101100",
+          "kind": "ordinary",
+          "offset": 26820
+        },
+        {
+          "id": "LP-1742484360",
+          "kind": "stress",
+          "offset": 26880
+        },
+        {
+          "id": "LP-1742519280",
+          "kind": "stress",
+          "offset": 26940
+        },
+        {
+          "id": "LP-1744104240",
+          "kind": "stress",
+          "offset": 27000
+        },
+        {
+          "id": "LP-1744305120",
+          "kind": "stress",
+          "offset": 27060
+        },
+        {
+          "id": "LP-1750901880",
+          "kind": "stress",
+          "offset": 27120
+        },
+        {
+          "id": "LP-1752760980",
+          "kind": "stress",
+          "offset": 27180
+        },
+        {
+          "id": "LP-1759201560",
+          "kind": "stress",
+          "offset": 27240
+        },
+        {
+          "id": "LP-1760946360",
+          "kind": "stress",
+          "offset": 27300
+        },
+        {
+          "id": "LP-1761525300",
+          "kind": "stress",
+          "offset": 27360
+        },
+        {
+          "id": "LP-1761860100",
+          "kind": "stress",
+          "offset": 27420
+        },
+        {
+          "id": "LP-1761977520",
+          "kind": "stress",
+          "offset": 27480
+        },
+        {
+          "id": "LP-1762177320",
+          "kind": "stress",
+          "offset": 27540
+        },
+        {
+          "id": "LP-1762547460",
+          "kind": "stress",
+          "offset": 27600
+        },
+        {
+          "id": "LP-1762785780",
+          "kind": "stress",
+          "offset": 27660
+        },
+        {
+          "id": "LP-1764858300",
+          "kind": "stress",
+          "offset": 27720
+        },
+        {
+          "id": "LP-1765002720",
+          "kind": "stress",
+          "offset": 27780
+        },
+        {
+          "id": "LP-1765228020",
+          "kind": "stress",
+          "offset": 27840
+        },
+        {
+          "id": "LP-1767908100",
+          "kind": "stress",
+          "offset": 27900
+        },
+        {
+          "id": "LP-1769871180",
+          "kind": "stress",
+          "offset": 27960
+        },
+        {
+          "id": "LP-1769943840",
+          "kind": "stress",
+          "offset": 28020
+        },
+        {
+          "id": "LP-1770007380",
+          "kind": "stress",
+          "offset": 28080
+        },
+        {
+          "id": "LP-1770107460",
+          "kind": "stress",
+          "offset": 28140
+        },
+        {
+          "id": "LP-1770358500",
+          "kind": "stress",
+          "offset": 28200
+        },
+        {
+          "id": "LP-1770964140",
+          "kind": "stress",
+          "offset": 28260
+        },
+        {
+          "id": "LP-1771233240",
+          "kind": "stress",
+          "offset": 28320
+        },
+        {
+          "id": "LP-1772439060",
+          "kind": "stress",
+          "offset": 28380
+        },
+        {
+          "id": "LP-1773389220",
+          "kind": "stress",
+          "offset": 28440
+        },
+        {
+          "id": "LP-1773684540",
+          "kind": "stress",
+          "offset": 28500
+        },
+        {
+          "id": "LP-1773895800",
+          "kind": "stress",
+          "offset": 28560
+        },
+        {
+          "id": "LP-1774277040",
+          "kind": "stress",
+          "offset": 28620
+        },
+        {
+          "id": "LP-1778581860",
+          "kind": "stress",
+          "offset": 28680
+        },
+        {
+          "id": "LP-1779437280",
+          "kind": "stress",
+          "offset": 28740
+        }
+      ],
+      "provenance": {
+        "sha256": "135cede458ca491a87bdce8449dbd2519c9a800c4b41e3146724c068aa2f20cb",
+        "rows": 760648,
+        "first": 1742480760,
+        "last": 1788119580,
+        "oracle": "supplied causal oracle; crvUSD spot / USD oracle"
+      }
+    }
+  },
+  "windows": 11520,
+  "candles": 518400,
+  "horizons": [
+    30,
+    60
+  ],
+  "columns": [
+    "A",
+    "fee",
+    "start",
+    "end",
+    "bands",
+    "external_fee",
+    "dynamic_multiplier",
+    "unused"
+  ],
+  "preparation_seconds": 0.07033249991945922,
+  "curve_pipeline_seconds": 8.450516916112974,
+  "frozen_inputs_sha256": "ead84cc64c98dc9f3fc32cb9336ab3778d91b1fe6f041cf671f90611eacb8690",
+  "protocol_sha256": "5f56ab48ea635465e03646e0dc7506233d9284c3ae5db182840264657a09f6f7",
+  "files": {
+    "prices.npy": "5fb64d7b53c7de9dee3fb08ae7b94e066f24b6cf1fc75cfa3e5683a436bdcc13",
+    "tasks.npy": "85aaf7b0da3304464247f48bb44edcb254c87fbd6d54ef1ba77268732ba627cd"
+  },
+  "initialization": "Upstream default: each independent synthetic window starts with zero exchange memory",
+  "scope": "Fixed historical replay; no parameter selection, calibration, V2 rescaling or new sampling"
+}

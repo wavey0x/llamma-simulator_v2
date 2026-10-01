@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "modules": {
+    "simulator.amm.lending_amm": "native-declarations/simulator/amm/lending_amm.pxd",
+    "simulator.amm.simulator": "native-declarations/simulator/amm/simulator.pxd"
+  },
+  "directives": {
+    "language_level": 3,
+    "annotation_typing": false,
+    "infer_types": null
+  }
+}

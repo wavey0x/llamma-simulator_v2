@@ -1,0 +1,203 @@
+{
+  "seed": 20261001,
+  "ordinary": 128,
+  "stress": 32,
+  "minutes": 30,
+  "bands": 4,
+  "external_fee": 0.0005,
+  "dynamic_fee_multiplier": 0.25,
+  "position_shift": 0,
+  "score_statistic": "mean of worst ceil(5% * 128) = 7 ordinary windows",
+  "stress_selection": "16 largest open-close moves + 16 largest candle ranges; distinct UTC days; window starts 15 minutes earlier",
+  "pairs": {
+    "ETH": [
+      [
+        50,
+        0.001
+      ],
+      [
+        50,
+        0.002
+      ],
+      [
+        50,
+        0.005
+      ],
+      [
+        100,
+        0.001
+      ],
+      [
+        100,
+        0.002
+      ],
+      [
+        100,
+        0.005
+      ],
+      [
+        200,
+        0.001
+      ],
+      [
+        200,
+        0.002
+      ],
+      [
+        200,
+        0.005
+      ],
+      [
+        500,
+        0.001
+      ],
+      [
+        500,
+        0.002
+      ],
+      [
+        500,
+        0.005
+      ]
+    ],
+    "LP": [
+      [
+        100,
+        0.001
+      ],
+      [
+        100,
+        0.003
+      ],
+      [
+        100,
+        0.01
+      ],
+      [
+        400,
+        0.001
+      ],
+      [
+        400,
+        0.003
+      ],
+      [
+        400,
+        0.01
+      ],
+      [
+        440,
+        0.001
+      ],
+      [
+        440,
+        0.003
+      ],
+      [
+        440,
+        0.00909090909090909
+      ],
+      [
+        500,
+        0.001
+      ],
+      [
+        500,
+        0.003
+      ],
+      [
+        500,
+        0.008
+      ]
+    ],
+    "BTC": [
+      [
+        50,
+        0.001
+      ],
+      [
+        50,
+        0.002
+      ],
+      [
+        50,
+        0.005
+      ],
+      [
+        100,
+        0.001
+      ],
+      [
+        100,
+        0.002
+      ],
+      [
+        100,
+        0.005
+      ],
+      [
+        200,
+        0.001
+      ],
+      [
+        200,
+        0.002
+      ],
+      [
+        200,
+        0.005
+      ],
+      [
+        500,
+        0.001
+      ],
+      [
+        500,
+        0.002
+      ],
+      [
+        500,
+        0.005
+      ]
+    ]
+  },
+  "data": {
+    "ETH": {
+      "sha256": "bb47d7e4e04541a736cb366f6c53acc6dd0db8f15dbc56b437b49166971a6fd0",
+      "rows": 2149199,
+      "first": 1635724800,
+      "last": 1764681480,
+      "oracle": "revision-specific 600-second EMA"
+    },
+    "LP": {
+      "sha256": "135cede458ca491a87bdce8449dbd2519c9a800c4b41e3146724c068aa2f20cb",
+      "rows": 760648,
+      "first": 1742480760,
+      "last": 1788119580,
+      "oracle": "supplied causal oracle; crvUSD spot / USD oracle"
+    },
+    "BTC": {
+      "sha256": "0ce886a2d0157d83b27e7b6707db6b1b067185ee8da8bd0fd191f0cd94ef0265",
+      "rows": 2091732,
+      "first": 1635724800,
+      "last": 1761233460,
+      "oracle": "revision-specific 600-second EMA",
+      "source": "upstream f18e123:data/BTCUSDT/BTCUSDT-1m-binance.json.gz",
+      "denomination": "USDT per BTC; USD proxy, matching upstream BTC/USD setup"
+    }
+  },
+  "inputs_sha256": "ead84cc64c98dc9f3fc32cb9336ab3778d91b1fe6f041cf671f90611eacb8690",
+  "python": "3.11.15",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "extension": {
+    "market": "BTC",
+    "seed": 20261001,
+    "existing_windows_unchanged": true,
+    "fixed_comparison": {
+      "A": 500,
+      "fee": 0.001
+    },
+    "new_impact_replays": 21120,
+    "reused_impact_replays": 21760
+  }
+}
