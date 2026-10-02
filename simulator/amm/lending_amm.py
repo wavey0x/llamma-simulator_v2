@@ -103,9 +103,9 @@ def _ratio_square(A):
 class BandBalances:
     """Integer band balances with dense trading buffers and sparse overflow.
 
-    Missing reads insert zero, as with defaultdict(float). Dense bands record
-    whether they are represented, and the lowest and highest such band, so
-    valuation can visit the original key set in ascending order.
+    Missing reads insert zero, as with defaultdict(float). Presence flags and
+    conservative bounds let valuation visit represented bands in ascending order.
+    Deletion can leave the bounds wider than the remaining keys until clear().
     """
 
     def __init__(self):
@@ -397,7 +397,7 @@ class LendingAMM:
             price = self.p_oracle
         else:
             price = p_oracle
-        return _cube(price) / self.p_top(n_band)**2
+        return _cube(price) / self.p_top(n_band) ** 2
 
     def p_up(self, n_band, p_oracle: float | None = None):
         """
@@ -407,7 +407,7 @@ class LendingAMM:
             price = self.p_oracle
         else:
             price = p_oracle
-        return _cube(price) / self.p_top(n_band + 1)**2
+        return _cube(price) / self.p_top(n_band + 1) ** 2
 
     def p_top(self, n):
         # Prices which show start and end of band when p_oracle = p
@@ -479,9 +479,9 @@ class LendingAMM:
             band = n
         return self._get_f(value, self.p_top(band))
 
-    def _get_f(self, value, p_top):
+    def _get_f(self, y0, p_top):
         p_oracle = self.p_oracle
-        return value * p_oracle**2 / p_top * self.A
+        return y0 * p_oracle**2 / p_top * self.A
 
     def get_g(self, y0=None, n=None):
         if y0 is None:
@@ -494,9 +494,9 @@ class LendingAMM:
             band = n
         return self._get_g(value, self.p_top(band))
 
-    def _get_g(self, value, p_top):
+    def _get_g(self, y0, p_top):
         p_oracle = self.p_oracle
-        return value * p_top / p_oracle * (self.A - 1)
+        return y0 * p_top / p_oracle * (self.A - 1)
 
     def get_p(self, y0=None):
         return self._trade_prices(y0)[0]
@@ -752,7 +752,9 @@ class LendingAMM:
     def get_all_y(self):
         total = 0.0
         x, y = self.bands_x, self.bands_y
-        for i in range(min(x.lowest, y.lowest), min(max(x.highest, y.highest), 499) + 1):
+        n1 = min(x.lowest, y.lowest)
+        n2 = min(max(x.highest, y.highest), 499)
+        for i in range(n1, n2 + 1):
             if x.has(i) or y.has(i):
                 total += self.get_y_up(i)
         return total
@@ -760,7 +762,9 @@ class LendingAMM:
     def get_all_x(self):
         total = 0.0
         x, y = self.bands_x, self.bands_y
-        for i in range(min(x.lowest, y.lowest), min(max(x.highest, y.highest), 499) + 1):
+        n1 = min(x.lowest, y.lowest)
+        n2 = min(max(x.highest, y.highest), 499)
+        for i in range(n1, n2 + 1):
             if x.has(i) or y.has(i):
                 total += self.get_x_down(i)
         return total

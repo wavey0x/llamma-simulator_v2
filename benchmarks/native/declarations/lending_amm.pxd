@@ -49,8 +49,7 @@ cdef class LendingAMM:
     cpdef void set_p_oracle(self, double p, timestamp=*)
     @cython.locals(snapshot=OracleSnapshot)
     cpdef (double, double) _observe(self, double p, double timestamp, bint missing=*)
-    @cython.locals(p_oracle=cython.double, oracle_memory_fee=cython.double,
-                   fee_with_memory=cython.double, distance_fee=cython.double)
+    @cython.locals(p_oracle=cython.double, oracle_memory_fee=cython.double)
     cpdef double dynamic_fee(self, long n_band, timestamp=*) except? -1
     @cython.locals(fee_with_memory=cython.double, distance_fee=cython.double)
     cpdef double _dynamic_fee(self, long n_band, double p_oracle, double oracle_memory_fee) except? -1
@@ -63,13 +62,12 @@ cdef class LendingAMM:
     cpdef (double, double) _price_oracle_view(self, timestamp)
     @cython.locals(price=cython.double)
     cpdef (double, double) _price_oracle_at(self, double timestamp)
-    @cython.locals(p_o_up=cython.double, p_c_d=cython.double, band_ratio=cython.double, p_c_u=cython.double)
+    @cython.locals(p_o_up=cython.double, p_c_d=cython.double, p_c_u=cython.double)
     cpdef double _distance_fee(self, double p_oracle, long n_band) except? -1
-    @cython.locals(k=cython.double, p_base=cython.double, price=cython.double)
+    @cython.locals(price=cython.double)
     cpdef double p_down(self, long n_band, p_oracle=*) except? -1
-    @cython.locals(k=cython.double, p_base=cython.double, price=cython.double)
+    @cython.locals(price=cython.double)
     cpdef double p_up(self, long n_band, p_oracle=*) except? -1
-    @cython.locals(k=cython.double)
     cpdef double p_top(self, long n) except? -1
     @cython.locals(k=cython.double)
     cpdef double p_bottom(self, long n) except? -1
@@ -84,19 +82,19 @@ cdef class LendingAMM:
     @cython.locals(A=cython.double, p_o=cython.double,
                    a=cython.double, b=cython.double, D=cython.double)
     cpdef double _get_y0(self, double x, double y, double p_top) except? -1
-    @cython.locals(band=cython.long, value=cython.double, p_top=cython.double, p_oracle=cython.double)
+    @cython.locals(band=cython.long, value=cython.double)
     cpdef double get_f(self, y0=*, n=*) except? -1
-    @cython.locals(band=cython.long, value=cython.double, p_top=cython.double, p_oracle=cython.double)
+    @cython.locals(band=cython.long, value=cython.double)
     cpdef double get_g(self, y0=*, n=*) except? -1
-    cpdef double _get_f(self, double value, double p_top) except? -1
-    cpdef double _get_g(self, double value, double p_top) except? -1
+    cpdef double _get_f(self, double y0, double p_top) except? -1
+    cpdef double _get_g(self, double y0, double p_top) except? -1
     cpdef double get_p(self, y0=*) except? -1
     @cython.locals(price=cython.double, value=cython.double, x=cython.double, y=cython.double, p_top=cython.double,
                    lower_price=cython.double, upper_price=cython.double)
     cpdef (double, double, double) _trade_prices(self, y0=*)
     cpdef void _commit_oracle(self, (double, double) snapshot)
     @cython.locals(x=cython.double, y=cython.double, y0=cython.double, f=cython.double, g=cython.double,
-                   p_o=cython.double, p_top=cython.double, lower_price=cython.double, upper_price=cython.double,
+                   p_top=cython.double, lower_price=cython.double, upper_price=cython.double,
                    current_price=cython.double,
                    dx=cython.double, dy=cython.double, oracle_memory_fee=cython.double, fee=cython.double,
                    snapshot=OracleSnapshot,
@@ -116,9 +114,9 @@ cdef class LendingAMM:
                    f=cython.double, Inv=cython.double, y_o=cython.double, x_o=cython.double)
     cpdef double get_x_down(self, n) except? -1
 
-    @cython.locals(i=cython.long, total=cython.double, x=BandBalances, y=BandBalances)
+    @cython.locals(i=cython.long, n1=cython.long, n2=cython.long, total=cython.double, x=BandBalances, y=BandBalances)
     cpdef double get_all_x(self) except? -1
-    @cython.locals(i=cython.long, total=cython.double, x=BandBalances, y=BandBalances)
+    @cython.locals(i=cython.long, n1=cython.long, n2=cython.long, total=cython.double, x=BandBalances, y=BandBalances)
     cpdef double get_all_y(self) except? -1
 
 @cython.locals(n=cython.long, p_down=cython.double, p_up=cython.double, target=cython.double,

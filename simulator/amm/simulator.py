@@ -469,9 +469,7 @@ def replay_batch(simulator, points, records):
             points[lo:hi, 6],
             int(records[i, 4]),
             float(records[i, 6]),
-            0.0,
-            None,
-            workspace,
-            float(records[i, 5]),
+            workspace=workspace,
+            external_fee_override=float(records[i, 5]),
         )
     return values

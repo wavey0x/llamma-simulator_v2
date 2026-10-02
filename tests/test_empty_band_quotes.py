@@ -24,8 +24,7 @@ class EmptyBandQuoteTest(unittest.TestCase):
         simulator.external_fee = 0.0
         simulator.log_enabled = simulator.verbose = False
         bars = [[0, market, market, market, market, 0]]
-        simulator.calculate_loss(50, fee, bars, [1.0], 1, 0.0,
-                                 initial_state=OracleState(1.0, memory, -30.0))
+        simulator.calculate_loss(50, fee, bars, [1.0], 1, 0.0, initial_state=OracleState(1.0, memory, -30.0))
         return positions[0]
 
     def test_tiny_boundary_exchange_still_writes_oracle_memory(self):

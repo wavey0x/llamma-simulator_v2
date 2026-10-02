@@ -9,8 +9,7 @@ from simulator.amm.simulator import Simulator, replay_batch
 
 
 def observed_state(amm):
-    return (amm.raw_p_oracle, amm.p_oracle, amm.prev_p_oracle,
-            amm.current_timestamp, amm.oracle_state())
+    return (amm.raw_p_oracle, amm.p_oracle, amm.prev_p_oracle, amm.current_timestamp, amm.oracle_state())
 
 
 class OracleBoundaryTest(unittest.TestCase):
@@ -70,8 +69,7 @@ class OracleBoundaryTest(unittest.TestCase):
         sim.external_fee = 0.0005
         records = np.array([[100, 0.003, 0, 2, 4, 0.0005, 0.25, 0]], dtype=float)
         for timestamp in (-float("inf"), float("inf"), float("nan"), 30.0):
-            points = np.array([[60, 1, 1.1, 0.9, 1, 0, 1],
-                               [timestamp, 1, 1.1, 0.9, 1, 0, 1]], dtype=float)
+            points = np.array([[60, 1, 1.1, 0.9, 1, 0, 1], [timestamp, 1, 1.1, 0.9, 1, 0, 1]], dtype=float)
             with self.assertRaises(ValueError):
                 replay_batch(sim, points, records)
             with self.assertRaises(ValueError):
