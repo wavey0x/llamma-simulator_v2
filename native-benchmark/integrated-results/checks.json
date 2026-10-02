@@ -1,0 +1,32 @@
+{
+  "source_commit": "37b552e400434cec2a6c10795f6fbb30c2b11e2f",
+  "python_unittest": {
+    "passed": 57
+  },
+  "compiled_unittest": {
+    "passed": 14,
+    "patterns": [
+      "test_native_storage.py",
+      "test_replay_batch.py",
+      "test_band_geometry.py",
+      "test_empty_band_quotes.py",
+      "test_oracle_boundaries.py"
+    ]
+  },
+  "prior_state_comparison": {
+    "reference_commit": "70652405270e0f9b5563d5313a41a37cc6a6400b",
+    "python_cases": 156,
+    "compiled_prefixes": 2436,
+    "bitwise_equal": true
+  },
+  "prior_ordered_outputs": {
+    "arrays": 30,
+    "byte_equal": true
+  },
+  "mismatched_profiling_tool_rejected": true,
+  "source_only": {
+    "commit": "72bb07ebc7d12d8465fd3e0c5e546d19d2378012",
+    "same_generated_and_artifacts": true
+  },
+  "without_pgo_short_gate": "passed"
+}

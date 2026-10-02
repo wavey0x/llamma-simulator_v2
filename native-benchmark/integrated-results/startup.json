@@ -1,0 +1,157 @@
+{
+  "python-1": {
+    "seconds": 0.6611285000108182,
+    "ready": true,
+    "loaded": [
+      {
+        "simulator.amm.lending_amm": "python/simulator/amm/lending_amm.py",
+        "simulator.amm.simulator": "python/simulator/amm/simulator.py"
+      }
+    ]
+  },
+  "cython-1": {
+    "seconds": 0.6726590830367059,
+    "ready": true,
+    "loaded": [
+      {
+        "simulator.amm.lending_amm": "curve/candidate/simulator/amm/lending_amm.cpython-311-darwin.so",
+        "simulator.amm.simulator": "curve/candidate/simulator/amm/simulator.cpython-311-darwin.so"
+      }
+    ]
+  },
+  "fork-python-1": {
+    "seconds": 0.6576102080289274,
+    "ready": true,
+    "loaded": [
+      {
+        "simulator.amm.lending_amm": "python/simulator/amm/lending_amm.py",
+        "simulator.amm.simulator": "python/simulator/amm/simulator.py"
+      }
+    ]
+  },
+  "fork-cython-1": {
+    "seconds": 0.6599436250980943,
+    "ready": true,
+    "loaded": [
+      {
+        "simulator.amm.lending_amm": "curve/candidate/simulator/amm/lending_amm.cpython-311-darwin.so",
+        "simulator.amm.simulator": "curve/candidate/simulator/amm/simulator.cpython-311-darwin.so"
+      }
+    ]
+  },
+  "phil-1": {
+    "seconds": 0.09675270784646273,
+    "ready": true,
+    "loaded": [
+      {
+        "library": "phil/phil.dylib"
+      }
+    ]
+  },
+  "python-4": {
+    "seconds": 0.812726124888286,
+    "ready": true,
+    "loaded": [
+      {
+        "simulator.amm.lending_amm": "python/simulator/amm/lending_amm.py",
+        "simulator.amm.simulator": "python/simulator/amm/simulator.py"
+      },
+      {
+        "simulator.amm.lending_amm": "python/simulator/amm/lending_amm.py",
+        "simulator.amm.simulator": "python/simulator/amm/simulator.py"
+      },
+      {
+        "simulator.amm.lending_amm": "python/simulator/amm/lending_amm.py",
+        "simulator.amm.simulator": "python/simulator/amm/simulator.py"
+      },
+      {
+        "simulator.amm.lending_amm": "python/simulator/amm/lending_amm.py",
+        "simulator.amm.simulator": "python/simulator/amm/simulator.py"
+      }
+    ]
+  },
+  "cython-4": {
+    "seconds": 0.847304750001058,
+    "ready": true,
+    "loaded": [
+      {
+        "simulator.amm.lending_amm": "curve/candidate/simulator/amm/lending_amm.cpython-311-darwin.so",
+        "simulator.amm.simulator": "curve/candidate/simulator/amm/simulator.cpython-311-darwin.so"
+      },
+      {
+        "simulator.amm.lending_amm": "curve/candidate/simulator/amm/lending_amm.cpython-311-darwin.so",
+        "simulator.amm.simulator": "curve/candidate/simulator/amm/simulator.cpython-311-darwin.so"
+      },
+      {
+        "simulator.amm.lending_amm": "curve/candidate/simulator/amm/lending_amm.cpython-311-darwin.so",
+        "simulator.amm.simulator": "curve/candidate/simulator/amm/simulator.cpython-311-darwin.so"
+      },
+      {
+        "simulator.amm.lending_amm": "curve/candidate/simulator/amm/lending_amm.cpython-311-darwin.so",
+        "simulator.amm.simulator": "curve/candidate/simulator/amm/simulator.cpython-311-darwin.so"
+      }
+    ]
+  },
+  "fork-python-4": {
+    "seconds": 0.8860173330176622,
+    "ready": true,
+    "loaded": [
+      {
+        "simulator.amm.lending_amm": "python/simulator/amm/lending_amm.py",
+        "simulator.amm.simulator": "python/simulator/amm/simulator.py"
+      },
+      {
+        "simulator.amm.lending_amm": "python/simulator/amm/lending_amm.py",
+        "simulator.amm.simulator": "python/simulator/amm/simulator.py"
+      },
+      {
+        "simulator.amm.lending_amm": "python/simulator/amm/lending_amm.py",
+        "simulator.amm.simulator": "python/simulator/amm/simulator.py"
+      },
+      {
+        "simulator.amm.lending_amm": "python/simulator/amm/lending_amm.py",
+        "simulator.amm.simulator": "python/simulator/amm/simulator.py"
+      }
+    ]
+  },
+  "fork-cython-4": {
+    "seconds": 0.8618425421882421,
+    "ready": true,
+    "loaded": [
+      {
+        "simulator.amm.lending_amm": "curve/candidate/simulator/amm/lending_amm.cpython-311-darwin.so",
+        "simulator.amm.simulator": "curve/candidate/simulator/amm/simulator.cpython-311-darwin.so"
+      },
+      {
+        "simulator.amm.lending_amm": "curve/candidate/simulator/amm/lending_amm.cpython-311-darwin.so",
+        "simulator.amm.simulator": "curve/candidate/simulator/amm/simulator.cpython-311-darwin.so"
+      },
+      {
+        "simulator.amm.lending_amm": "curve/candidate/simulator/amm/lending_amm.cpython-311-darwin.so",
+        "simulator.amm.simulator": "curve/candidate/simulator/amm/simulator.cpython-311-darwin.so"
+      },
+      {
+        "simulator.amm.lending_amm": "curve/candidate/simulator/amm/lending_amm.cpython-311-darwin.so",
+        "simulator.amm.simulator": "curve/candidate/simulator/amm/simulator.cpython-311-darwin.so"
+      }
+    ]
+  },
+  "phil-4": {
+    "seconds": 0.22075874987058342,
+    "ready": true,
+    "loaded": [
+      {
+        "library": "phil/phil.dylib"
+      },
+      {
+        "library": "phil/phil.dylib"
+      },
+      {
+        "library": "phil/phil.dylib"
+      },
+      {
+        "library": "phil/phil.dylib"
+      }
+    ]
+  }
+}

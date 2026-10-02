@@ -1,0 +1,22 @@
+{
+  "previous": {
+    "median_seconds": 0.10871629160828888,
+    "maximum_error": 4.007905118896815e-14,
+    "repeatable": true
+  },
+  "proposal": {
+    "median_seconds": 0.06494786683470011,
+    "maximum_error": 4.007905118896815e-14,
+    "repeatable": true
+  },
+  "integrated": {
+    "median_seconds": 0.060050375014543536,
+    "maximum_error": 4.007905118896815e-14,
+    "repeatable": true
+  },
+  "phil": {
+    "median_seconds": 0.06192671656608582,
+    "maximum_error": 0.004341049441461298,
+    "repeatable": true
+  }
+}

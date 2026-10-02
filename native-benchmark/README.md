@@ -9,36 +9,33 @@ This kit packages the builder, declarations, frozen inputs and benchmark driver 
 
 ## Starting points
 
-- [Source review branch](https://github.com/wavey0x/llamma-simulator_v2/tree/codex/native-replay-review), pinned at `f60abdfec7cb02c93f5b1c36476fed2137bb0de7`.
+- [Earlier published source review branch](https://github.com/wavey0x/llamma-simulator_v2/tree/codex/native-replay-review), pinned at `f60abdfec7cb02c93f5b1c36476fed2137bb0de7`.
 - [Diff against Curve master](https://github.com/curvefi/llamma-simulator_v2/compare/master...wavey0x:codex/native-replay-review) and [readability/tradeoff review](../benchmarks/native/README.md).
 - Curve baseline: `0bb370f02970c2c1056da8a4faffd0fa9be35575`; Phil baseline: `e9487b9fb5602f2a343f40276508966c1edb526d`.
 
 The candidate already has typed numeric helpers, exact-input caches, numeric band storage and reusable batch state. There is no handwritten replacement of the accounting in C++. The build recipe reuses committed Python files, stages `.pxd` type declarations alongside them, and compiles them. The native declarations are model-specific: a changed field, signature or cache dependency may need review. Reusability does not mean arbitrary future commits will compile unchanged.
 
-The [current results](shared-inputs-results/README.md) show **55.7x the one-worker throughput of Curve Python**, with Phil still **1.87x faster**. The interpreted fork takes **48.0% less time** than Curve Python. The latest change reuses loaded balances and band top in numeric helpers, reducing replay time by about 6% in paired comparisons without adding cache state. Per-market timings, ordered outputs and build identities are included; [previous qualification](optimized-results/README.md) and [original handoff results](reference-results/README.md) remain available separately.
+The [current results](integrated-results/README.md) qualify source `37b552e400434cec2a6c10795f6fbb30c2b11e2f`: **108.1x Curve Python throughput**, approximately matching Phil's replay speed on this host. The integration reduces native replay time by **44.8%** against our previous candidate in a paired comparison. It combines dense band flags, numeric oracle internals and ordinary Python powers with deterministic PGO, while preserving shared band inputs and raw-price guards. The interpreted fork remains faster than Curve Python. [Earlier shared-input results](shared-inputs-results/README.md) remain available separately.
 
 ## Reproduce
 
 **Use your own hardware and compiler.** Matching our machine, compiler or absolute timings is not required. Establish local baselines for every backend and compare optimizations on that same machine, keeping your chosen environment stable and recording it with the results.
 
-The packaged scripts record our original environment and currently contain macOS-specific setup. Before running on another target, adapt the compiler/SDK handling in `cython/build.py` and `cython/setup.py`, Phil's shared-library command in `prepare.py`, and host reporting in `bench.py`; record your target in `cython/toolchain.json`. Install `uv` and use the dependency lock. This setup work should leave model logic and frozen benchmark inputs unchanged.
+The packaged scripts record our original environment and currently contain macOS-specific setup. Before running on another target, adapt the compiler/SDK handling in `cython/build.py` and `cython/setup.py`, Phil's shared-library command in `prepare.py`, and host reporting in `bench.py`; record your target and the matching `llvm-profdata` version/hash in `cython/toolchain.json`. Install `uv` and use the dependency lock. This setup work should leave model logic and frozen benchmark inputs unchanged.
 
-Clone the current kit and run from the repository root:
+Run from a checkout containing this kit revision:
 
 ```sh
-git clone --branch codex/native-benchmark-optimized \
-  https://github.com/wavey0x/llamma-simulator_v2.git
-cd llamma-simulator_v2
 uv sync --frozen --project native-benchmark/cython
 PY=native-benchmark/cython/.venv/bin/python
 
 # Once per toolchain: unchanged Curve Python/Cython and pinned Phil C++.
 $PY native-benchmark/prepare.py baseline --output build/benchmark-baseline
 
-# Build the current source-review candidate, then run all five backends.
+# Qualify the current candidate, then run all five backends.
 $PY native-benchmark/prepare.py candidate \
-  --commit f60abdfec7cb02c93f5b1c36476fed2137bb0de7 \
-  --output build/benchmark-001
+  --commit 37b552e400434cec2a6c10795f6fbb30c2b11e2f \
+  --output build/benchmark-001 --reproducibility
 $PY native-benchmark/bench.py run \
   --baseline build/benchmark-baseline --root build/benchmark-001 \
   --output build/results-001 --repeats 5
@@ -49,6 +46,14 @@ Both builds run the existing 48 short parity fixtures. The benchmark reuses thei
 For the next experiment, create your own branch, make one focused change and commit it. Run `$PY -m unittest discover -s tests`, prepare that full commit SHA into `build/benchmark-002`, and benchmark into `build/results-002`. The baseline can be reused while its toolchain stays unchanged. Changes to declarations or the builder also belong in the experiment commit, even though the builder reads them from the current checkout. Run with a clean tracked working tree so both are unambiguous.
 
 The console ends with a timing table. Keep `summary.json` (medians/ranges), `comparison.json` (errors), `timings.json` (trials), `receipt.json` (identities), and the prepared build's `curve/release.json`. Avoid publishing local logs or entire build directories; they can contain local paths. Use `--reproducibility` on preparation when qualifying a release or changing the toolchain, rather than requiring two clean builds for every experiment.
+
+## Deterministic PGO
+
+The native profile enables PGO through one `pgo` setting. The builder compiles an instrumented copy of the pinned source, runs the fixed synthetic workload in `cython/pgo_training.py`, merges its counts with pinned `llvm-profdata`, then compiles the same source using those counts. It never trains on the frozen benchmark inputs or reuses a profile from another revision. Training code, dependencies, tool identity, merged profile and final binaries are recorded in the receipts. Incompatible profiling tools fail explicitly.
+
+To disable PGO for a comparison, copy `cython/profiles/native.json`, set `pgo` to `false`, and pass that file through `prepare.py candidate --profile PATH`. Keep one production native profile; an exact-power diagnostic does not need another normal release variant. Compilation retains `-ffp-contract=off -fno-fast-math` and the existing loss tolerance.
+
+The builder does not rewrite the Python source. Compatible future source commits use the same recipe; a changed typed signature or layout may require a small declaration update. Run the short gate routinely and use the second clean build for release/toolchain qualification. Determinism means repeatability within the recorded environment, not identical results or binaries across arbitrary hosts and compilers.
 
 ## What this measures
 
@@ -65,7 +70,7 @@ Keep the existing `5e-14` absolute loss tolerance; investigate any violation. Th
 3. Prefer small declarations, local reuse and obvious invariants. New cache state or custom storage needs a clear whole-workload win (roughly 10–15% is a useful bar), readable dependencies and targeted reset/invalidation tests.
 4. Report interpreted Python performance as well as compiled performance. The current fork improves both; preserve that advantage and keep looking for ways to simplify `.read()`/`.write()` storage operations.
 
-Do not add a second financial implementation, source-rewriting framework, fast-math, reassociated equations, reduced precision or looser tolerances. Preserve fee charging, oracle write timing, zero-input behavior, replay order and recovery accounting. Avoid removing runtime `pow` merely because a rewrite looks algebraically equivalent: that previously broke numerical parity. Generic Python LRU caches, ordinary dictionary band storage, extra small caches, merging compilation units and aggressive compiler flags were previously unhelpful; revisit only with new evidence.
+Do not add a second financial implementation, source-rewriting framework, fast-math, reassociated equations, reduced precision or looser tolerances. Preserve fee charging, oracle write timing, zero-input behavior, replay order and recovery accounting. The native profile uses `cpow: true` to compile ordinary Python powers as real C math; retain the numerical gate when changing this directive or compiler flags. Generic Python LRU caches, ordinary dictionary band storage, extra small caches, merging compilation units and aggressive compiler flags were previously unhelpful; revisit only with new evidence.
 
 Keep empty-band prechecks on raw prices. A fee-adjusted shortcut passed the market benchmark but skipped tiny exchanges that write oracle memory; `tests/test_empty_band_quotes.py` covers the regression. Targeted checks should follow the behavior being changed, rather than adding fresh parameter sweeps.
 

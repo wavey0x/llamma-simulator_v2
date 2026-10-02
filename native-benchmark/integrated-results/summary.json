@@ -1,0 +1,272 @@
+[
+  {
+    "configuration": "python-1",
+    "market": "ETH",
+    "windows": 3840,
+    "median_seconds": 2.2523730830289423,
+    "min_seconds": 2.2465128749608994,
+    "max_seconds": 2.256313082994893,
+    "windows_per_second": 1704.8685357383386
+  },
+  {
+    "configuration": "python-1",
+    "market": "BTC",
+    "windows": 3840,
+    "median_seconds": 2.2110623330809176,
+    "min_seconds": 2.2055898748803884,
+    "max_seconds": 2.354148417012766,
+    "windows_per_second": 1736.7217298886837
+  },
+  {
+    "configuration": "python-1",
+    "market": "LP",
+    "windows": 3840,
+    "median_seconds": 2.0310254578944296,
+    "min_seconds": 2.016763250110671,
+    "max_seconds": 2.042586165945977,
+    "windows_per_second": 1890.6705403786223
+  },
+  {
+    "configuration": "cython-1",
+    "market": "ETH",
+    "windows": 3840,
+    "median_seconds": 0.836394082987681,
+    "min_seconds": 0.8313665830064565,
+    "max_seconds": 0.8459787911269814,
+    "windows_per_second": 4591.13721403091
+  },
+  {
+    "configuration": "cython-1",
+    "market": "BTC",
+    "windows": 3840,
+    "median_seconds": 0.8152977090794593,
+    "min_seconds": 0.8147979581262916,
+    "max_seconds": 0.8211851669475436,
+    "windows_per_second": 4709.935962331708
+  },
+  {
+    "configuration": "cython-1",
+    "market": "LP",
+    "windows": 3840,
+    "median_seconds": 0.7529836657922715,
+    "min_seconds": 0.7503649168647826,
+    "max_seconds": 0.7544263750314713,
+    "windows_per_second": 5099.712217475054
+  },
+  {
+    "configuration": "fork-python-1",
+    "market": "ETH",
+    "windows": 3840,
+    "median_seconds": 1.1746168329846114,
+    "min_seconds": 1.166183833964169,
+    "max_seconds": 1.3153853749390692,
+    "windows_per_second": 3269.1511752329093
+  },
+  {
+    "configuration": "fork-python-1",
+    "market": "BTC",
+    "windows": 3840,
+    "median_seconds": 1.1130124169867486,
+    "min_seconds": 1.1062226248905063,
+    "max_seconds": 1.146430583205074,
+    "windows_per_second": 3450.0962805033278
+  },
+  {
+    "configuration": "fork-python-1",
+    "market": "LP",
+    "windows": 3840,
+    "median_seconds": 0.6453353748656809,
+    "min_seconds": 0.6445450829342008,
+    "max_seconds": 0.6472326668445021,
+    "windows_per_second": 5950.394398880197
+  },
+  {
+    "configuration": "fork-cython-1",
+    "market": "ETH",
+    "windows": 3840,
+    "median_seconds": 0.023415124975144863,
+    "min_seconds": 0.023182333912700415,
+    "max_seconds": 0.023627292132005095,
+    "windows_per_second": 163996.56222532046
+  },
+  {
+    "configuration": "fork-cython-1",
+    "market": "BTC",
+    "windows": 3840,
+    "median_seconds": 0.022539875004440546,
+    "min_seconds": 0.022306042024865746,
+    "max_seconds": 0.026858249912038445,
+    "windows_per_second": 170364.74245058978
+  },
+  {
+    "configuration": "fork-cython-1",
+    "market": "LP",
+    "windows": 3840,
+    "median_seconds": 0.014146291883662343,
+    "min_seconds": 0.013918083161115646,
+    "max_seconds": 0.01676204102113843,
+    "windows_per_second": 271449.2272306953
+  },
+  {
+    "configuration": "phil-1",
+    "market": "ETH",
+    "windows": 3840,
+    "median_seconds": 0.02228987890703138,
+    "min_seconds": 0.02218591537530301,
+    "max_seconds": 0.02240615234040888,
+    "windows_per_second": 172275.4984904232
+  },
+  {
+    "configuration": "phil-1",
+    "market": "BTC",
+    "windows": 3840,
+    "median_seconds": 0.021603472654533107,
+    "min_seconds": 0.02157517056184588,
+    "max_seconds": 0.022106046875705943,
+    "windows_per_second": 177749.20085332874
+  },
+  {
+    "configuration": "phil-1",
+    "market": "LP",
+    "windows": 3840,
+    "median_seconds": 0.01828863150149118,
+    "min_seconds": 0.01821113803453045,
+    "max_seconds": 0.018451636722602416,
+    "windows_per_second": 209966.502944023
+  },
+  {
+    "configuration": "python-4",
+    "market": "ETH",
+    "windows": 3840,
+    "median_seconds": 0.6196880000643432,
+    "min_seconds": 0.6107447920367122,
+    "max_seconds": 0.64368712506257,
+    "windows_per_second": 6196.666709055665
+  },
+  {
+    "configuration": "python-4",
+    "market": "BTC",
+    "windows": 3840,
+    "median_seconds": 0.5958775840699673,
+    "min_seconds": 0.5908554580528289,
+    "max_seconds": 0.6158506250940263,
+    "windows_per_second": 6444.276647851065
+  },
+  {
+    "configuration": "python-4",
+    "market": "LP",
+    "windows": 3840,
+    "median_seconds": 0.5485784590709955,
+    "min_seconds": 0.5390389580279589,
+    "max_seconds": 0.5713187919463962,
+    "windows_per_second": 6999.910289045889
+  },
+  {
+    "configuration": "cython-4",
+    "market": "ETH",
+    "windows": 3840,
+    "median_seconds": 0.2311592090409249,
+    "min_seconds": 0.22644058312289417,
+    "max_seconds": 0.25544500001706183,
+    "windows_per_second": 16611.92740679502
+  },
+  {
+    "configuration": "cython-4",
+    "market": "BTC",
+    "windows": 3840,
+    "median_seconds": 0.23177425004541874,
+    "min_seconds": 0.22185800014995039,
+    "max_seconds": 0.2386684170924127,
+    "windows_per_second": 16567.84564828711
+  },
+  {
+    "configuration": "cython-4",
+    "market": "LP",
+    "windows": 3840,
+    "median_seconds": 0.2140144999139011,
+    "min_seconds": 0.20052974997088313,
+    "max_seconds": 0.2316560831386596,
+    "windows_per_second": 17942.70949652873
+  },
+  {
+    "configuration": "fork-python-4",
+    "market": "ETH",
+    "windows": 3840,
+    "median_seconds": 0.32448495808057487,
+    "min_seconds": 0.3188824998214841,
+    "max_seconds": 0.34892766596749425,
+    "windows_per_second": 11834.138700033256
+  },
+  {
+    "configuration": "fork-python-4",
+    "market": "BTC",
+    "windows": 3840,
+    "median_seconds": 0.31228108308278024,
+    "min_seconds": 0.30000266595743597,
+    "max_seconds": 0.4487703328486532,
+    "windows_per_second": 12296.614197991888
+  },
+  {
+    "configuration": "fork-python-4",
+    "market": "LP",
+    "windows": 3840,
+    "median_seconds": 0.17596883419901133,
+    "min_seconds": 0.17066954192705452,
+    "max_seconds": 0.1804211661219597,
+    "windows_per_second": 21822.04603149877
+  },
+  {
+    "configuration": "fork-cython-4",
+    "market": "ETH",
+    "windows": 3840,
+    "median_seconds": 0.0078004589304327965,
+    "min_seconds": 0.0072225420735776424,
+    "max_seconds": 0.007914749905467033,
+    "windows_per_second": 492278.72798850096
+  },
+  {
+    "configuration": "fork-cython-4",
+    "market": "BTC",
+    "windows": 3840,
+    "median_seconds": 0.007162666879594326,
+    "min_seconds": 0.006883667083457112,
+    "max_seconds": 0.0074652498587965965,
+    "windows_per_second": 536113.1635117292
+  },
+  {
+    "configuration": "fork-cython-4",
+    "market": "LP",
+    "windows": 3840,
+    "median_seconds": 0.005010625114664435,
+    "min_seconds": 0.004685957916080952,
+    "max_seconds": 0.005505500128492713,
+    "windows_per_second": 766371.4431082851
+  },
+  {
+    "configuration": "phil-4",
+    "market": "ETH",
+    "windows": 3840,
+    "median_seconds": 0.006689022127829958,
+    "min_seconds": 0.006658615908236243,
+    "max_seconds": 0.006885158843942918,
+    "windows_per_second": 574074.9434844173
+  },
+  {
+    "configuration": "phil-4",
+    "market": "BTC",
+    "windows": 3840,
+    "median_seconds": 0.006521372408315074,
+    "min_seconds": 0.006474721347331069,
+    "max_seconds": 0.00701988281798549,
+    "windows_per_second": 588833.1105127211
+  },
+  {
+    "configuration": "phil-4",
+    "market": "LP",
+    "windows": 3840,
+    "median_seconds": 0.005735122409532778,
+    "min_seconds": 0.005453029938507825,
+    "max_seconds": 0.006071938812965527,
+    "windows_per_second": 669558.5073506448
+  }
+]

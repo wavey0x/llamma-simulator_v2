@@ -1,0 +1,56 @@
+[
+  {
+    "seconds": 3.249298125039786,
+    "loops": 1,
+    "max_error": 0.0,
+    "above_tolerance": 0,
+    "repeatable": true,
+    "variant": "previous",
+    "trial": 0
+  },
+  {
+    "seconds": 2.8854194169398397,
+    "loops": 1,
+    "max_error": 0.0,
+    "above_tolerance": 0,
+    "repeatable": true,
+    "variant": "integrated",
+    "trial": 0
+  },
+  {
+    "seconds": 2.891795458039269,
+    "loops": 1,
+    "max_error": 0.0,
+    "above_tolerance": 0,
+    "repeatable": true,
+    "variant": "integrated",
+    "trial": 1
+  },
+  {
+    "seconds": 3.077574457973242,
+    "loops": 1,
+    "max_error": 0.0,
+    "above_tolerance": 0,
+    "repeatable": true,
+    "variant": "previous",
+    "trial": 1
+  },
+  {
+    "seconds": 3.0608667908236384,
+    "loops": 1,
+    "max_error": 0.0,
+    "above_tolerance": 0,
+    "repeatable": true,
+    "variant": "previous",
+    "trial": 2
+  },
+  {
+    "seconds": 2.9068521251901984,
+    "loops": 1,
+    "max_error": 0.0,
+    "above_tolerance": 0,
+    "repeatable": true,
+    "variant": "integrated",
+    "trial": 2
+  }
+]

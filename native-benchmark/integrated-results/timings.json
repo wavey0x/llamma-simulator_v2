@@ -1,0 +1,1502 @@
+[
+  {
+    "trial": 0,
+    "configuration": "python-1",
+    "market": "ETH",
+    "seconds": 2.2465128749608994,
+    "total_seconds": 2.2465128749608994,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-1-ETH.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "python-1",
+    "market": "BTC",
+    "seconds": 2.354148417012766,
+    "total_seconds": 2.354148417012766,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-1-BTC.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "python-1",
+    "market": "LP",
+    "seconds": 2.042586165945977,
+    "total_seconds": 2.042586165945977,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-1-LP.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "cython-1",
+    "market": "ETH",
+    "seconds": 0.8349713748320937,
+    "total_seconds": 0.8349713748320937,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-1-ETH.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "cython-1",
+    "market": "BTC",
+    "seconds": 0.8211851669475436,
+    "total_seconds": 0.8211851669475436,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-1-BTC.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "cython-1",
+    "market": "LP",
+    "seconds": 0.7544263750314713,
+    "total_seconds": 0.7544263750314713,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-1-LP.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "fork-python-1",
+    "market": "ETH",
+    "seconds": 1.3153853749390692,
+    "total_seconds": 1.3153853749390692,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-1-ETH.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "fork-python-1",
+    "market": "BTC",
+    "seconds": 1.1062226248905063,
+    "total_seconds": 1.1062226248905063,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-1-BTC.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "fork-python-1",
+    "market": "LP",
+    "seconds": 0.6453353748656809,
+    "total_seconds": 0.6453353748656809,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-1-LP.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "fork-cython-1",
+    "market": "ETH",
+    "seconds": 0.023431082954630256,
+    "total_seconds": 0.023431082954630256,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-1-ETH.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "fork-cython-1",
+    "market": "BTC",
+    "seconds": 0.026858249912038445,
+    "total_seconds": 0.026858249912038445,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-1-BTC.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "fork-cython-1",
+    "market": "LP",
+    "seconds": 0.014310583006590605,
+    "total_seconds": 0.014310583006590605,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-1-LP.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "phil-1",
+    "market": "ETH",
+    "seconds": 0.02228987890703138,
+    "total_seconds": 0.7132761250250041,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-1-ETH.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "phil-1",
+    "market": "BTC",
+    "seconds": 0.021586595037661027,
+    "total_seconds": 0.6907710412051529,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-1-BTC.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "phil-1",
+    "market": "LP",
+    "seconds": 0.018217822937003803,
+    "total_seconds": 0.5829703339841217,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-1-LP.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "python-4",
+    "market": "ETH",
+    "seconds": 0.6196880000643432,
+    "total_seconds": 0.6196880000643432,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-4-ETH.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "python-4",
+    "market": "BTC",
+    "seconds": 0.5908554580528289,
+    "total_seconds": 0.5908554580528289,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-4-BTC.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "python-4",
+    "market": "LP",
+    "seconds": 0.5485784590709955,
+    "total_seconds": 0.5485784590709955,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-4-LP.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "cython-4",
+    "market": "ETH",
+    "seconds": 0.23256270796991885,
+    "total_seconds": 0.23256270796991885,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-4-ETH.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "cython-4",
+    "market": "BTC",
+    "seconds": 0.23717795801348984,
+    "total_seconds": 0.23717795801348984,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-4-BTC.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "cython-4",
+    "market": "LP",
+    "seconds": 0.2140144999139011,
+    "total_seconds": 0.2140144999139011,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-4-LP.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "fork-python-4",
+    "market": "ETH",
+    "seconds": 0.32448495808057487,
+    "total_seconds": 0.32448495808057487,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-4-ETH.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "fork-python-4",
+    "market": "BTC",
+    "seconds": 0.31228108308278024,
+    "total_seconds": 0.31228108308278024,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-4-BTC.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "fork-python-4",
+    "market": "LP",
+    "seconds": 0.17596883419901133,
+    "total_seconds": 0.17596883419901133,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-4-LP.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "fork-cython-4",
+    "market": "ETH",
+    "seconds": 0.007914749905467033,
+    "total_seconds": 0.007914749905467033,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-4-ETH.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "fork-cython-4",
+    "market": "BTC",
+    "seconds": 0.0074652498587965965,
+    "total_seconds": 0.0074652498587965965,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-4-BTC.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "fork-cython-4",
+    "market": "LP",
+    "seconds": 0.005010625114664435,
+    "total_seconds": 0.005010625114664435,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-4-LP.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "phil-4",
+    "market": "ETH",
+    "seconds": 0.0066662760291364975,
+    "total_seconds": 0.21332083293236792,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-4-ETH.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "phil-4",
+    "market": "BTC",
+    "seconds": 0.006522157564177178,
+    "total_seconds": 0.2087090420536697,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-4-BTC.npy"
+  },
+  {
+    "trial": 0,
+    "configuration": "phil-4",
+    "market": "LP",
+    "seconds": 0.005634347660816275,
+    "total_seconds": 0.1802991251461208,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-4-LP.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "python-1",
+    "market": "BTC",
+    "seconds": 2.2110623330809176,
+    "total_seconds": 2.2110623330809176,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-1-BTC.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "python-1",
+    "market": "LP",
+    "seconds": 2.016763250110671,
+    "total_seconds": 2.016763250110671,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-1-LP.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "python-1",
+    "market": "ETH",
+    "seconds": 2.252733875066042,
+    "total_seconds": 2.252733875066042,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-1-ETH.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "phil-4",
+    "market": "BTC",
+    "seconds": 0.00701988281798549,
+    "total_seconds": 0.22463625017553568,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-4-BTC.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "phil-4",
+    "market": "LP",
+    "seconds": 0.006071938812965527,
+    "total_seconds": 0.19430204201489687,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-4-LP.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "phil-4",
+    "market": "ETH",
+    "seconds": 0.006885158843942918,
+    "total_seconds": 0.22032508300617337,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-4-ETH.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "fork-cython-4",
+    "market": "BTC",
+    "seconds": 0.007387374993413687,
+    "total_seconds": 0.007387374993413687,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-4-BTC.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "fork-cython-4",
+    "market": "LP",
+    "seconds": 0.005505500128492713,
+    "total_seconds": 0.005505500128492713,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-4-LP.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "fork-cython-4",
+    "market": "ETH",
+    "seconds": 0.0072225420735776424,
+    "total_seconds": 0.0072225420735776424,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-4-ETH.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "fork-python-4",
+    "market": "BTC",
+    "seconds": 0.30000266595743597,
+    "total_seconds": 0.30000266595743597,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-4-BTC.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "fork-python-4",
+    "market": "LP",
+    "seconds": 0.17257674993015826,
+    "total_seconds": 0.17257674993015826,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-4-LP.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "fork-python-4",
+    "market": "ETH",
+    "seconds": 0.3211031670216471,
+    "total_seconds": 0.3211031670216471,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-4-ETH.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "cython-4",
+    "market": "BTC",
+    "seconds": 0.23177425004541874,
+    "total_seconds": 0.23177425004541874,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-4-BTC.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "cython-4",
+    "market": "LP",
+    "seconds": 0.20052974997088313,
+    "total_seconds": 0.20052974997088313,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-4-LP.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "cython-4",
+    "market": "ETH",
+    "seconds": 0.22644058312289417,
+    "total_seconds": 0.22644058312289417,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-4-ETH.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "python-4",
+    "market": "BTC",
+    "seconds": 0.6158506250940263,
+    "total_seconds": 0.6158506250940263,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-4-BTC.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "python-4",
+    "market": "LP",
+    "seconds": 0.5713187919463962,
+    "total_seconds": 0.5713187919463962,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-4-LP.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "python-4",
+    "market": "ETH",
+    "seconds": 0.6250846248585731,
+    "total_seconds": 0.6250846248585731,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-4-ETH.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "phil-1",
+    "market": "BTC",
+    "seconds": 0.021603472654533107,
+    "total_seconds": 0.6913111249450594,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-1-BTC.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "phil-1",
+    "market": "LP",
+    "seconds": 0.018451636722602416,
+    "total_seconds": 0.5904523751232773,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-1-LP.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "phil-1",
+    "market": "ETH",
+    "seconds": 0.02218591537530301,
+    "total_seconds": 0.7099492920096964,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-1-ETH.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "fork-cython-1",
+    "market": "BTC",
+    "seconds": 0.022306042024865746,
+    "total_seconds": 0.022306042024865746,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-1-BTC.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "fork-cython-1",
+    "market": "LP",
+    "seconds": 0.014006707817316055,
+    "total_seconds": 0.014006707817316055,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-1-LP.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "fork-cython-1",
+    "market": "ETH",
+    "seconds": 0.023311165859922767,
+    "total_seconds": 0.023311165859922767,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-1-ETH.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "fork-python-1",
+    "market": "BTC",
+    "seconds": 1.1130124169867486,
+    "total_seconds": 1.1130124169867486,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-1-BTC.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "fork-python-1",
+    "market": "LP",
+    "seconds": 0.6456979161594063,
+    "total_seconds": 0.6456979161594063,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-1-LP.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "fork-python-1",
+    "market": "ETH",
+    "seconds": 1.2199342499952763,
+    "total_seconds": 1.2199342499952763,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-1-ETH.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "cython-1",
+    "market": "BTC",
+    "seconds": 0.8147979581262916,
+    "total_seconds": 0.8147979581262916,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-1-BTC.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "cython-1",
+    "market": "LP",
+    "seconds": 0.7503649168647826,
+    "total_seconds": 0.7503649168647826,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-1-LP.npy"
+  },
+  {
+    "trial": 1,
+    "configuration": "cython-1",
+    "market": "ETH",
+    "seconds": 0.8447646670974791,
+    "total_seconds": 0.8447646670974791,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-1-ETH.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "fork-python-1",
+    "market": "LP",
+    "seconds": 0.6445450829342008,
+    "total_seconds": 0.6445450829342008,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-1-LP.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "fork-python-1",
+    "market": "ETH",
+    "seconds": 1.167079292004928,
+    "total_seconds": 1.167079292004928,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-1-ETH.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "fork-python-1",
+    "market": "BTC",
+    "seconds": 1.146430583205074,
+    "total_seconds": 1.146430583205074,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-1-BTC.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "fork-cython-1",
+    "market": "LP",
+    "seconds": 0.014146291883662343,
+    "total_seconds": 0.014146291883662343,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-1-LP.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "fork-cython-1",
+    "market": "ETH",
+    "seconds": 0.023415124975144863,
+    "total_seconds": 0.023415124975144863,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-1-ETH.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "fork-cython-1",
+    "market": "BTC",
+    "seconds": 0.022328916937112808,
+    "total_seconds": 0.022328916937112808,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-1-BTC.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "phil-1",
+    "market": "LP",
+    "seconds": 0.01821113803453045,
+    "total_seconds": 0.5827564171049744,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-1-LP.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "phil-1",
+    "market": "ETH",
+    "seconds": 0.02233017577964347,
+    "total_seconds": 0.714565624948591,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-1-ETH.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "phil-1",
+    "market": "BTC",
+    "seconds": 0.02157517056184588,
+    "total_seconds": 0.6904054579790682,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-1-BTC.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "python-4",
+    "market": "LP",
+    "seconds": 0.5390389580279589,
+    "total_seconds": 0.5390389580279589,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-4-LP.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "python-4",
+    "market": "ETH",
+    "seconds": 0.6131921669002622,
+    "total_seconds": 0.6131921669002622,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-4-ETH.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "python-4",
+    "market": "BTC",
+    "seconds": 0.5954552919138223,
+    "total_seconds": 0.5954552919138223,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-4-BTC.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "cython-4",
+    "market": "LP",
+    "seconds": 0.2316560831386596,
+    "total_seconds": 0.2316560831386596,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-4-LP.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "cython-4",
+    "market": "ETH",
+    "seconds": 0.23066641693003476,
+    "total_seconds": 0.23066641693003476,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-4-ETH.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "cython-4",
+    "market": "BTC",
+    "seconds": 0.2264437081757933,
+    "total_seconds": 0.2264437081757933,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-4-BTC.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "fork-python-4",
+    "market": "LP",
+    "seconds": 0.17605537502095103,
+    "total_seconds": 0.17605537502095103,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-4-LP.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "fork-python-4",
+    "market": "ETH",
+    "seconds": 0.33914370788261294,
+    "total_seconds": 0.33914370788261294,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-4-ETH.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "fork-python-4",
+    "market": "BTC",
+    "seconds": 0.3187448331154883,
+    "total_seconds": 0.3187448331154883,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-4-BTC.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "fork-cython-4",
+    "market": "LP",
+    "seconds": 0.005075416062027216,
+    "total_seconds": 0.005075416062027216,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-4-LP.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "fork-cython-4",
+    "market": "ETH",
+    "seconds": 0.007883166894316673,
+    "total_seconds": 0.007883166894316673,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-4-ETH.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "fork-cython-4",
+    "market": "BTC",
+    "seconds": 0.007162666879594326,
+    "total_seconds": 0.007162666879594326,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-4-BTC.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "phil-4",
+    "market": "LP",
+    "seconds": 0.005735122409532778,
+    "total_seconds": 0.1835239171050489,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-4-LP.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "phil-4",
+    "market": "ETH",
+    "seconds": 0.006689022127829958,
+    "total_seconds": 0.21404870809055865,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-4-ETH.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "phil-4",
+    "market": "BTC",
+    "seconds": 0.006490074221801478,
+    "total_seconds": 0.2076823750976473,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-4-BTC.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "python-1",
+    "market": "LP",
+    "seconds": 2.017755459062755,
+    "total_seconds": 2.017755459062755,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-1-LP.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "python-1",
+    "market": "ETH",
+    "seconds": 2.256313082994893,
+    "total_seconds": 2.256313082994893,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-1-ETH.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "python-1",
+    "market": "BTC",
+    "seconds": 2.2068905408959836,
+    "total_seconds": 2.2068905408959836,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-1-BTC.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "cython-1",
+    "market": "LP",
+    "seconds": 0.7529836657922715,
+    "total_seconds": 0.7529836657922715,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-1-LP.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "cython-1",
+    "market": "ETH",
+    "seconds": 0.8459787911269814,
+    "total_seconds": 0.8459787911269814,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-1-ETH.npy"
+  },
+  {
+    "trial": 2,
+    "configuration": "cython-1",
+    "market": "BTC",
+    "seconds": 0.8152977090794593,
+    "total_seconds": 0.8152977090794593,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-1-BTC.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "fork-python-1",
+    "market": "ETH",
+    "seconds": 1.1746168329846114,
+    "total_seconds": 1.1746168329846114,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-1-ETH.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "fork-python-1",
+    "market": "BTC",
+    "seconds": 1.110009792027995,
+    "total_seconds": 1.110009792027995,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-1-BTC.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "fork-python-1",
+    "market": "LP",
+    "seconds": 0.6452737080398947,
+    "total_seconds": 0.6452737080398947,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-1-LP.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "cython-1",
+    "market": "ETH",
+    "seconds": 0.836394082987681,
+    "total_seconds": 0.836394082987681,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-1-ETH.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "cython-1",
+    "market": "BTC",
+    "seconds": 0.8149356669746339,
+    "total_seconds": 0.8149356669746339,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-1-BTC.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "cython-1",
+    "market": "LP",
+    "seconds": 0.7537288328167051,
+    "total_seconds": 0.7537288328167051,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-1-LP.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "python-1",
+    "market": "ETH",
+    "seconds": 2.2510083341039717,
+    "total_seconds": 2.2510083341039717,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-1-ETH.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "python-1",
+    "market": "BTC",
+    "seconds": 2.3097927910275757,
+    "total_seconds": 2.3097927910275757,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-1-BTC.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "python-1",
+    "market": "LP",
+    "seconds": 2.0310254578944296,
+    "total_seconds": 2.0310254578944296,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-1-LP.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "phil-4",
+    "market": "ETH",
+    "seconds": 0.006658615908236243,
+    "total_seconds": 0.21307570906355977,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-4-ETH.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "phil-4",
+    "market": "BTC",
+    "seconds": 0.006521372408315074,
+    "total_seconds": 0.20868391706608236,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-4-BTC.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "phil-4",
+    "market": "LP",
+    "seconds": 0.005741039058193564,
+    "total_seconds": 0.18371324986219406,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-4-LP.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "fork-cython-4",
+    "market": "ETH",
+    "seconds": 0.007417707936838269,
+    "total_seconds": 0.007417707936838269,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-4-ETH.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "fork-cython-4",
+    "market": "BTC",
+    "seconds": 0.006883667083457112,
+    "total_seconds": 0.006883667083457112,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-4-BTC.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "fork-cython-4",
+    "market": "LP",
+    "seconds": 0.004913459066301584,
+    "total_seconds": 0.004913459066301584,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-4-LP.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "fork-python-4",
+    "market": "ETH",
+    "seconds": 0.3188824998214841,
+    "total_seconds": 0.3188824998214841,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-4-ETH.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "fork-python-4",
+    "market": "BTC",
+    "seconds": 0.4487703328486532,
+    "total_seconds": 0.4487703328486532,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-4-BTC.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "fork-python-4",
+    "market": "LP",
+    "seconds": 0.1804211661219597,
+    "total_seconds": 0.1804211661219597,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-4-LP.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "cython-4",
+    "market": "ETH",
+    "seconds": 0.2311592090409249,
+    "total_seconds": 0.2311592090409249,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-4-ETH.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "cython-4",
+    "market": "BTC",
+    "seconds": 0.2386684170924127,
+    "total_seconds": 0.2386684170924127,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-4-BTC.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "cython-4",
+    "market": "LP",
+    "seconds": 0.20625262497924268,
+    "total_seconds": 0.20625262497924268,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-4-LP.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "python-4",
+    "market": "ETH",
+    "seconds": 0.64368712506257,
+    "total_seconds": 0.64368712506257,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-4-ETH.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "python-4",
+    "market": "BTC",
+    "seconds": 0.5958775840699673,
+    "total_seconds": 0.5958775840699673,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-4-BTC.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "python-4",
+    "market": "LP",
+    "seconds": 0.5545892082154751,
+    "total_seconds": 0.5545892082154751,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-4-LP.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "phil-1",
+    "market": "ETH",
+    "seconds": 0.02240615234040888,
+    "total_seconds": 0.7169968748930842,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-1-ETH.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "phil-1",
+    "market": "BTC",
+    "seconds": 0.022106046875705943,
+    "total_seconds": 0.7073935000225902,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-1-BTC.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "phil-1",
+    "market": "LP",
+    "seconds": 0.018333458348934073,
+    "total_seconds": 0.5866706671658903,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-1-LP.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "fork-cython-1",
+    "market": "ETH",
+    "seconds": 0.023627292132005095,
+    "total_seconds": 0.023627292132005095,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-1-ETH.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "fork-cython-1",
+    "market": "BTC",
+    "seconds": 0.02256345795467496,
+    "total_seconds": 0.02256345795467496,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-1-BTC.npy"
+  },
+  {
+    "trial": 3,
+    "configuration": "fork-cython-1",
+    "market": "LP",
+    "seconds": 0.01676204102113843,
+    "total_seconds": 0.01676204102113843,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-1-LP.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "phil-1",
+    "market": "BTC",
+    "seconds": 0.021681152349628974,
+    "total_seconds": 0.6937968751881272,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-1-BTC.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "phil-1",
+    "market": "LP",
+    "seconds": 0.01828863150149118,
+    "total_seconds": 0.5852362080477178,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-1-LP.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "phil-1",
+    "market": "ETH",
+    "seconds": 0.022281294281128794,
+    "total_seconds": 0.7130014169961214,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-1-ETH.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "python-4",
+    "market": "BTC",
+    "seconds": 0.6130403329152614,
+    "total_seconds": 0.6130403329152614,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-4-BTC.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "python-4",
+    "market": "LP",
+    "seconds": 0.548546832986176,
+    "total_seconds": 0.548546832986176,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-4-LP.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "python-4",
+    "market": "ETH",
+    "seconds": 0.6107447920367122,
+    "total_seconds": 0.6107447920367122,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-4-ETH.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "cython-4",
+    "market": "BTC",
+    "seconds": 0.22185800014995039,
+    "total_seconds": 0.22185800014995039,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-4-BTC.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "cython-4",
+    "market": "LP",
+    "seconds": 0.21434750012122095,
+    "total_seconds": 0.21434750012122095,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-4-LP.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "cython-4",
+    "market": "ETH",
+    "seconds": 0.25544500001706183,
+    "total_seconds": 0.25544500001706183,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-4-ETH.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "fork-python-4",
+    "market": "BTC",
+    "seconds": 0.3042623340152204,
+    "total_seconds": 0.3042623340152204,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-4-BTC.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "fork-python-4",
+    "market": "LP",
+    "seconds": 0.17066954192705452,
+    "total_seconds": 0.17066954192705452,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-4-LP.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "fork-python-4",
+    "market": "ETH",
+    "seconds": 0.34892766596749425,
+    "total_seconds": 0.34892766596749425,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-4-ETH.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "fork-cython-4",
+    "market": "BTC",
+    "seconds": 0.007004332961514592,
+    "total_seconds": 0.007004332961514592,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-4-BTC.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "fork-cython-4",
+    "market": "LP",
+    "seconds": 0.004685957916080952,
+    "total_seconds": 0.004685957916080952,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-4-LP.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "fork-cython-4",
+    "market": "ETH",
+    "seconds": 0.0078004589304327965,
+    "total_seconds": 0.0078004589304327965,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-4-ETH.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "phil-4",
+    "market": "BTC",
+    "seconds": 0.006474721347331069,
+    "total_seconds": 0.20719108311459422,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-4-BTC.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "phil-4",
+    "market": "LP",
+    "seconds": 0.005453029938507825,
+    "total_seconds": 0.1744969580322504,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-4-LP.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "phil-4",
+    "market": "ETH",
+    "seconds": 0.006869843746244442,
+    "total_seconds": 0.21983499987982213,
+    "batches": 32,
+    "windows": 3840,
+    "file": "phil-4-ETH.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "python-1",
+    "market": "BTC",
+    "seconds": 2.2055898748803884,
+    "total_seconds": 2.2055898748803884,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-1-BTC.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "python-1",
+    "market": "LP",
+    "seconds": 2.039538834011182,
+    "total_seconds": 2.039538834011182,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-1-LP.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "python-1",
+    "market": "ETH",
+    "seconds": 2.2523730830289423,
+    "total_seconds": 2.2523730830289423,
+    "batches": 1,
+    "windows": 3840,
+    "file": "python-1-ETH.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "cython-1",
+    "market": "BTC",
+    "seconds": 0.8196810001973063,
+    "total_seconds": 0.8196810001973063,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-1-BTC.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "cython-1",
+    "market": "LP",
+    "seconds": 0.7511019159574062,
+    "total_seconds": 0.7511019159574062,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-1-LP.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "cython-1",
+    "market": "ETH",
+    "seconds": 0.8313665830064565,
+    "total_seconds": 0.8313665830064565,
+    "batches": 1,
+    "windows": 3840,
+    "file": "cython-1-ETH.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "fork-python-1",
+    "market": "BTC",
+    "seconds": 1.1161159169860184,
+    "total_seconds": 1.1161159169860184,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-1-BTC.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "fork-python-1",
+    "market": "LP",
+    "seconds": 0.6472326668445021,
+    "total_seconds": 0.6472326668445021,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-1-LP.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "fork-python-1",
+    "market": "ETH",
+    "seconds": 1.166183833964169,
+    "total_seconds": 1.166183833964169,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-python-1-ETH.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "fork-cython-1",
+    "market": "BTC",
+    "seconds": 0.022539875004440546,
+    "total_seconds": 0.022539875004440546,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-1-BTC.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "fork-cython-1",
+    "market": "LP",
+    "seconds": 0.013918083161115646,
+    "total_seconds": 0.013918083161115646,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-1-LP.npy"
+  },
+  {
+    "trial": 4,
+    "configuration": "fork-cython-1",
+    "market": "ETH",
+    "seconds": 0.023182333912700415,
+    "total_seconds": 0.023182333912700415,
+    "batches": 1,
+    "windows": 3840,
+    "file": "fork-cython-1-ETH.npy"
+  }
+]

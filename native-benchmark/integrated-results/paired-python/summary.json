@@ -1,0 +1,12 @@
+{
+  "previous": {
+    "median_seconds": 3.077574457973242,
+    "maximum_error": 0.0,
+    "repeatable": true
+  },
+  "integrated": {
+    "median_seconds": 2.891795458039269,
+    "maximum_error": 0.0,
+    "repeatable": true
+  }
+}
