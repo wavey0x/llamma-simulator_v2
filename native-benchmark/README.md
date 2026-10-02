@@ -9,13 +9,13 @@ This kit packages the builder, declarations, frozen inputs and benchmark driver 
 
 ## Starting points
 
-- [Source review branch](https://github.com/wavey0x/llamma-simulator_v2/tree/codex/native-replay-review), pinned at `1505d10de6d74c13b58b16181bf8806f8c1d5ccd`.
+- [Source review branch](https://github.com/wavey0x/llamma-simulator_v2/tree/codex/native-replay-review), pinned at `f60abdfec7cb02c93f5b1c36476fed2137bb0de7`.
 - [Diff against Curve master](https://github.com/curvefi/llamma-simulator_v2/compare/master...wavey0x:codex/native-replay-review) and [readability/tradeoff review](../benchmarks/native/README.md).
 - Curve baseline: `0bb370f02970c2c1056da8a4faffd0fa9be35575`; Phil baseline: `e9487b9fb5602f2a343f40276508966c1edb526d`.
 
 The candidate already has typed numeric helpers, exact-input caches, numeric band storage and reusable batch state. There is no handwritten replacement of the accounting in C++. The build recipe reuses committed Python files, stages `.pxd` type declarations alongside them, and compiles them. The native declarations are model-specific: a changed field, signature or cache dependency may need review. Reusability does not mean arbitrary future commits will compile unchanged.
 
-The [current results](optimized-results/README.md) show **52.6x the one-worker throughput of Curve Python**, with Phil still **1.99x faster**. The interpreted fork takes **44.7% less time** than Curve Python. The latest changes remove the global spot-price cache, reuse dimensionless geometry and avoid unnecessary band searches. Per-market timings, ordered outputs and build identities are included; [earlier handoff results](reference-results/README.md) remain available separately.
+The [current results](shared-inputs-results/README.md) show **55.7x the one-worker throughput of Curve Python**, with Phil still **1.87x faster**. The interpreted fork takes **48.0% less time** than Curve Python. The latest change reuses loaded balances and band top in numeric helpers, reducing replay time by about 6% in paired comparisons without adding cache state. Per-market timings, ordered outputs and build identities are included; [previous qualification](optimized-results/README.md) and [original handoff results](reference-results/README.md) remain available separately.
 
 ## Reproduce
 
@@ -37,7 +37,7 @@ $PY native-benchmark/prepare.py baseline --output build/benchmark-baseline
 
 # Build the current source-review candidate, then run all five backends.
 $PY native-benchmark/prepare.py candidate \
-  --commit 1505d10de6d74c13b58b16181bf8806f8c1d5ccd \
+  --commit f60abdfec7cb02c93f5b1c36476fed2137bb0de7 \
   --output build/benchmark-001
 $PY native-benchmark/bench.py run \
   --baseline build/benchmark-baseline --root build/benchmark-001 \

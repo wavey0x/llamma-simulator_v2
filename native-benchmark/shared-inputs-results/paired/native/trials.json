@@ -1,0 +1,92 @@
+[
+  {
+    "seconds": 0.12906801366868118,
+    "loops": 3,
+    "max_error": 4.007905118896815e-14,
+    "above_tolerance": 0,
+    "repeatable": true,
+    "variant": "standard",
+    "trial": 0
+  },
+  {
+    "seconds": 0.11573954167154928,
+    "loops": 3,
+    "max_error": 4.007905118896815e-14,
+    "above_tolerance": 0,
+    "repeatable": true,
+    "variant": "geometry",
+    "trial": 0
+  },
+  {
+    "seconds": 0.11574258329346776,
+    "loops": 3,
+    "max_error": 4.007905118896815e-14,
+    "above_tolerance": 0,
+    "repeatable": true,
+    "variant": "geometry",
+    "trial": 1
+  },
+  {
+    "seconds": 0.12334218062460423,
+    "loops": 3,
+    "max_error": 4.007905118896815e-14,
+    "above_tolerance": 0,
+    "repeatable": true,
+    "variant": "standard",
+    "trial": 1
+  },
+  {
+    "seconds": 0.12319422202805679,
+    "loops": 3,
+    "max_error": 4.007905118896815e-14,
+    "above_tolerance": 0,
+    "repeatable": true,
+    "variant": "standard",
+    "trial": 2
+  },
+  {
+    "seconds": 0.11574969463981688,
+    "loops": 3,
+    "max_error": 4.007905118896815e-14,
+    "above_tolerance": 0,
+    "repeatable": true,
+    "variant": "geometry",
+    "trial": 2
+  },
+  {
+    "seconds": 0.11635123604598145,
+    "loops": 3,
+    "max_error": 4.007905118896815e-14,
+    "above_tolerance": 0,
+    "repeatable": true,
+    "variant": "geometry",
+    "trial": 3
+  },
+  {
+    "seconds": 0.12326687496776383,
+    "loops": 3,
+    "max_error": 4.007905118896815e-14,
+    "above_tolerance": 0,
+    "repeatable": true,
+    "variant": "standard",
+    "trial": 3
+  },
+  {
+    "seconds": 0.12525265268050134,
+    "loops": 3,
+    "max_error": 4.007905118896815e-14,
+    "above_tolerance": 0,
+    "repeatable": true,
+    "variant": "standard",
+    "trial": 4
+  },
+  {
+    "seconds": 0.11919544466460745,
+    "loops": 3,
+    "max_error": 4.007905118896815e-14,
+    "above_tolerance": 0,
+    "repeatable": true,
+    "variant": "geometry",
+    "trial": 4
+  }
+]

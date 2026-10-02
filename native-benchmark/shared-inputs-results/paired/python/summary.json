@@ -1,0 +1,17 @@
+{
+  "standard": {
+    "median_seconds": 2.7943450422026217,
+    "maximum_error": 0.0,
+    "repeatable": true
+  },
+  "geometry": {
+    "median_seconds": 2.6372236660681665,
+    "maximum_error": 0.0,
+    "repeatable": true
+  },
+  "balances": {
+    "median_seconds": 2.760997250210494,
+    "maximum_error": 0.0,
+    "repeatable": true
+  }
+}

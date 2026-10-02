@@ -1,0 +1,13 @@
+{
+  "status": "verified",
+  "commit": "098ce5fa311dd0dbe84eca0ac6f1619cab390a74",
+  "reproducibility": "identical generated C++ and extension binaries",
+  "pipeline_sha256": "23f4c97d47b29cc3a6a6d6939ee77c94b8349b2cc7b0a307b7ac29b5ef5db89c",
+  "build_id": "da938d0dba1d23d7dc5da0a9342b298c4cb9931f35788e76371930f3b7761704",
+  "artifact_hash": "0924a15846af5155fb48cb6d86772dad8a0d07c2538e857e985d459e35d52ef8",
+  "verification": {
+    "path": "validation/verification.json",
+    "sha256": "0b6bb7572567e923c897c979db46ac28bf7e8d5a28a4658b24e5613a9c57c8ad"
+  },
+  "evidence_id": "f9601d31a041d0283b939e0febe7d8057be6409246311c2b44ea8c24bb38ffa9"
+}
