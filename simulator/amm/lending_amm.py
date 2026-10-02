@@ -212,17 +212,6 @@ class BandBalances:
         return result
 
 
-# Reuse a spot price only while every geometry and balance input agrees.
-_price_valid = False
-_price_A = 0
-_price_base = 0
-_price_oracle = 0
-_price_band = 0
-_price_x = 0
-_price_y = 0
-_price_value = 0.0
-
-
 class LendingAMM:
     def __init__(
         self,
@@ -486,39 +475,16 @@ class LendingAMM:
         return value * p_top / p_oracle * (self.A - 1)
 
     def get_p(self, y0=None):
-        global _price_valid, _price_value
-        global _price_A, _price_base, _price_oracle, _price_band, _price_x, _price_y
         x = self.bands_x.read(self.active_band)
         y = self.bands_y.read(self.active_band)
-        if (
-            y0 is None
-            and _price_valid
-            and _price_A == self.A
-            and _price_base == self.p_base
-            and _price_oracle == self.p_oracle
-            and _price_band == self.active_band
-            and _price_x == x
-            and _price_y == y
-        ):
-            return _price_value
         if x == 0 and y == 0:
-            result = _power(self.p_up(self.active_band) * self.p_down(self.active_band), 0.5)
+            return _power(self.p_up(self.active_band) * self.p_down(self.active_band), 0.5)
         else:
             if y0 is None:
                 value = self.get_y0()
             else:
                 value = y0
-            result = (self._get_f(value, self.active_band) + x) / (self._get_g(value, self.active_band) + y)
-        if y0 is None:
-            _price_A = self.A
-            _price_base = self.p_base
-            _price_oracle = self.p_oracle
-            _price_band = self.active_band
-            _price_x = x
-            _price_y = y
-            _price_value = result
-            _price_valid = True
-        return result
+            return (self._get_f(value, self.active_band) + x) / (self._get_g(value, self.active_band) + y)
 
     def trade_to_price(self, price) -> tuple:
         """

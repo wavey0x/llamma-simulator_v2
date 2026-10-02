@@ -35,10 +35,6 @@ cdef class BandBalances:
     @cython.locals(n=cython.long)
     cpdef void clear(self) except *
 
-cdef bint _price_valid
-cdef double _price_A, _price_base, _price_oracle, _price_x, _price_y, _price_value
-cdef long _price_band
-
 @cython.final
 cdef class LendingAMM:
     cdef dict __dict__
@@ -95,7 +91,7 @@ cdef class LendingAMM:
     cpdef double get_g(self, y0=*, n=*) except? -1
     cpdef double _get_f(self, double value, long band) except? -1
     cpdef double _get_g(self, double value, long band) except? -1
-    @cython.locals(result=cython.double, value=cython.double, x=cython.double, y=cython.double)
+    @cython.locals(value=cython.double, x=cython.double, y=cython.double)
     cpdef double get_p(self, y0=*) except? -1
     cpdef void _commit_oracle(self, (double, double) snapshot)
     @cython.locals(x=cython.double, y=cython.double, y0=cython.double, f=cython.double, g=cython.double,
