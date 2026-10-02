@@ -49,12 +49,7 @@ def fee_multiplier(fee: float) -> float:
     return 1 / max(1 - fee, 1e-18)
 
 
-def _power(value, exponent):
-    # Avoid Cython's constant-power rewrites; final compiler rounding is checked separately.
-    return value**exponent
-
-
-# Cache the dimensionless band factor _power((A - 1) / A, n). Each slot remembers its A,
+# Cache the dimensionless band factor ((A - 1) / A) ** n. Each slot remembers its A,
 # so a new base price reuses it and a different A recomputes it.
 _factor_As = array("d", [float("nan")]) * 1002
 _factors = array("d", [0.0]) * 1002
@@ -62,10 +57,10 @@ _factors = array("d", [0.0]) * 1002
 
 def _band_factor(A, n):
     if not -500 <= n <= 501:
-        return _power((A - 1) / A, n)
+        return ((A - 1) / A) ** n
     i = n + 500
     if _factor_As[i] != A:
-        _factors[i] = _power((A - 1) / A, n)
+        _factors[i] = ((A - 1) / A) ** n
         _factor_As[i] = A
     return _factors[i]
 
@@ -80,7 +75,7 @@ _ratio_value = 0.0
 def _cube(price):
     global _cube_price, _cube_value
     if price != _cube_price:
-        _cube_value = _power(price, 3)
+        _cube_value = price**3
         _cube_price = price
     return _cube_value
 
@@ -88,29 +83,9 @@ def _cube(price):
 def _ratio_square(A):
     global _ratio_A, _ratio_value
     if A != _ratio_A:
-        _ratio_value = _power(A / (A - 1), 2)
+        _ratio_value = (A / (A - 1)) ** 2
         _ratio_A = A
     return _ratio_value
-
-
-def _oracle_limit(price, old_price, old_dfee, dt, delay, min_ratio, max_change):
-    limited_price = price
-    ratio = 0.0
-
-    if dt > 0 and old_price > 0:
-        price_ratio = min(old_price, price) / max(old_price, price)
-        if price > old_price and price_ratio < min_ratio:
-            price_ratio = min_ratio
-            limited_price = old_price * max_change
-        elif price < old_price and price_ratio < min_ratio:
-            price_ratio = min_ratio
-            limited_price = old_price / max_change
-
-        ratio = ((1.0 + old_dfee) - _power(price_ratio, 3)) * (dt / delay)
-        # The on-chain cap of 1 - 1e-18 rounds to 1.0 as a float.
-        ratio = min(max(ratio, 0.0), 1.0)
-
-    return limited_price, ratio
 
 
 class BandBalances:
@@ -321,15 +296,26 @@ class LendingAMM:
     def _limit_price_oracle(self, price: float, timestamp: float | None) -> tuple[float, float]:
         if timestamp is None:
             timestamp = self._normalize_timestamp(timestamp)
-        return _oracle_limit(
-            price,
-            self.old_p_oracle,
-            self.old_dfee,
-            self._memory_dt(timestamp),
-            self.PREV_P_O_DELAY,
-            self.MIN_PRICE_RATIO,
-            self.MAX_P_O_CHANGE,
-        )
+        old_price = self.old_p_oracle
+        old_dfee = self.old_dfee
+        dt = self._memory_dt(timestamp)
+        limited_price = price
+        ratio = 0.0
+
+        if dt > 0 and old_price > 0:
+            price_ratio = min(old_price, price) / max(old_price, price)
+            if price > old_price and price_ratio < self.MIN_PRICE_RATIO:
+                price_ratio = self.MIN_PRICE_RATIO
+                limited_price = old_price * self.MAX_P_O_CHANGE
+            elif price < old_price and price_ratio < self.MIN_PRICE_RATIO:
+                price_ratio = self.MIN_PRICE_RATIO
+                limited_price = old_price / self.MAX_P_O_CHANGE
+
+            ratio = ((1.0 + old_dfee) - price_ratio**3) * (dt / self.PREV_P_O_DELAY)
+            # The on-chain cap of 1 - 1e-18 rounds to 1.0 as a float.
+            ratio = min(max(ratio, 0.0), 1.0)
+
+        return limited_price, ratio
 
     def _price_oracle_view(self, timestamp: float | None) -> tuple[float, float]:
         price = self.raw_p_oracle if self.raw_p_oracle is not None else self.p_oracle
@@ -352,7 +338,7 @@ class LendingAMM:
             return 0.0
 
         # Matches on-chain: p_c_d = p_o**3 / p_o_up**2, p_c_u = p_c_d * (A / (A-1))**2
-        p_c_d = _cube(p_oracle) / _power(p_o_up, 2)
+        p_c_d = _cube(p_oracle) / p_o_up**2
         p_c_u = p_c_d * _ratio_square(self.A)
 
         if p_oracle < p_c_d and p_c_d > 0:
@@ -369,7 +355,7 @@ class LendingAMM:
             price = self.p_oracle
         else:
             price = p_oracle
-        return _cube(price) / _power(self.p_top(n_band), 2)
+        return _cube(price) / self.p_top(n_band)**2
 
     def p_up(self, n_band, p_oracle: float | None = None):
         """
@@ -379,7 +365,7 @@ class LendingAMM:
             price = self.p_oracle
         else:
             price = p_oracle
-        return _cube(price) / _power(self.p_top(n_band + 1), 2)
+        return _cube(price) / self.p_top(n_band + 1)**2
 
     def p_top(self, n):
         # Prices which show start and end of band when p_oracle = p
@@ -436,8 +422,8 @@ class LendingAMM:
         # solve:
         # p_o * A * y0**2 - y0 * (p_top/p_o * (A-1) * x + p_o**2/p_top * A * y) - xy = 0
         a = p_o * A
-        b = p_top / p_o * (A - 1) * x + _power(p_o, 2) / p_top * A * y
-        D = _power(b, 2) + 4 * a * x * y
+        b = p_top / p_o * (A - 1) * x + p_o**2 / p_top * A * y
+        D = b**2 + 4 * a * x * y
         return (b + sqrt(D)) / (2 * a)
 
     def get_f(self, y0=None, n=None):
@@ -453,7 +439,7 @@ class LendingAMM:
 
     def _get_f(self, value, p_top):
         p_oracle = self.p_oracle
-        return value * _power(p_oracle, 2) / p_top * self.A
+        return value * p_oracle**2 / p_top * self.A
 
     def get_g(self, y0=None, n=None):
         if y0 is None:
@@ -481,7 +467,7 @@ class LendingAMM:
             # An empty band has no tradable balance at its quoted midpoint.
             upper_price = self.p_up(self.active_band)
             lower_price = self.p_down(self.active_band)
-            return _power(upper_price * lower_price, 0.5), lower_price, upper_price
+            return (upper_price * lower_price) ** 0.5, lower_price, upper_price
         else:
             p_top = self.p_top(self.active_band)
             if y0 is None:
@@ -548,7 +534,7 @@ class LendingAMM:
                     break
 
                 # reduce y, increase x, go up
-                y_dest = _power(Inv / price, 0.5) - g
+                y_dest = (Inv / price) ** 0.5 - g
                 x_old = self.bands_x.read(n)
                 if y_dest >= 0:
                     # End the cycle
@@ -573,7 +559,7 @@ class LendingAMM:
                     break
 
                 # increase y, reduce x, go down
-                x_dest = _power(Inv * price, 0.5) - f
+                x_dest = (Inv * price) ** 0.5 - f
                 y_old = self.bands_y.read(n)
                 if x_dest >= 0:
                     # End the cycle
@@ -613,7 +599,7 @@ class LendingAMM:
         p_o = self.p_oracle
         p_o_up = self.p_top(n)
         p_o_down = p_o_up * (self.A - 1) / self.A
-        p_current_mid = _power(p_o, 3) / _power(p_o_down, 2) * (self.A - 1) / self.A
+        p_current_mid = p_o**3 / p_o_down**2 * (self.A - 1) / self.A
         sqrt_band_ratio = sqrt(self.A / (self.A - 1))
 
         if x == 0 or y == 0:
@@ -672,7 +658,7 @@ class LendingAMM:
         p_o = self.p_oracle
         p_o_up = self.p_top(n)
         p_o_down = p_o_up * (self.A - 1) / self.A
-        p_current_mid = _power(p_o, 3) / _power(p_o_down, 2) * (self.A - 1) / self.A
+        p_current_mid = p_o**3 / p_o_down**2 * (self.A - 1) / self.A
         sqrt_band_ratio = sqrt(self.A / (self.A - 1))
 
         if x == 0 or y == 0:

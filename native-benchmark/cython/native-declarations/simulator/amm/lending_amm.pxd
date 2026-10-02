@@ -5,8 +5,6 @@ ctypedef (double, double) OracleSnapshot
 
 cpdef double sqrt(double value) except? -1
 
-cpdef double _power(double value, double exponent) except? -1
-
 cpdef double fee_multiplier(double fee) except? -1
 
 cdef double _factor_As[1002], _factors[1002]
@@ -15,10 +13,6 @@ cpdef double _band_factor(double A, long n) except? -1
 cdef double _cube_price, _cube_value, _ratio_A, _ratio_value
 cpdef double _cube(double price) except? -1
 cpdef double _ratio_square(double A) except? -1
-
-@cython.locals(limited_price=cython.double, ratio=cython.double, price_ratio=cython.double)
-cpdef (double, double) _oracle_limit(double price, double old_price, double old_dfee,
-                                    double dt, double delay, double min_ratio, double max_change)
 
 @cython.final
 cdef class BandBalances:
