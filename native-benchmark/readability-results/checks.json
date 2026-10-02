@@ -1,0 +1,286 @@
+{
+  "identities": {
+    "previous": {
+      "commit": "37b552e400434cec2a6c10795f6fbb30c2b11e2f",
+      "build_id": "9745f583fded7b3e885edaf520ce02d7a3263d051f4829a96ebb1dad2fb04981",
+      "artifact_hash": "12683bc9c9a3328a13612e6a740137f8d00969f6b8a4211c8811c64c27d91c18"
+    },
+    "final": {
+      "commit": "54544eeb08393b0f91e6ced10c13d9405a9b9ebb",
+      "build_id": "f68ae9bd9c331df085445636d0bd95718e66c44e960f911c9b0dcf9e11110114",
+      "artifact_hash": "718d7311c91d8fa3b028b3d019ccace0886badfdc173f23dcb0def646638fd4a"
+    }
+  },
+  "comparisons": [
+    {
+      "variant": "previous",
+      "backend": "fork-python",
+      "workers": 1,
+      "market": "ETH",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 0.0,
+      "sha256": "c4a3cdd4785aaaec05904b8259e9dae403a6bc4fdd128e924945e29942772479"
+    },
+    {
+      "variant": "previous",
+      "backend": "fork-python",
+      "workers": 1,
+      "market": "BTC",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 0.0,
+      "sha256": "d5b47cb60ae25c38c531fc11a59f3030ced385d48de4cd346754242a41dda9d6"
+    },
+    {
+      "variant": "previous",
+      "backend": "fork-python",
+      "workers": 1,
+      "market": "LP",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 0.0,
+      "sha256": "f0c266cd0ee7dbd4657530b4f705b15960b9cc9e4bf1641852152d0b01daaada"
+    },
+    {
+      "variant": "final",
+      "backend": "fork-python",
+      "workers": 1,
+      "market": "ETH",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 0.0,
+      "sha256": "c4a3cdd4785aaaec05904b8259e9dae403a6bc4fdd128e924945e29942772479"
+    },
+    {
+      "variant": "final",
+      "backend": "fork-python",
+      "workers": 1,
+      "market": "BTC",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 0.0,
+      "sha256": "d5b47cb60ae25c38c531fc11a59f3030ced385d48de4cd346754242a41dda9d6"
+    },
+    {
+      "variant": "final",
+      "backend": "fork-python",
+      "workers": 1,
+      "market": "LP",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 0.0,
+      "sha256": "f0c266cd0ee7dbd4657530b4f705b15960b9cc9e4bf1641852152d0b01daaada"
+    },
+    {
+      "variant": "previous",
+      "backend": "fork-python",
+      "workers": 4,
+      "market": "ETH",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 0.0,
+      "sha256": "c4a3cdd4785aaaec05904b8259e9dae403a6bc4fdd128e924945e29942772479"
+    },
+    {
+      "variant": "previous",
+      "backend": "fork-python",
+      "workers": 4,
+      "market": "BTC",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 0.0,
+      "sha256": "d5b47cb60ae25c38c531fc11a59f3030ced385d48de4cd346754242a41dda9d6"
+    },
+    {
+      "variant": "previous",
+      "backend": "fork-python",
+      "workers": 4,
+      "market": "LP",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 0.0,
+      "sha256": "f0c266cd0ee7dbd4657530b4f705b15960b9cc9e4bf1641852152d0b01daaada"
+    },
+    {
+      "variant": "final",
+      "backend": "fork-python",
+      "workers": 4,
+      "market": "ETH",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 0.0,
+      "sha256": "c4a3cdd4785aaaec05904b8259e9dae403a6bc4fdd128e924945e29942772479"
+    },
+    {
+      "variant": "final",
+      "backend": "fork-python",
+      "workers": 4,
+      "market": "BTC",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 0.0,
+      "sha256": "d5b47cb60ae25c38c531fc11a59f3030ced385d48de4cd346754242a41dda9d6"
+    },
+    {
+      "variant": "final",
+      "backend": "fork-python",
+      "workers": 4,
+      "market": "LP",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 0.0,
+      "sha256": "f0c266cd0ee7dbd4657530b4f705b15960b9cc9e4bf1641852152d0b01daaada"
+    },
+    {
+      "variant": "previous",
+      "backend": "fork-cython",
+      "workers": 1,
+      "market": "ETH",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 1.7763568394002505e-14,
+      "sha256": "8630d97283cbd090997d9576f8dfc43b059671c3d60c19c69ce1e21a0af775f4"
+    },
+    {
+      "variant": "previous",
+      "backend": "fork-cython",
+      "workers": 1,
+      "market": "BTC",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 4.007905118896815e-14,
+      "sha256": "33fa278979bf00754dc3e64f5e8024e6eb2d40c90eeef971dc876e4f1c15c0f0"
+    },
+    {
+      "variant": "previous",
+      "backend": "fork-cython",
+      "workers": 1,
+      "market": "LP",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 1.432187701766452e-14,
+      "sha256": "dae58a06897d5d262bf9f3051ff6c14e70bc9fe777df454ab5a683c2ba152f3a"
+    },
+    {
+      "variant": "final",
+      "backend": "fork-cython",
+      "workers": 1,
+      "market": "ETH",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 1.7763568394002505e-14,
+      "sha256": "8630d97283cbd090997d9576f8dfc43b059671c3d60c19c69ce1e21a0af775f4"
+    },
+    {
+      "variant": "final",
+      "backend": "fork-cython",
+      "workers": 1,
+      "market": "BTC",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 4.007905118896815e-14,
+      "sha256": "33fa278979bf00754dc3e64f5e8024e6eb2d40c90eeef971dc876e4f1c15c0f0"
+    },
+    {
+      "variant": "final",
+      "backend": "fork-cython",
+      "workers": 1,
+      "market": "LP",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 1.432187701766452e-14,
+      "sha256": "dae58a06897d5d262bf9f3051ff6c14e70bc9fe777df454ab5a683c2ba152f3a"
+    },
+    {
+      "variant": "previous",
+      "backend": "fork-cython",
+      "workers": 4,
+      "market": "ETH",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 1.7763568394002505e-14,
+      "sha256": "8630d97283cbd090997d9576f8dfc43b059671c3d60c19c69ce1e21a0af775f4"
+    },
+    {
+      "variant": "previous",
+      "backend": "fork-cython",
+      "workers": 4,
+      "market": "BTC",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 4.007905118896815e-14,
+      "sha256": "33fa278979bf00754dc3e64f5e8024e6eb2d40c90eeef971dc876e4f1c15c0f0"
+    },
+    {
+      "variant": "previous",
+      "backend": "fork-cython",
+      "workers": 4,
+      "market": "LP",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 1.432187701766452e-14,
+      "sha256": "dae58a06897d5d262bf9f3051ff6c14e70bc9fe777df454ab5a683c2ba152f3a"
+    },
+    {
+      "variant": "final",
+      "backend": "fork-cython",
+      "workers": 4,
+      "market": "ETH",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 1.7763568394002505e-14,
+      "sha256": "8630d97283cbd090997d9576f8dfc43b059671c3d60c19c69ce1e21a0af775f4"
+    },
+    {
+      "variant": "final",
+      "backend": "fork-cython",
+      "workers": 4,
+      "market": "BTC",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 4.007905118896815e-14,
+      "sha256": "33fa278979bf00754dc3e64f5e8024e6eb2d40c90eeef971dc876e4f1c15c0f0"
+    },
+    {
+      "variant": "final",
+      "backend": "fork-cython",
+      "workers": 4,
+      "market": "LP",
+      "windows": 3840,
+      "previous_bitwise_equal": true,
+      "workers_bitwise_equal": true,
+      "max_error_vs_curve": 1.432187701766452e-14,
+      "sha256": "dae58a06897d5d262bf9f3051ff6c14e70bc9fe777df454ab5a683c2ba152f3a"
+    }
+  ],
+  "python_tests_passed": 57,
+  "compiled_tests_passed": 14,
+  "short_pipeline_fixtures": 48,
+  "formatting": "Black 25.1.0 and isort 6.0.1 with upstream configuration",
+  "direct_native_batch_call": true,
+  "builder_profile_training_and_toolchain_unchanged": true
+}

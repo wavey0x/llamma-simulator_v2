@@ -9,13 +9,13 @@ This kit packages the builder, declarations, frozen inputs and benchmark driver 
 
 ## Starting points
 
-- [Earlier published source review branch](https://github.com/wavey0x/llamma-simulator_v2/tree/codex/native-replay-review), pinned at `f60abdfec7cb02c93f5b1c36476fed2137bb0de7`.
-- [Diff against Curve master](https://github.com/curvefi/llamma-simulator_v2/compare/master...wavey0x:codex/native-replay-review) and [readability/tradeoff review](../benchmarks/native/README.md).
+- [Source review PR](https://github.com/curvefi/llamma-simulator_v2/pull/15), with the readability cleanup pinned at `54544eeb08393b0f91e6ced10c13d9405a9b9ebb`.
+- [Diff against Curve master](https://github.com/curvefi/llamma-simulator_v2/compare/master...wavey0x:codex/native-replay-integrated) and [readability cleanup checks](readability-results/README.md).
 - Curve baseline: `0bb370f02970c2c1056da8a4faffd0fa9be35575`; Phil baseline: `e9487b9fb5602f2a343f40276508966c1edb526d`.
 
 The candidate already has typed numeric helpers, exact-input caches, numeric band storage and reusable batch state. There is no handwritten replacement of the accounting in C++. The build recipe reuses committed Python files, stages `.pxd` type declarations alongside them, and compiles them. The native declarations are model-specific: a changed field, signature or cache dependency may need review. Reusability does not mean arbitrary future commits will compile unchanged.
 
-The [current results](integrated-results/README.md) qualify source `37b552e400434cec2a6c10795f6fbb30c2b11e2f`: **108.1x Curve Python throughput**, approximately matching Phil's replay speed on this host. The integration reduces native replay time by **44.8%** against our previous candidate in a paired comparison. It combines dense band flags, numeric oracle internals and ordinary Python powers with deterministic PGO, while preserving shared band inputs and raw-price guards. The interpreted fork remains faster than Curve Python. [Earlier shared-input results](shared-inputs-results/README.md) remain available separately.
+The [full comparison](integrated-results/README.md) qualifies source `37b552e400434cec2a6c10795f6fbb30c2b11e2f`: **108.1x Curve Python throughput**, approximately matching Phil's replay speed on this host. The [readability cleanup](readability-results/README.md) checks source `54544eeb08393b0f91e6ced10c13d9405a9b9ebb` against that candidate using the same frozen inputs. It preserves dense band storage, numeric oracle internals, caches and shared quote calculations. [Earlier shared-input results](shared-inputs-results/README.md) remain available separately.
 
 ## Reproduce
 
@@ -34,7 +34,7 @@ $PY native-benchmark/prepare.py baseline --output build/benchmark-baseline
 
 # Qualify the current candidate, then run all five backends.
 $PY native-benchmark/prepare.py candidate \
-  --commit 37b552e400434cec2a6c10795f6fbb30c2b11e2f \
+  --commit 54544eeb08393b0f91e6ced10c13d9405a9b9ebb \
   --output build/benchmark-001 --reproducibility
 $PY native-benchmark/bench.py run \
   --baseline build/benchmark-baseline --root build/benchmark-001 \
