@@ -14,5 +14,9 @@
     "-ffp-contract=off",
     "-fno-fast-math"
   ],
-  "schema": 1
+  "schema": 1,
+  "profiling_tool": {
+    "version": "Apple LLVM version 21.0.0\n  Optimized build.",
+    "sha256": "5e8de41c896418a5f321a46e47f5b4d3fb943a8868839bd66d0370009eaae4b8"
+  }
 }

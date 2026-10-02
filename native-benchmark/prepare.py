@@ -58,10 +58,10 @@ def prepare(args):
     if output.exists():
         raise FileExistsError("Benchmark outputs are immutable; choose a new directory")
     output.mkdir(parents=True)
-    profile = "default" if args.action == "baseline" else "native"
+    profile = HERE / "cython/profiles/default.json" if args.action == "baseline" else args.profile
     repository = f"https://github.com/{'curvefi' if args.action == 'baseline' else 'wavey0x'}/llamma-simulator_v2"
     pipeline(argparse.Namespace(output=output / "curve", commit=commit, source=args.source,
-                               repository=repository, profile=HERE / f"cython/profiles/{profile}.json",
+                               repository=repository, profile=profile,
                                source_manifest=None, windows=48, reproducibility=args.reproducibility))
     candidate = output / "curve/candidate"
     manifest = json.loads((candidate / "source.json").read_text())
@@ -78,5 +78,7 @@ if __name__ == "__main__":
     parser.add_argument("--source", type=Path, default=HERE.parent, help="Git checkout; only committed objects are built")
     parser.add_argument("--commit", help="Candidate commit; the upstream baseline is pinned in this script")
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--profile", type=Path, default=HERE / "cython/profiles/native.json",
+                        help="Candidate build profile; the native profile enables reproducible PGO")
     parser.add_argument("--reproducibility", action="store_true", help="Optional second clean build; unnecessary for routine experiments")
     prepare(parser.parse_args())

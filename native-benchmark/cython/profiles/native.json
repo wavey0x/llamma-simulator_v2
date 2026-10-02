@@ -9,5 +9,6 @@
     "annotation_typing": false,
     "infer_types": null,
     "cpow": true
-  }
+  },
+  "pgo": true
 }
