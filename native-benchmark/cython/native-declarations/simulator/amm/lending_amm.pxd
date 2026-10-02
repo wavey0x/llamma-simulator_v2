@@ -82,22 +82,24 @@ cdef class LendingAMM:
     cpdef deposit_range(self, double amount, double p1, double p2)
     @cython.locals(n_top=cython.long, n1=cython.long, n2=cython.long, i=cython.long, y=cython.double)
     cpdef deposit_nrange(self, double amount, double p, long dn)
-    @cython.locals(band=cython.long, A=cython.double, x=cython.double, y=cython.double, p_o=cython.double,
-                   p_top=cython.double, a=cython.double, b=cython.double, D=cython.double)
+    @cython.locals(band=cython.long, x=cython.double, y=cython.double)
     cpdef double get_y0(self, n=*) except? -1
+    @cython.locals(A=cython.double, p_o=cython.double,
+                   a=cython.double, b=cython.double, D=cython.double)
+    cpdef double _get_y0(self, double x, double y, double p_top) except? -1
     @cython.locals(band=cython.long, value=cython.double, p_top=cython.double, p_oracle=cython.double)
     cpdef double get_f(self, y0=*, n=*) except? -1
     @cython.locals(band=cython.long, value=cython.double, p_top=cython.double, p_oracle=cython.double)
     cpdef double get_g(self, y0=*, n=*) except? -1
-    cpdef double _get_f(self, double value, long band) except? -1
-    cpdef double _get_g(self, double value, long band) except? -1
+    cpdef double _get_f(self, double value, double p_top) except? -1
+    cpdef double _get_g(self, double value, double p_top) except? -1
     cpdef double get_p(self, y0=*) except? -1
-    @cython.locals(price=cython.double, value=cython.double, x=cython.double, y=cython.double,
+    @cython.locals(price=cython.double, value=cython.double, x=cython.double, y=cython.double, p_top=cython.double,
                    lower_price=cython.double, upper_price=cython.double)
     cpdef (double, double, double) _trade_prices(self, y0=*)
     cpdef void _commit_oracle(self, (double, double) snapshot)
     @cython.locals(x=cython.double, y=cython.double, y0=cython.double, f=cython.double, g=cython.double,
-                   p_o=cython.double, lower_price=cython.double, upper_price=cython.double,
+                   p_o=cython.double, p_top=cython.double, lower_price=cython.double, upper_price=cython.double,
                    current_price=cython.double,
                    dx=cython.double, dy=cython.double, oracle_memory_fee=cython.double, fee=cython.double,
                    snapshot=OracleSnapshot,

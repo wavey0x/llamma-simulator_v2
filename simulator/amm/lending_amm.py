@@ -425,15 +425,17 @@ class LendingAMM:
             self.bands_y.write(i, self.bands_y.read(i) + y)
 
     def get_y0(self, n=None):
-        A = self.A
         if n is None:
             band = self.active_band
         else:
             band = n
         x = self.bands_x.read(band)
         y = self.bands_y.read(band)
+        return self._get_y0(x, y, self.p_top(band))
+
+    def _get_y0(self, x, y, p_top):
+        A = self.A
         p_o = self.p_oracle
-        p_top = self.p_top(band)
 
         # solve:
         # p_o * A * y0**2 - y0 * (p_top/p_o * (A-1) * x + p_o**2/p_top * A * y) - xy = 0
@@ -451,10 +453,9 @@ class LendingAMM:
             band = self.active_band
         else:
             band = n
-        return self._get_f(value, band)
+        return self._get_f(value, self.p_top(band))
 
-    def _get_f(self, value, band):
-        p_top = self.p_top(band)
+    def _get_f(self, value, p_top):
         p_oracle = self.p_oracle
         return value * _power(p_oracle, 2) / p_top * self.A
 
@@ -467,10 +468,9 @@ class LendingAMM:
             band = self.active_band
         else:
             band = n
-        return self._get_g(value, band)
+        return self._get_g(value, self.p_top(band))
 
-    def _get_g(self, value, band):
-        p_top = self.p_top(band)
+    def _get_g(self, value, p_top):
         p_oracle = self.p_oracle
         return value * p_top / p_oracle * (self.A - 1)
 
@@ -487,11 +487,12 @@ class LendingAMM:
             lower_price = self.p_down(self.active_band)
             return _power(upper_price * lower_price, 0.5), lower_price, upper_price
         else:
+            p_top = self.p_top(self.active_band)
             if y0 is None:
-                value = self.get_y0()
+                value = self._get_y0(x, y, p_top)
             else:
                 value = y0
-            price = (self._get_f(value, self.active_band) + x) / (self._get_g(value, self.active_band) + y)
+            price = (self._get_f(value, p_top) + x) / (self._get_g(value, p_top) + y)
             return price, price, price
 
     def trade_to_price(self, price) -> tuple:
@@ -533,9 +534,10 @@ class LendingAMM:
                 self.active_band += bstep
                 continue
 
-            y0 = self.get_y0()
-            g = self._get_g(y0, n)
-            f = self._get_f(y0, n)
+            p_top = self.p_top(n)
+            y0 = self._get_y0(x, y, p_top)
+            g = self._get_g(y0, p_top)
+            f = self._get_f(y0, p_top)
             # (f + x)(g + y) = const = p_oracle * A**2 * y0**2 = I
             Inv = (f + x) * (g + y)
             # p = (f + x) / (g + y) => p * (g + y)**2 = I or (f + x)**2 / p = I
@@ -632,9 +634,9 @@ class LendingAMM:
                     x_equiv = y * p_current_mid
                 return x_equiv * sqrt_band_ratio / p_o_up
 
-        y0 = self.get_y0(n)
-        g = self._get_g(y0, n)
-        f = self._get_f(y0, n)
+        y0 = self._get_y0(x, y, p_o_up)
+        g = self._get_g(y0, p_o_up)
+        f = self._get_f(y0, p_o_up)
         # (f + x)(g + y) = const = p_top * A**2 * y0**2 = I
         Inv = (f + x) * (g + y)
         # p = (f + x) / (g + y) => p * (g + y)**2 = I or (f + x)**2 / p = I
@@ -691,9 +693,9 @@ class LendingAMM:
                     x_equiv = y * p_current_mid
                 return x_equiv
 
-        y0 = self.get_y0(n)
-        g = self._get_g(y0, n)
-        f = self._get_f(y0, n)
+        y0 = self._get_y0(x, y, p_o_up)
+        g = self._get_g(y0, p_o_up)
+        f = self._get_f(y0, p_o_up)
         # (f + x)(g + y) = const = p_top * A**2 * y0**2 = I
         Inv = (f + x) * (g + y)
         # p = (f + x) / (g + y) => p * (g + y)**2 = I or (f + x)**2 / p = I
