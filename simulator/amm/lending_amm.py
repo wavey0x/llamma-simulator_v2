@@ -54,28 +54,20 @@ def _power(value, exponent):
     return value**exponent
 
 
-# Cache only the dimensionless band factor. It depends on A and n, so changing
-# the position's base price does not invalidate it or reuse a stale price.
-_factor_A = 0.0
-_factor_values = array("d", [0.0]) * 1002
-_factor_valid = array("b", [0]) * 1002
+# Cache the dimensionless band factor _power((A - 1) / A, n). Each slot remembers its A,
+# so a new base price reuses it and a different A recomputes it.
+_factor_As = array("d", [float("nan")]) * 1002
+_factors = array("d", [0.0]) * 1002
 
 
-@cython.boundscheck(False)
-@cython.wraparound(False)
 def _band_factor(A, n):
-    global _factor_A
     if not -500 <= n <= 501:
         return _power((A - 1) / A, n)
-    if A != _factor_A:
-        for i in range(1002):
-            _factor_valid[i] = 0
-        _factor_A = A
     i = n + 500
-    if not _factor_valid[i]:
-        _factor_values[i] = _power((A - 1) / A, n)
-        _factor_valid[i] = 1
-    return _factor_values[i]
+    if _factor_As[i] != A:
+        _factors[i] = _power((A - 1) / A, n)
+        _factor_As[i] = A
+    return _factors[i]
 
 
 # Last-value caches are separate from persistent exchange memory.
@@ -124,49 +116,49 @@ def _oracle_limit(price, old_price, old_dfee, dt, delay, min_ratio, max_change):
 class BandBalances:
     """Integer band balances with dense trading buffers and sparse overflow.
 
-    Missing reads insert zero, as with defaultdict(float). Track represented
-    bands separately so valuation preserves the original key set and order.
+    Missing reads insert zero, as with defaultdict(float). Dense bands record
+    whether they are represented, and the lowest and highest such band, so
+    valuation can visit the original key set in ascending order.
     """
 
     def __init__(self):
         self._values = array("d", [0.0]) * 1001
         self._present = array("b", [0]) * 1001
-        self._keys = set()
+        self.lowest = 501  # no dense band is represented yet
+        self.highest = -501
         self._overflow = {}
 
-    @cython.boundscheck(False)
-    @cython.wraparound(False)
     def read(self, n):
         if -500 <= n <= 500:
-            i = n + 500
-            if not self._present[i]:
-                self._keys.add(n)
-                self._present[i] = 1
-            return self._values[i]
-        if n not in self._overflow:
-            self._keys.add(n)
-            self._overflow[n] = 0.0
-        return self._overflow[n]
+            if not self._present[n + 500]:
+                self._represent(n)
+            return self._values[n + 500]
+        return self._overflow.setdefault(n, 0.0)
 
-    @cython.boundscheck(False)
-    @cython.wraparound(False)
     def write(self, n, value):
         if -500 <= n <= 500:
-            i = n + 500
-            if not self._present[i]:
-                self._keys.add(n)
-                self._present[i] = 1
-            self._values[i] = value
+            if not self._present[n + 500]:
+                self._represent(n)
+            self._values[n + 500] = value
         else:
-            self._keys.add(n)
             self._overflow[n] = value
 
+    def has(self, n):
+        if -500 <= n <= 500:
+            return self._present[n + 500]
+        return n in self._overflow
+
+    def _represent(self, n):
+        self._present[n + 500] = 1
+        self.lowest = min(self.lowest, n)
+        self.highest = max(self.highest, n)
+
     def clear(self):
-        for n in self._keys:
-            if -500 <= n <= 500:
-                self._values[n + 500] = 0.0
-                self._present[n + 500] = 0
-        self._keys.clear()
+        for n in range(self.lowest, self.highest + 1):
+            self._values[n + 500] = 0.0
+            self._present[n + 500] = 0
+        self.lowest = 501
+        self.highest = -501
         self._overflow.clear()
 
     def __getitem__(self, n):
@@ -177,7 +169,8 @@ class BandBalances:
 
     def __delitem__(self, n):
         n = index(n)
-        self._keys.remove(n)
+        if not self.has(n):
+            raise KeyError(n)
         if -500 <= n <= 500:
             self._present[n + 500] = 0
             self._values[n + 500] = 0.0
@@ -185,19 +178,20 @@ class BandBalances:
             del self._overflow[n]
 
     def __iter__(self):
-        return iter(self._keys)
+        return iter(self.keys())
 
     def __len__(self):
-        return len(self._keys)
+        return len(self.keys())
 
     def keys(self):
-        return self._keys.copy()
+        dense = {n for n in range(self.lowest, self.highest + 1) if self._present[n + 500]}
+        return dense | self._overflow.keys()
 
     def values(self):
-        return [self.read(n) for n in self._keys]
+        return [self.read(n) for n in self.keys()]
 
     def items(self):
-        return [(n, self.read(n)) for n in self._keys]
+        return [(n, self.read(n)) for n in self.keys()]
 
     def update(self, values):
         for n, value in dict(values).items():
@@ -729,15 +723,17 @@ class LendingAMM:
     # Keep legacy bounds and ascending summation; do not populate unrepresented bands.
     def get_all_y(self):
         total = 0.0
-        for i in sorted(self.bands_x._keys | self.bands_y._keys):
-            if -500 <= i < 500:
+        x, y = self.bands_x, self.bands_y
+        for i in range(min(x.lowest, y.lowest), min(max(x.highest, y.highest), 499) + 1):
+            if x.has(i) or y.has(i):
                 total += self.get_y_up(i)
         return total
 
     def get_all_x(self):
         total = 0.0
-        for i in sorted(self.bands_x._keys | self.bands_y._keys):
-            if -500 <= i < 500:
+        x, y = self.bands_x, self.bands_y
+        for i in range(min(x.lowest, y.lowest), min(max(x.highest, y.highest), 499) + 1):
+            if x.has(i) or y.has(i):
                 total += self.get_x_down(i)
         return total
 

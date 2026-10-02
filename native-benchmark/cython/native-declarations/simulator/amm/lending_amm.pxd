@@ -9,9 +9,7 @@ cpdef double _power(double value, double exponent) except? -1
 
 cpdef double fee_multiplier(double fee) except? -1
 
-cdef double _factor_A
-cdef double _factor_values[1002]
-cdef signed char _factor_valid[1002]
+cdef double _factor_As[1002], _factors[1002]
 @cython.locals(i=cython.long)
 cpdef double _band_factor(double A, long n) except? -1
 cdef double _cube_price, _cube_value, _ratio_A, _ratio_value
@@ -24,14 +22,14 @@ cpdef (double, double) _oracle_limit(double price, double old_price, double old_
 
 @cython.final
 cdef class BandBalances:
-    cdef double[::1] _values
-    cdef signed char[::1] _present
-    cdef set _keys
+    cdef double _values[1001]
+    cdef signed char _present[1001]
+    cdef readonly long lowest, highest
     cdef dict _overflow
-    @cython.locals(i=cython.long)
     cpdef double read(self, long n) except? -1
-    @cython.locals(i=cython.long)
     cpdef void write(self, long n, double value) except *
+    cpdef bint has(self, long n) except -1
+    cdef void _represent(self, long n) noexcept
     @cython.locals(n=cython.long)
     cpdef void clear(self) except *
 
@@ -119,9 +117,9 @@ cdef class LendingAMM:
                    f=cython.double, Inv=cython.double, y_o=cython.double, x_o=cython.double)
     cpdef double get_x_down(self, n) except? -1
 
-    @cython.locals(i=cython.long, total=cython.double)
+    @cython.locals(i=cython.long, total=cython.double, x=BandBalances, y=BandBalances)
     cpdef double get_all_x(self) except? -1
-    @cython.locals(i=cython.long, total=cython.double)
+    @cython.locals(i=cython.long, total=cython.double, x=BandBalances, y=BandBalances)
     cpdef double get_all_y(self) except? -1
 
 @cython.locals(n=cython.long, p_down=cython.double, p_up=cython.double, target=cython.double,
