@@ -50,7 +50,7 @@ def fee_multiplier(fee: float) -> float:
 
 
 def _power(value, exponent):
-    # A runtime exponent preserves Python's libm pow rounding in native builds.
+    # Avoid Cython's constant-power rewrites; final compiler rounding is checked separately.
     return value**exponent
 
 
