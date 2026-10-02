@@ -282,7 +282,8 @@ class LendingAMM:
         self._observe(p, timestamp)
 
     def _observe(self, p, timestamp=None):
-        timestamp = self._normalize_timestamp(timestamp)
+        if timestamp is None:
+            timestamp = self._normalize_timestamp(timestamp)
         if (
             not isfinite(p)
             or p <= 0
@@ -293,7 +294,7 @@ class LendingAMM:
         self.raw_p_oracle = p
         self.current_timestamp = timestamp
         self.prev_p_oracle = self.p_oracle
-        snapshot = self._price_oracle_view(timestamp)
+        snapshot = self._limit_price_oracle(p, timestamp)
         self.p_oracle, _ = snapshot
         return snapshot
 
@@ -324,7 +325,8 @@ class LendingAMM:
         return delay - min(delay, elapsed)
 
     def _limit_price_oracle(self, price: float, timestamp: float | None) -> tuple[float, float]:
-        timestamp = self._normalize_timestamp(timestamp)
+        if timestamp is None:
+            timestamp = self._normalize_timestamp(timestamp)
         return _oracle_limit(
             price,
             self.old_p_oracle,
@@ -745,6 +747,9 @@ def find_target_price(amm, p, p_oracle, memory_fee, is_up=True):
     if is_up:
         for n in range(amm.max_band, amm.min_band - 1, -1):
             p_down = amm.p_down(n)
+            # Nonnegative fees cannot move a positive target past the raw price.
+            if memory_fee >= 0 and 0 <= p <= p_down:
+                continue
             target = p / fee_multiplier(amm._dynamic_fee(n, p_oracle, memory_fee))
 
             if target > p_down:
@@ -753,6 +758,8 @@ def find_target_price(amm, p, p_oracle, memory_fee, is_up=True):
     else:
         for n in range(amm.min_band, amm.max_band + 1):
             p_up = amm.p_up(n)
+            if memory_fee >= 0 and p >= 0 and p >= p_up:
+                continue
             target = p * fee_multiplier(amm._dynamic_fee(n, p_oracle, memory_fee))
 
             if target < p_up:
