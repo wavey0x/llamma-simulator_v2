@@ -10,8 +10,8 @@ cpdef double _power(double value, double exponent) except? -1
 cpdef double fee_multiplier(double fee) except? -1
 
 cdef double _factor_A
-cdef double[::1] _factor_values
-cdef signed char[::1] _factor_valid
+cdef double _factor_values[1002]
+cdef signed char _factor_valid[1002]
 @cython.locals(i=cython.long)
 cpdef double _band_factor(double A, long n) except? -1
 cdef double _cube_price, _cube_value, _ratio_A, _ratio_value
