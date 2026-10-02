@@ -475,16 +475,24 @@ class LendingAMM:
         return value * p_top / p_oracle * (self.A - 1)
 
     def get_p(self, y0=None):
+        return self._trade_prices(y0)[0]
+
+    def _trade_prices(self, y0=None):
+        """Return the quote and raw-price bounds for the active band."""
         x = self.bands_x.read(self.active_band)
         y = self.bands_y.read(self.active_band)
         if x == 0 and y == 0:
-            return _power(self.p_up(self.active_band) * self.p_down(self.active_band), 0.5)
+            # An empty band has no tradable balance at its quoted midpoint.
+            upper_price = self.p_up(self.active_band)
+            lower_price = self.p_down(self.active_band)
+            return _power(upper_price * lower_price, 0.5), lower_price, upper_price
         else:
             if y0 is None:
                 value = self.get_y0()
             else:
                 value = y0
-            return (self._get_f(value, self.active_band) + x) / (self._get_g(value, self.active_band) + y)
+            price = (self._get_f(value, self.active_band) + x) / (self._get_g(value, self.active_band) + y)
+            return price, price, price
 
     def trade_to_price(self, price) -> tuple:
         """
@@ -499,24 +507,13 @@ class LendingAMM:
         self.p_oracle, oracle_memory_fee = snapshot
         original_band = self.active_band
 
-        if self.bands_x.read(self.active_band) == 0 and self.bands_y.read(self.active_band) == 0:
-            # If current band is empty - steps are determined by whether current price is higher or lower than
-            # boundaries
-            if price > self.p_up(self.active_band):
-                bstep = 1
-            elif price < self.p_down(self.active_band):
-                bstep = -1
-            else:
-                return 0, 0
-
+        current_price, lower_price, upper_price = self._trade_prices()
+        if price > upper_price:
+            bstep = 1  # going up: sell
+        elif price < lower_price:
+            bstep = -1  # going down: buy
         else:
-            current_price = self.get_p()
-            if price > current_price:
-                bstep = 1  # going up: sell
-            elif price < current_price:
-                bstep = -1  # going down: buy
-            else:
-                return 0, 0
+            return 0, 0
 
         dx = 0
         dy = 0

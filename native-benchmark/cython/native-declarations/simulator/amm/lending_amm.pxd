@@ -91,11 +91,14 @@ cdef class LendingAMM:
     cpdef double get_g(self, y0=*, n=*) except? -1
     cpdef double _get_f(self, double value, long band) except? -1
     cpdef double _get_g(self, double value, long band) except? -1
-    @cython.locals(value=cython.double, x=cython.double, y=cython.double)
     cpdef double get_p(self, y0=*) except? -1
+    @cython.locals(price=cython.double, value=cython.double, x=cython.double, y=cython.double,
+                   lower_price=cython.double, upper_price=cython.double)
+    cpdef (double, double, double) _trade_prices(self, y0=*)
     cpdef void _commit_oracle(self, (double, double) snapshot)
     @cython.locals(x=cython.double, y=cython.double, y0=cython.double, f=cython.double, g=cython.double,
-                   p_o=cython.double, current_price=cython.double,
+                   p_o=cython.double, lower_price=cython.double, upper_price=cython.double,
+                   current_price=cython.double,
                    dx=cython.double, dy=cython.double, oracle_memory_fee=cython.double, fee=cython.double,
                    snapshot=OracleSnapshot,
                    antifee=cython.double,
