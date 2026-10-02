@@ -85,7 +85,7 @@ def _calculate_loss(
             high = find_target_price(amm, high_external, snapshot[0], snapshot[1], is_up=True)
             if high > current_price:
                 amm.trade_to_price(high_external)
-                snapshot = amm._price_oracle_view(t)
+                snapshot = amm._price_oracle_at(t)
                 antifee = fee_multiplier(max(amm.fee, snapshot[1]))
                 current_price, lower_price, upper_price = amm._trade_prices()
 
