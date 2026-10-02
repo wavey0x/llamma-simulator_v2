@@ -3,7 +3,7 @@ from math import sqrt
 from unittest.mock import Mock, patch
 
 from simulator.amm.intitial_liquidity import ConstantInitialLiquidity
-from simulator.amm.lending_amm import LendingAMM, OracleState
+from simulator.amm.lending_amm import LendingAMM, OracleState, find_target_price
 from simulator.amm.simulator import Simulator
 
 
@@ -109,6 +109,20 @@ class AmmFeeTargetTest(unittest.TestCase):
         trade.assert_not_called()
         self.assertEqual(amm.bands_x[0], 1.0)
         self.assertEqual(amm.bands_y[0], 1.0)
+
+    def test_base_or_memory_fee_can_rule_out_both_directions(self):
+        for fee, memory in ((0.02, 0.0), (0.001, 0.02)):
+            for factor in (0.99, 1.01):
+                with self.subTest(fee=fee, memory=memory, factor=factor):
+                    state = OracleState(1.0, memory, 0)
+                    amm = LendingAMM(1.0, 50, fee, 0.25, oracle_state=state)
+                    amm.bands_x[0] = amm.bands_y[0] = 1.0
+                    market = amm.get_p() * factor
+                    with patch("simulator.amm.simulator.find_target_price", wraps=find_target_price) as quote:
+                        replay_position(amm, [0, market, market, market, market, 1.0], 1.0, 0.0)
+                    quote.assert_not_called()
+                    self.assertEqual((amm.bands_x[0], amm.bands_y[0]), (1.0, 1.0))
+                    self.assertEqual(amm.oracle_state(), state)
 
 
 if __name__ == "__main__":

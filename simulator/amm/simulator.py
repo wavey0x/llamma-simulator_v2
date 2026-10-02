@@ -8,7 +8,7 @@ import numpy as np
 import psutil
 
 from .intitial_liquidity import BaseRangeInitialLiquidity
-from .lending_amm import LendingAMM, OracleState, find_target_price
+from .lending_amm import LendingAMM, OracleState, fee_multiplier, find_target_price
 from .price_history_loader import BasePriceHistoryLoader, VolatilityPriceHistoryLoader
 from .price_oracle import BasePriceOracle
 
@@ -73,13 +73,19 @@ def _calculate_loss(
 
         high_external = high * (1 - external_fee)
         low_external = low * (1 + external_fee)
-        high = find_target_price(amm, high_external, snapshot[0], snapshot[1], is_up=True)
-
         # Use fee-adjusted targets only to check profitability. The AMM
         # applies its own per-band fee inside trade_to_price().
-        if high > amm.get_p():
-            amm.trade_to_price(high_external)
-            snapshot = amm._price_oracle_view(t)
+        # Distance fees can only increase the base/oracle fee. Skip the band
+        # search when even that minimum fee makes this direction unprofitable.
+        current_price = amm.get_p()
+        antifee = fee_multiplier(max(amm.fee, snapshot[1]))
+        if high_external / antifee > current_price:
+            high = find_target_price(amm, high_external, snapshot[0], snapshot[1], is_up=True)
+            if high > current_price:
+                amm.trade_to_price(high_external)
+                snapshot = amm._price_oracle_view(t)
+                antifee = fee_multiplier(max(amm.fee, snapshot[1]))
+                current_price = amm.get_p()
 
         # Not correct for dynamic fees which are too high
         # if high > max_price:
@@ -88,9 +94,10 @@ def _calculate_loss(
         #         assert amm.bands_y[n] == 0
         #         assert amm.bands_x[n] > 0
 
-        low = find_target_price(amm, low_external, snapshot[0], snapshot[1], is_up=False)
-        if low < amm.get_p():
-            amm.trade_to_price(low_external)
+        if low_external * antifee < current_price:
+            low = find_target_price(amm, low_external, snapshot[0], snapshot[1], is_up=False)
+            if low < current_price:
+                amm.trade_to_price(low_external)
 
         # Not correct for dynamic fees which are too high
         # if low < min_price:
