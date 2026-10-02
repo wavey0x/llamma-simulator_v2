@@ -203,6 +203,8 @@ class LendingAMM:
         *,
         oracle_state: OracleState | None = None,
     ):
+        self.bands_x = BandBalances()
+        self.bands_y = BandBalances()
         self.reset(p_base, A, fee, dynamic_fee_multiplier, oracle_state)
 
     def reset(self, p_base, A, fee, dynamic_fee_multiplier=None, oracle_state=None):
@@ -223,12 +225,8 @@ class LendingAMM:
             self.restore_oracle_state(oracle_state)
         self.A = A
         self.dynamic_fee_multiplier = dynamic_fee_multiplier if dynamic_fee_multiplier is not None else 0.25
-        if getattr(self, "bands_x", None) is None:
-            self.bands_x = BandBalances()
-            self.bands_y = BandBalances()
-        else:
-            self.bands_x.clear()
-            self.bands_y.clear()
+        self.bands_x.clear()
+        self.bands_y.clear()
         self.min_band = self.max_band = self.active_band = 0
         self.fee = fee
 
