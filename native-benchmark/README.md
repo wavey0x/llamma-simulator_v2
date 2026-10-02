@@ -1,16 +1,21 @@
-# Native replay benchmark handoff
+# Native replay benchmark
 
-Close the remaining speed gap to Phil's C++ while keeping Python as the single source of financial logic and keeping changes small enough for Curve's maintainers to review. This kit packages the existing builder, declarations, frozen inputs and benchmark driver; it changes no simulator formulas.
+- Close the remaining speed gap to Phil's C++.
+- Keep Python as the single source of financial logic and preserve its accounting.
+- Keep changes small, readable and suitable for Curve's maintainers to review.
+- Use a lightweight, reusable build with deterministic outputs and proportionate checks.
+
+This kit packages the builder, declarations, frozen inputs and benchmark driver alongside the optimized Python source.
 
 ## Starting points
 
-- [Source review branch](https://github.com/wavey0x/llamma-simulator_v2/tree/codex/native-replay-review), pinned at `3f2f95d1e1528cc17bcd7b2454c7c76b28c0fd18`.
+- [Source review branch](https://github.com/wavey0x/llamma-simulator_v2/tree/codex/native-replay-review), pinned at `1505d10de6d74c13b58b16181bf8806f8c1d5ccd`.
 - [Diff against Curve master](https://github.com/curvefi/llamma-simulator_v2/compare/master...wavey0x:codex/native-replay-review) and [readability/tradeoff review](../benchmarks/native/README.md).
 - Curve baseline: `0bb370f02970c2c1056da8a4faffd0fa9be35575`; Phil baseline: `e9487b9fb5602f2a343f40276508966c1edb526d`.
 
 The candidate already has typed numeric helpers, exact-input caches, numeric band storage and reusable batch state. There is no handwritten replacement of the accounting in C++. The build recipe reuses committed Python files, stages `.pxd` type declarations alongside them, and compiles them. The native declarations are model-specific: a changed field, signature or cache dependency may need review. Reusability does not mean arbitrary future commits will compile unchanged.
 
-The [fresh handoff verification](reference-results/README.md) reproduces the earlier loss arrays exactly, with about 27x the one-worker throughput of Curve Python and a remaining 3.8x gap to Phil. It includes per-market timings, ordered outputs and build identities.
+The [current results](optimized-results/README.md) show **52.6x the one-worker throughput of Curve Python**, with Phil still **1.99x faster**. The interpreted fork takes **44.7% less time** than Curve Python. The latest changes remove the global spot-price cache, reuse dimensionless geometry and avoid unnecessary band searches. Per-market timings, ordered outputs and build identities are included; [earlier handoff results](reference-results/README.md) remain available separately.
 
 ## Reproduce
 
@@ -18,9 +23,12 @@ The [fresh handoff verification](reference-results/README.md) reproduces the ear
 
 The packaged scripts record our original environment and currently contain macOS-specific setup. Before running on another target, adapt the compiler/SDK handling in `cython/build.py` and `cython/setup.py`, Phil's shared-library command in `prepare.py`, and host reporting in `bench.py`; record your target in `cython/toolchain.json`. Install `uv` and use the dependency lock. This setup work should leave model logic and frozen benchmark inputs unchanged.
 
-From the repository root, after cloning the handoff branch:
+Clone the current kit and run from the repository root:
 
 ```sh
+git clone --branch codex/native-benchmark-optimized \
+  https://github.com/wavey0x/llamma-simulator_v2.git
+cd llamma-simulator_v2
 uv sync --frozen --project native-benchmark/cython
 PY=native-benchmark/cython/.venv/bin/python
 
@@ -29,7 +37,7 @@ $PY native-benchmark/prepare.py baseline --output build/benchmark-baseline
 
 # Build the current source-review candidate, then run all five backends.
 $PY native-benchmark/prepare.py candidate \
-  --commit 3f2f95d1e1528cc17bcd7b2454c7c76b28c0fd18 \
+  --commit 1505d10de6d74c13b58b16181bf8806f8c1d5ccd \
   --output build/benchmark-001
 $PY native-benchmark/bench.py run \
   --baseline build/benchmark-baseline --root build/benchmark-001 \
@@ -55,9 +63,11 @@ Keep the existing `5e-14` absolute loss tolerance; investigate any violation. Th
 1. Profile this current native build first; old profiles predate major fixes. Cython annotation HTML is generated beside the staged source under `build/benchmark-001/curve/candidate/` and helps locate remaining Python operations.
 2. Investigate expensive repeated math, Python/native call boundaries, allocation and band traversal, guided by the measured profile. Change one cause at a time and retain a before/after table for all three markets and both worker counts.
 3. Prefer small declarations, local reuse and obvious invariants. New cache state or custom storage needs a clear whole-workload win (roughly 10–15% is a useful bar), readable dependencies and targeted reset/invalidation tests.
-4. Report interpreted Python performance as well as compiled performance. The existing fork was roughly 10% slower when interpreted; improving that and simplifying `.read()`/`.write()` storage operations would strengthen an upstream proposal.
+4. Report interpreted Python performance as well as compiled performance. The current fork improves both; preserve that advantage and keep looking for ways to simplify `.read()`/`.write()` storage operations.
 
 Do not add a second financial implementation, source-rewriting framework, fast-math, reassociated equations, reduced precision or looser tolerances. Preserve fee charging, oracle write timing, zero-input behavior, replay order and recovery accounting. Avoid removing runtime `pow` merely because a rewrite looks algebraically equivalent: that previously broke numerical parity. Generic Python LRU caches, ordinary dictionary band storage, extra small caches, merging compilation units and aggressive compiler flags were previously unhelpful; revisit only with new evidence.
+
+Keep empty-band prechecks on raw prices. A fee-adjusted shortcut passed the market benchmark but skipped tiny exchanges that write oracle memory; `tests/test_empty_band_quotes.py` covers the regression. Targeted checks should follow the behavior being changed, rather than adding fresh parameter sweeps.
 
 Return a focused commit/diff, per-market before/after timings, maximum error and a sentence on readability/API costs. Work on your own branch; leave `codex/native-replay-review` unchanged. The combined candidate is an experiment, not blanket approval for upstreaming all of its storage, cache and API tradeoffs.
 

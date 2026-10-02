@@ -1,0 +1,170 @@
+{
+  "absolute_tolerance": 5e-14,
+  "results": [
+    {
+      "backend": "python",
+      "market": "ETH",
+      "windows": 3840,
+      "maximum_absolute_error": 0.0,
+      "worst_index": 0,
+      "python_loss": 1.026235122492114e-05,
+      "backend_loss": 1.026235122492114e-05,
+      "above_tolerance": 0,
+      "workers_bitwise_equal": true
+    },
+    {
+      "backend": "cython",
+      "market": "ETH",
+      "windows": 3840,
+      "maximum_absolute_error": 1.7763568394002505e-14,
+      "worst_index": 3257,
+      "python_loss": -1.8566233979111502e-06,
+      "backend_loss": -1.8566234156747186e-06,
+      "above_tolerance": 0,
+      "workers_bitwise_equal": true
+    },
+    {
+      "backend": "fork-python",
+      "market": "ETH",
+      "windows": 3840,
+      "maximum_absolute_error": 0.0,
+      "worst_index": 0,
+      "python_loss": 1.026235122492114e-05,
+      "backend_loss": 1.026235122492114e-05,
+      "above_tolerance": 0,
+      "workers_bitwise_equal": true
+    },
+    {
+      "backend": "fork-cython",
+      "market": "ETH",
+      "windows": 3840,
+      "maximum_absolute_error": 1.7763568394002505e-14,
+      "worst_index": 3257,
+      "python_loss": -1.8566233979111502e-06,
+      "backend_loss": -1.8566234156747186e-06,
+      "above_tolerance": 0,
+      "workers_bitwise_equal": true
+    },
+    {
+      "backend": "phil",
+      "market": "ETH",
+      "windows": 3840,
+      "maximum_absolute_error": 0.004341049441461298,
+      "worst_index": 159,
+      "python_loss": 0.02926262085481368,
+      "backend_loss": 0.024921571413352384,
+      "above_tolerance": 3840,
+      "workers_bitwise_equal": true
+    },
+    {
+      "backend": "python",
+      "market": "BTC",
+      "windows": 3840,
+      "maximum_absolute_error": 0.0,
+      "worst_index": 0,
+      "python_loss": -7.518142291829122e-06,
+      "backend_loss": -7.518142291829122e-06,
+      "above_tolerance": 0,
+      "workers_bitwise_equal": true
+    },
+    {
+      "backend": "cython",
+      "market": "BTC",
+      "windows": 3840,
+      "maximum_absolute_error": 4.007905118896815e-14,
+      "worst_index": 3512,
+      "python_loss": 0.012368143118555164,
+      "backend_loss": 0.012368143118515085,
+      "above_tolerance": 0,
+      "workers_bitwise_equal": true
+    },
+    {
+      "backend": "fork-python",
+      "market": "BTC",
+      "windows": 3840,
+      "maximum_absolute_error": 0.0,
+      "worst_index": 0,
+      "python_loss": -7.518142291829122e-06,
+      "backend_loss": -7.518142291829122e-06,
+      "above_tolerance": 0,
+      "workers_bitwise_equal": true
+    },
+    {
+      "backend": "fork-cython",
+      "market": "BTC",
+      "windows": 3840,
+      "maximum_absolute_error": 4.007905118896815e-14,
+      "worst_index": 3512,
+      "python_loss": 0.012368143118555164,
+      "backend_loss": 0.012368143118515085,
+      "above_tolerance": 0,
+      "workers_bitwise_equal": true
+    },
+    {
+      "backend": "phil",
+      "market": "BTC",
+      "windows": 3840,
+      "maximum_absolute_error": 0.0028331020045402333,
+      "worst_index": 3009,
+      "python_loss": 0.06719939315654433,
+      "backend_loss": 0.0643662911520041,
+      "above_tolerance": 3840,
+      "workers_bitwise_equal": true
+    },
+    {
+      "backend": "python",
+      "market": "LP",
+      "windows": 3840,
+      "maximum_absolute_error": 0.0,
+      "worst_index": 0,
+      "python_loss": 1.146426115661292e-05,
+      "backend_loss": 1.146426115661292e-05,
+      "above_tolerance": 0,
+      "workers_bitwise_equal": true
+    },
+    {
+      "backend": "cython",
+      "market": "LP",
+      "windows": 3840,
+      "maximum_absolute_error": 0.0,
+      "worst_index": 0,
+      "python_loss": 1.146426115661292e-05,
+      "backend_loss": 1.146426115661292e-05,
+      "above_tolerance": 0,
+      "workers_bitwise_equal": true
+    },
+    {
+      "backend": "fork-python",
+      "market": "LP",
+      "windows": 3840,
+      "maximum_absolute_error": 0.0,
+      "worst_index": 0,
+      "python_loss": 1.146426115661292e-05,
+      "backend_loss": 1.146426115661292e-05,
+      "above_tolerance": 0,
+      "workers_bitwise_equal": true
+    },
+    {
+      "backend": "fork-cython",
+      "market": "LP",
+      "windows": 3840,
+      "maximum_absolute_error": 1.432187701766452e-14,
+      "worst_index": 2228,
+      "python_loss": 0.003470525933391033,
+      "backend_loss": 0.003470525933405355,
+      "above_tolerance": 0,
+      "workers_bitwise_equal": true
+    },
+    {
+      "backend": "phil",
+      "market": "LP",
+      "windows": 3840,
+      "maximum_absolute_error": 6.451921748662492e-05,
+      "worst_index": 1838,
+      "python_loss": -0.007189577732880537,
+      "backend_loss": -0.007125058515393912,
+      "above_tolerance": 3840,
+      "workers_bitwise_equal": true
+    }
+  ]
+}
